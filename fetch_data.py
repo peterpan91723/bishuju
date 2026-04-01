@@ -9,12 +9,24 @@ BASE_URL = "https://fapi.binance.com"
 TOP_N = 50
 REQUEST_TIMEOUT = 10  # 请求超时（秒）
 
+# 中文合约名映射为英文
+SYMBOL_RENAME = {
+    "币安人生USDT": "BIANRENSHENGUSDT",
+    "我踏马来了USDT": "WOTAMALAILIAOUSDT",
+    "龙虾USDT": "LONGXIAUSDT",
+}
+
 
 def _api_get(url, params=None):
     """统一的API请求，带超时和状态码检查"""
     resp = requests.get(url, params=params, timeout=REQUEST_TIMEOUT)
     resp.raise_for_status()
     return resp.json()
+
+
+def rename_symbol(symbol):
+    """中文合约名转英文"""
+    return SYMBOL_RENAME.get(symbol, symbol)
 
 
 def get_usdt_perpetual_symbols():
@@ -237,7 +249,7 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
 
     yesterday_change = [
         {
-            "symbol": s,
+            "symbol": rename_symbol(s),
             "value": d["changePercent"],
             "open": d["open"],
             "close": d["close"],
@@ -249,7 +261,7 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
 
     yesterday_volume = [
         {
-            "symbol": s,
+            "symbol": rename_symbol(s),
             "value": d["volume"],
             "valueFormatted": format_volume(d["volume"]),
         }
@@ -259,14 +271,14 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
     yesterday_volume.sort(key=lambda x: x["value"], reverse=True)
 
     weekly_volume = [
-        {"symbol": s, "value": v, "valueFormatted": format_volume(v)}
+        {"symbol": rename_symbol(s), "value": v, "valueFormatted": format_volume(v)}
         for s, v in weekly_data.items()
         if s in valid_symbols
     ]
     weekly_volume.sort(key=lambda x: x["value"], reverse=True)
 
     funding_list = [
-        {"symbol": s, "value": round(d["fundingRate"], 5)}
+        {"symbol": rename_symbol(s), "value": round(d["fundingRate"], 5)}
         for s, d in funding_data.items()
         if s in valid_symbols
     ]
@@ -274,7 +286,7 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
 
     weekly_rsi = [
         {
-            "symbol": s,
+            "symbol": rename_symbol(s),
             "value": v["rsiCurr"],
             "rsiPrev": v["rsiPrev"],
             "trend": "up" if v["rsiCurr"] > v["rsiPrev"] else "down",
@@ -286,7 +298,7 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
 
     rsi_momentum = [
         {
-            "symbol": s,
+            "symbol": rename_symbol(s),
             "value": d["volume"],
             "valueFormatted": format_volume(d["volume"]),
             "rsiCurr": d["rsiCurr"],
