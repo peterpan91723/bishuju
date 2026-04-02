@@ -14,9 +14,6 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-    env:
-      ALL_PROXY: ${{ secrets.PROXY_URL }}
-      HTTPS_PROXY: ${{ secrets.PROXY_URL }}
     steps:
       - uses: actions/checkout@v4
 
@@ -28,6 +25,9 @@ jobs:
         run: pip install requests pysocks
 
       - name: Run fetch_data.py (single run)
+        env:
+          ALL_PROXY: ${{ secrets.PROXY_URL }}
+          HTTPS_PROXY: ${{ secrets.PROXY_URL }}
         run: |
           python -c "
           from fetch_data import *
