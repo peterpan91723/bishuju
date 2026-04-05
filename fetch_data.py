@@ -377,17 +377,22 @@ def fetch_daily_data(symbols):
 
 
 def fetch_weekly_data(symbols):
-    """抓取周线/月线更新的数据"""
+    """抓取每周更新的数据"""
     print("正在获取上周成交量...")
     weekly_data = get_weekly_volume(symbols)
 
     print("正在获取周线RSI...")
     rsi_data = get_weekly_rsi(symbols)
 
+    return weekly_data, rsi_data
+
+
+def fetch_monthly_data(symbols):
+    """抓取每月更新的数据"""
     print("正在获取月线RSI...")
     monthly_rsi_data = get_monthly_rsi(symbols)
 
-    return weekly_data, rsi_data, monthly_rsi_data
+    return monthly_rsi_data
 
 
 def main():
@@ -397,7 +402,8 @@ def main():
     print(f"共 {len(symbols)} 个USDT永续合约")
 
     yesterday_data, funding_data, momentum_data = fetch_daily_data(symbols)
-    weekly_data, rsi_data, monthly_rsi_data = fetch_weekly_data(symbols)
+    weekly_data, rsi_data = fetch_weekly_data(symbols)
+    monthly_rsi_data = fetch_monthly_data(symbols)
 
     output = build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
     save_data(output)
@@ -408,9 +414,11 @@ def main():
     print(f"  每 {FUNDING_INTERVAL} 秒更新资金费率")
     print(f"  每天 UTC+8 {FULL_UPDATE_HOUR}:00 延迟1秒更新日线数据")
     print(f"  每周一 UTC+8 {FULL_UPDATE_HOUR}:00 延迟5秒更新周线数据")
+    print(f"  每月1号 UTC+8 {FULL_UPDATE_HOUR}:00 更新月线数据")
     print(f"  Ctrl+C 退出")
     last_daily_update_date = datetime.now(timezone(timedelta(hours=8))).date()
     last_weekly_update_week = datetime.now(timezone(timedelta(hours=8))).isocalendar()[1]
+    last_monthly_update_month = datetime.now(timezone(timedelta(hours=8))).month
 
     try:
         while True:
@@ -432,9 +440,16 @@ def main():
                     if now_utc8.weekday() == 0 and current_week != last_weekly_update_week:
                         time.sleep(4)
                         print(f"[周线更新]")
-                        weekly_data, rsi_data, monthly_rsi_data = fetch_weekly_data(symbols)
+                        weekly_data, rsi_data = fetch_weekly_data(symbols)
                         last_weekly_update_week = current_week
                         print(f"[周线更新完成]")
+
+                    # 每月1号更新月线数据
+                    if now_utc8.day == 1 and now_utc8.month != last_monthly_update_month:
+                        print(f"[月线更新]")
+                        monthly_rsi_data = fetch_monthly_data(symbols)
+                        last_monthly_update_month = now_utc8.month
+                        print(f"[月线更新完成]")
 
                     last_daily_update_date = now_utc8.date()
                     print(f"[日线更新完成]")
