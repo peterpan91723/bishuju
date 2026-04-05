@@ -175,6 +175,25 @@ def get_weekly_rsi(symbols):
     return results
 
 
+def get_monthly_rsi(symbols):
+    """获取月线RSI(14)（分批并发）"""
+    params = {"interval": "1M", "limit": 100}
+
+    all_klines = batch_fetch_klines(symbols, params)
+    results = {}
+    for symbol, klines in all_klines.items():
+        if len(klines) >= 17:
+            closes = [float(k[4]) for k in klines[:-1]]
+            rsi_prev, rsi_curr = calc_rsi_last_two(closes)
+            if rsi_curr is not None and rsi_prev is not None:
+                results[symbol] = {
+                    "rsiCurr": rsi_curr,
+                    "rsiPrev": rsi_prev,
+                }
+
+    return results
+
+
 def calc_ema(closes, period):
     """计算EMA（与TradingView一致）"""
     if len(closes) < period:
@@ -243,7 +262,7 @@ def format_volume(vol):
     return f"{vol:.2f}"
 
 
-def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, momentum_data):
+def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, monthly_rsi_data, momentum_data):
     """构建排行榜数据"""
     valid_symbols = set(symbols)
 
@@ -296,6 +315,18 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
     ]
     weekly_rsi.sort(key=lambda x: x["value"], reverse=True)
 
+    monthly_rsi = [
+        {
+            "symbol": rename_symbol(s),
+            "value": v["rsiCurr"],
+            "rsiPrev": v["rsiPrev"],
+            "trend": "up" if v["rsiCurr"] > v["rsiPrev"] else "down",
+        }
+        for s, v in monthly_rsi_data.items()
+        if s in valid_symbols
+    ]
+    monthly_rsi.sort(key=lambda x: x["value"], reverse=True)
+
     rsi_momentum = [
         {
             "symbol": rename_symbol(s),
@@ -316,6 +347,7 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
         "weeklyVolume": weekly_volume[:TOP_N],
         "fundingRate": funding_list,
         "weeklyRsi": weekly_rsi,
+        "monthlyRsi": monthly_rsi,
         "rsiMomentum": rsi_momentum,
     }
 
@@ -345,14 +377,17 @@ def fetch_daily_data(symbols):
 
 
 def fetch_weekly_data(symbols):
-    """抓取每周一更新的数据"""
+    """抓取周线/月线更新的数据"""
     print("正在获取上周成交量...")
     weekly_data = get_weekly_volume(symbols)
 
     print("正在获取周线RSI...")
     rsi_data = get_weekly_rsi(symbols)
 
-    return weekly_data, rsi_data
+    print("正在获取月线RSI...")
+    monthly_rsi_data = get_monthly_rsi(symbols)
+
+    return weekly_data, rsi_data, monthly_rsi_data
 
 
 def main():
@@ -362,9 +397,9 @@ def main():
     print(f"共 {len(symbols)} 个USDT永续合约")
 
     yesterday_data, funding_data, momentum_data = fetch_daily_data(symbols)
-    weekly_data, rsi_data = fetch_weekly_data(symbols)
+    weekly_data, rsi_data, monthly_rsi_data = fetch_weekly_data(symbols)
 
-    output = build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, momentum_data)
+    output = build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
     save_data(output)
     print(f"\n全量数据已保存 | 更新时间: {output['updateTime']}")
 
@@ -397,7 +432,7 @@ def main():
                     if now_utc8.weekday() == 0 and current_week != last_weekly_update_week:
                         time.sleep(4)
                         print(f"[周线更新]")
-                        weekly_data, rsi_data = fetch_weekly_data(symbols)
+                        weekly_data, rsi_data, monthly_rsi_data = fetch_weekly_data(symbols)
                         last_weekly_update_week = current_week
                         print(f"[周线更新完成]")
 
@@ -407,7 +442,7 @@ def main():
                     # 更新资金费率
                     funding_data = get_funding_rates()
 
-                output = build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, momentum_data)
+                output = build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
                 save_data(output)
                 print(f"[已更新] {output['updateTime']}")
             except Exception as e:

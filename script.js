@@ -4,6 +4,7 @@ const TABS_CONFIG = {
     weeklyVolume: { header: "成交量 (USDT)", format: v => v.valueFormatted },
     fundingRate: { header: "费率 (%)", format: v => formatFunding(v.value) },
     weeklyRsi: { header: "RSI(14)", format: v => v.value.toFixed(2), subFormat: v => `${v.rsiPrev} → ${v.value.toFixed(2)} ${v.trend === "up" ? "↑ 递增" : "↓ 递减"}` },
+    monthlyRsi: { header: "RSI(14)", format: v => v.value.toFixed(2), subFormat: v => `${v.rsiPrev} → ${v.value.toFixed(2)} ${v.trend === "up" ? "↑ 递增" : "↓ 递减"}` },
     rsiMomentum: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `EMA9>21 | RSI: ${v.rsiPrev} → ${v.rsiCurr}` },
 };
 
@@ -23,7 +24,7 @@ function formatFunding(val) {
 
 function getColorClass(val, tab) {
     if (tab === "yesterdayVolume" || tab === "weeklyVolume" || tab === "rsiMomentum") return "neutral";
-    if (tab === "weeklyRsi") {
+    if (tab === "weeklyRsi" || tab === "monthlyRsi") {
         if (val > 70) return "negative";
         if (val < 30) return "positive";
         return "neutral";

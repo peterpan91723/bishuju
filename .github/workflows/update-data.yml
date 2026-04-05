@@ -36,9 +36,9 @@ jobs:
           print(f'{len(symbols)} 个合约')
 
           yesterday_data, funding_data, momentum_data = fetch_daily_data(symbols)
-          weekly_data, rsi_data = fetch_weekly_data(symbols)
+          weekly_data, rsi_data, monthly_rsi_data = fetch_weekly_data(symbols)
 
-          output = build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, momentum_data)
+          output = build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
           save_data(output)
           print(f'数据已更新: {output[\"updateTime\"]}')
           "
