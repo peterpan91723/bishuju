@@ -22,10 +22,82 @@ jobs:
       - name: Install dependencies
         run: pip install requests pysocks
 
+      - name: Setup Xray proxy
+        env:
+          PROXY_URL: ${{ secrets.PROXY_URL }}
+        run: |
+          # 下载 Xray-core
+          wget -q https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+          unzip -q Xray-linux-64.zip -d xray
+          chmod +x xray/xray
+
+          # 解析 VLESS URL，生成 Xray 配置
+          python3 - << 'PYEOF'
+          import re, json, urllib.parse, os
+
+          url = os.environ['PROXY_URL']
+          # 解析: vless://UUID@host:port?params#name
+          m = re.match(r'vless://([^@]+)@([^:]+):(\d+)\?([^#]+)', url)
+          uuid = m.group(1)
+          host = m.group(2)
+          port = int(m.group(3))
+          params = dict(urllib.parse.parse_qsl(m.group(4)))
+
+          alpn_raw = urllib.parse.unquote(params.get('alpn', 'h2,http/1.1'))
+          alpn_list = alpn_raw.split(',')
+          ws_path = urllib.parse.unquote(params.get('path', '/'))
+          ws_host = params.get('host', host)
+          sni = params.get('sni', host)
+          fp = params.get('fp', 'chrome')
+          security = params.get('security', 'tls')
+          net_type = params.get('type', 'ws')
+
+          config = {
+            "log": {"loglevel": "warning"},
+            "inbounds": [{
+              "port": 10808,
+              "protocol": "socks",
+              "settings": {"auth": "noauth", "udp": True}
+            }],
+            "outbounds": [{
+              "protocol": "vless",
+              "settings": {
+                "vnext": [{
+                  "address": host,
+                  "port": port,
+                  "users": [{"id": uuid, "encryption": "none"}]
+                }]
+              },
+              "streamSettings": {
+                "network": net_type,
+                "security": security,
+                "tlsSettings": {
+                  "serverName": sni,
+                  "alpn": alpn_list,
+                  "fingerprint": fp
+                },
+                "wsSettings": {
+                  "path": ws_path,
+                  "headers": {"Host": ws_host}
+                }
+              }
+            }]
+          }
+
+          with open('xray_config.json', 'w') as f:
+              json.dump(config, f, indent=2)
+          print('Xray 配置生成完毕')
+          PYEOF
+
+          # 启动 Xray（后台运行）
+          ./xray/xray run -config xray_config.json > xray.log 2>&1 &
+          sleep 3
+          echo "Xray 已启动，本地 socks5://127.0.0.1:10808"
+
       - name: Run fetch_data.py (single run)
         env:
-          ALL_PROXY: ${{ secrets.PROXY_URL }}
-          HTTPS_PROXY: ${{ secrets.PROXY_URL }}
+          ALL_PROXY: socks5://127.0.0.1:10808
+          HTTPS_PROXY: socks5://127.0.0.1:10808
         run: |
           python -c "
           from fetch_data import *
