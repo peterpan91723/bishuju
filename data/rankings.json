@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026-04-19 09:10:17 UTC",
+  "updateTime": "2026-04-19 10:04:03 UTC",
   "yesterdayChange": [
     {
       "symbol": "HIGHUSDT",
@@ -3725,194 +3725,146 @@
   "fundingRate": [
     {
       "symbol": "DENTUSDT",
-      "value": 0.10411
-    },
-    {
-      "symbol": "AKEUSDT",
-      "value": 0.08277
-    },
-    {
-      "symbol": "RAVEUSDT",
-      "value": 0.07802
+      "value": 0.11328
     },
     {
       "symbol": "PUMPBTCUSDT",
-      "value": 0.07792
+      "value": 0.10069
     },
     {
-      "symbol": "LYNUSDT",
-      "value": 0.07744
-    },
-    {
-      "symbol": "SKYAIUSDT",
-      "value": 0.07493
+      "symbol": "AKEUSDT",
+      "value": 0.10027
     },
     {
       "symbol": "GUAUSDT",
-      "value": 0.07369
+      "value": 0.08657
+    },
+    {
+      "symbol": "SKYAIUSDT",
+      "value": 0.06805
     },
     {
       "symbol": "BULLAUSDT",
-      "value": 0.06372
+      "value": 0.0613
     },
     {
-      "symbol": "CLOUSDT",
-      "value": 0.05498
-    },
-    {
-      "symbol": "GWEIUSDT",
-      "value": 0.05302
-    },
-    {
-      "symbol": "ARIAUSDT",
-      "value": 0.05267
-    },
-    {
-      "symbol": "TRUTHUSDT",
-      "value": 0.04906
-    },
-    {
-      "symbol": "AIAUSDT",
-      "value": 0.0486
-    },
-    {
-      "symbol": "FOLKSUSDT",
-      "value": 0.0447
-    },
-    {
-      "symbol": "ARCUSDT",
-      "value": 0.0435
-    },
-    {
-      "symbol": "1000000BOBUSDT",
-      "value": 0.0429
-    },
-    {
-      "symbol": "COLLECTUSDT",
-      "value": 0.0428
-    },
-    {
-      "symbol": "CYSUSDT",
-      "value": 0.04204
-    },
-    {
-      "symbol": "DAMUSDT",
-      "value": 0.04067
-    },
-    {
-      "symbol": "ONUSDT",
-      "value": 0.04061
+      "symbol": "RAVEUSDT",
+      "value": 0.05779
     },
     {
       "symbol": "AGTUSDT",
-      "value": 0.03862
+      "value": 0.05144
     },
     {
-      "symbol": "LABUSDT",
-      "value": 0.03747
+      "symbol": "ONUSDT",
+      "value": 0.048
     },
     {
-      "symbol": "POWERUSDT",
-      "value": 0.03304
+      "symbol": "FOLKSUSDT",
+      "value": 0.04796
+    },
+    {
+      "symbol": "LYNUSDT",
+      "value": 0.04772
+    },
+    {
+      "symbol": "DAMUSDT",
+      "value": 0.04646
+    },
+    {
+      "symbol": "ARIAUSDT",
+      "value": 0.04506
+    },
+    {
+      "symbol": "AIAUSDT",
+      "value": 0.03933
+    },
+    {
+      "symbol": "ARCUSDT",
+      "value": 0.0393
+    },
+    {
+      "symbol": "COLLECTUSDT",
+      "value": 0.03918
     },
     {
       "symbol": "MAGMAUSDT",
-      "value": 0.029
+      "value": 0.03779
     },
     {
-      "symbol": "TAUSDT",
-      "value": 0.02502
+      "symbol": "NAORISUSDT",
+      "value": 0.03704
     },
     {
-      "symbol": "BSBUSDT",
-      "value": 0.02437
-    },
-    {
-      "symbol": "TACUSDT",
-      "value": 0.02385
+      "symbol": "CYSUSDT",
+      "value": 0.03538
     },
     {
       "symbol": "UBUSDT",
-      "value": 0.02322
-    },
-    {
-      "symbol": "HANAUSDT",
-      "value": 0.02223
-    },
-    {
-      "symbol": "EDGEUSDT",
-      "value": 0.02137
-    },
-    {
-      "symbol": "BEATUSDT",
-      "value": 0.0201
+      "value": 0.03466
     },
     {
       "symbol": "BASUSDT",
-      "value": 0.01762
+      "value": 0.03118
     },
     {
-      "symbol": "PIEVERSEUSDT",
-      "value": 0.01622
+      "symbol": "TRUTHUSDT",
+      "value": 0.03038
+    },
+    {
+      "symbol": "CLOUSDT",
+      "value": 0.02787
+    },
+    {
+      "symbol": "POWERUSDT",
+      "value": 0.02688
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "value": 0.02299
+    },
+    {
+      "symbol": "TACUSDT",
+      "value": 0.02047
     },
     {
       "symbol": "FHEUSDT",
-      "value": 0.01607
+      "value": 0.01979
     },
     {
-      "symbol": "PLAYUSDT",
-      "value": 0.01439
+      "symbol": "EDGEUSDT",
+      "value": 0.01839
     },
     {
-      "symbol": "ACTUSDT",
-      "value": 0.01331
+      "symbol": "PIEVERSEUSDT",
+      "value": 0.01835
     },
     {
-      "symbol": "JELLYJELLYUSDT",
-      "value": 0.01268
+      "symbol": "BSBUSDT",
+      "value": 0.0183
     },
     {
-      "symbol": "APRUSDT",
-      "value": 0.01259
+      "symbol": "TAUSDT",
+      "value": 0.01697
     },
     {
-      "symbol": "RLCUSDT",
-      "value": 0.01
+      "symbol": "HANAUSDT",
+      "value": 0.01678
     },
     {
-      "symbol": "QNTUSDT",
-      "value": 0.01
+      "symbol": "BEATUSDT",
+      "value": 0.01561
     },
     {
-      "symbol": "PEOPLEUSDT",
-      "value": 0.01
+      "symbol": "LABUSDT",
+      "value": 0.01525
     },
     {
-      "symbol": "1000XECUSDT",
-      "value": 0.01
+      "symbol": "AIOTUSDT",
+      "value": 0.01366
     },
     {
-      "symbol": "COTIUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "IDUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "XVSUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "BELUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "CRVUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "KNCUSDT",
+      "symbol": "XMRUSDT",
       "value": 0.01
     },
     {
@@ -3920,31 +3872,7 @@
       "value": 0.01
     },
     {
-      "symbol": "NEARUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "SFPUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "CHRUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "AGLDUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "JOEUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "CKBUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "IOSTUSDT",
+      "symbol": "CRVUSDT",
       "value": 0.01
     },
     {
@@ -3952,59 +3880,11 @@
       "value": 0.01
     },
     {
-      "symbol": "HOTUSDT",
+      "symbol": "SNXUSDT",
       "value": 0.01
     },
     {
-      "symbol": "ATAUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "RSRUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "ARPAUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "XMRUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "CFXUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "SPELLUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "APTUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "IOTAUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "BNTUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "WOOUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "ONEUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "HFTUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "MTLUSDT",
+      "symbol": "1INCHUSDT",
       "value": 0.01
     },
     {
@@ -4012,35 +3892,15 @@
       "value": 0.01
     },
     {
-      "symbol": "NEOUSDT",
+      "symbol": "STGUSDT",
       "value": 0.01
     },
     {
-      "symbol": "BTCDOMUSDT",
+      "symbol": "BNTUSDT",
       "value": 0.01
     },
     {
-      "symbol": "CTSIUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "YFIUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "CELRUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "ZECUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "XVGUSDT",
-      "value": 0.01
-    },
-    {
-      "symbol": "SNXUSDT",
+      "symbol": "HFTUSDT",
       "value": 0.01
     },
     {
@@ -4048,15 +3908,19 @@
       "value": 0.01
     },
     {
-      "symbol": "STGUSDT",
+      "symbol": "PEOPLEUSDT",
       "value": 0.01
     },
     {
-      "symbol": "QTUMUSDT",
+      "symbol": "HOTUSDT",
       "value": 0.01
     },
     {
-      "symbol": "MAVUSDT",
+      "symbol": "IOTAUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "1000XECUSDT",
       "value": 0.01
     },
     {
@@ -4064,599 +3928,175 @@
       "value": 0.01
     },
     {
-      "symbol": "BATUSDT",
-      "value": 0.0095
+      "symbol": "CELRUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "CKBUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "QTUMUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "IOSTUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "SFPUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "MAVUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "ONEUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "BTCDOMUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "ATAUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "ARPAUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "BELUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "IDUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "QNTUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "XVGUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "RSRUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "COTIUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "MTLUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "APTUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "CTSIUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "SPELLUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "YFIUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "KNCUSDT",
+      "value": 0.01
+    },
+    {
+      "symbol": "CFXUSDT",
+      "value": 0.00953
+    },
+    {
+      "symbol": "RLCUSDT",
+      "value": 0.00932
+    },
+    {
+      "symbol": "ZECUSDT",
+      "value": 0.00926
+    },
+    {
+      "symbol": "NEARUSDT",
+      "value": 0.0091
     },
     {
       "symbol": "BANUSDT",
-      "value": 0.00897
-    },
-    {
-      "symbol": "ASTRUSDT",
-      "value": 0.00895
-    },
-    {
-      "symbol": "TAGUSDT",
-      "value": 0.00876
-    },
-    {
-      "symbol": "DEGOUSDT",
-      "value": 0.00857
-    },
-    {
-      "symbol": "OPUSDT",
-      "value": 0.0085
-    },
-    {
-      "symbol": "CHZUSDT",
-      "value": 0.00822
-    },
-    {
-      "symbol": "1INCHUSDT",
-      "value": 0.00821
-    },
-    {
-      "symbol": "HBARUSDT",
-      "value": 0.00797
-    },
-    {
-      "symbol": "UNIUSDT",
-      "value": 0.00791
-    },
-    {
-      "symbol": "JASMYUSDT",
-      "value": 0.0078
-    },
-    {
-      "symbol": "FILUSDT",
-      "value": 0.00775
-    },
-    {
-      "symbol": "IRYSUSDT",
-      "value": 0.00774
-    },
-    {
-      "symbol": "ENSUSDT",
-      "value": 0.00764
-    },
-    {
-      "symbol": "ACHUSDT",
-      "value": 0.00711
-    },
-    {
-      "symbol": "LONGXIAUSDT",
-      "value": 0.0065
-    },
-    {
-      "symbol": "GMXUSDT",
-      "value": 0.00593
-    },
-    {
-      "symbol": "EGLDUSDT",
-      "value": 0.00568
+      "value": 0.00839
     },
     {
       "symbol": "BLUAIUSDT",
-      "value": 0.00523
+      "value": 0.00827
     },
     {
-      "symbol": "LDOUSDT",
-      "value": 0.00522
+      "symbol": "JELLYJELLYUSDT",
+      "value": 0.0076
     },
     {
-      "symbol": "PROMPTUSDT",
-      "value": 0.005
+      "symbol": "CHZUSDT",
+      "value": 0.00733
     },
     {
-      "symbol": "XAIUSDT",
-      "value": 0.005
+      "symbol": "JASMYUSDT",
+      "value": 0.0069
     },
     {
-      "symbol": "METUSDT",
-      "value": 0.005
+      "symbol": "1000000BOBUSDT",
+      "value": 0.00689
     },
     {
-      "symbol": "OPNUSDT",
-      "value": 0.005
+      "symbol": "PLAYUSDT",
+      "value": 0.00687
     },
     {
-      "symbol": "AVNTUSDT",
-      "value": 0.005
+      "symbol": "LONGXIAUSDT",
+      "value": 0.00639
     },
     {
-      "symbol": "1000BONKUSDT",
-      "value": 0.005
+      "symbol": "BATUSDT",
+      "value": 0.00636
     },
     {
-      "symbol": "AERGOUSDT",
-      "value": 0.005
+      "symbol": "WOOUSDT",
+      "value": 0.00603
     },
     {
-      "symbol": "MELANIAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SKRUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TWTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SQDUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "JSTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CFGUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SOMIUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TRBUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TURTLEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ZKUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "DEEPUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "COAIUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "DEGENUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ESPUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TRIAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CGPTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MYXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "1000SATSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MLNUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TNSRUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "FIDAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SAFEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ORDIUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SWARMSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "RAYSOLUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SLPUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "AKTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "HYPERUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ALPINEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SAHARAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "OGUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MOODENGUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "AWEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MAGICUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ERAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ATUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ACEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SONICUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "DOODUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BMTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "VTHOUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "DODOXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "AZTECUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "GLMUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "AUCTIONUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "GRASSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "XPLUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "FLUIDUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TOWNSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "THEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "HEMIUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "RVNUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "XTZUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ZKPUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ZBTUSDT",
-      "value": 0.005
+      "symbol": "ACTUSDT",
+      "value": 0.00581
     },
     {
       "symbol": "PIPPINUSDT",
+      "value": 0.0054
+    },
+    {
+      "symbol": "AVAAIUSDT",
+      "value": 0.00537
+    },
+    {
+      "symbol": "ENSUSDT",
+      "value": 0.00536
+    },
+    {
+      "symbol": "IRYSUSDT",
+      "value": 0.00515
+    },
+    {
+      "symbol": "DOGSUSDT",
       "value": 0.005
     },
     {
-      "symbol": "VELODROMEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "GRIFFAINUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "1000000MOGUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "FIGHTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "USELESSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "QUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TUTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SENTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "HEIUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "LAYERUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MITOUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MONUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "POLYXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "KMNOUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "LSKUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CVXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "PUNDIXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BANKUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "AIOTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "IDOLUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "PIXELUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MASKUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ASRUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "LAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "LIGHTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "IRUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "XPINUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "GOATUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MEWUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "STBLUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MOCAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "DUSKUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CLANKERUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ALCHUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "HAEDALUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CHILLGUYUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "4USDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CTKUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ZRXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "LUNA2USDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SPORTFUNUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "FUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "KAIAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "YGGUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BREVUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "UMAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "B2USDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "OPENUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BSVUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "NILUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "JUPUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "B3USDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "1MBABYDOGEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TRADOORUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "VICUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "FLOWUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "NAORISUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "IOUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "1000CATUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "GPSUSDT",
+      "symbol": "SYSUSDT",
       "value": 0.005
     },
     {
@@ -4664,187 +4104,35 @@
       "value": 0.005
     },
     {
-      "symbol": "HMSTRUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "DOGSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "COWUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "AVAAIUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SXTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MBOXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BRETTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "XNYUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MERLUSDT",
-      "value": 0.005
-    },
-    {
       "symbol": "DOLOUSDT",
       "value": 0.005
     },
     {
-      "symbol": "CATIUSDT",
+      "symbol": "POWRUSDT",
       "value": 0.005
     },
     {
-      "symbol": "LITUSDT",
+      "symbol": "CGPTUSDT",
       "value": 0.005
     },
     {
-      "symbol": "EPICUSDT",
+      "symbol": "HEIUSDT",
       "value": 0.005
     },
     {
-      "symbol": "STORJUSDT",
+      "symbol": "BROCCOLIF3BUSDT",
       "value": 0.005
     },
     {
-      "symbol": "RIFUSDT",
+      "symbol": "DEGENUSDT",
       "value": 0.005
     },
     {
-      "symbol": "VELVETUSDT",
+      "symbol": "BIANRENSHENGUSDT",
       "value": 0.005
     },
     {
-      "symbol": "FFUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BASEDUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SYRUPUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MMTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "REZUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CCUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "FRAXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "AIUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "WAXPUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "NFPUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CHIPUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "VINEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "1000RATSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CETUSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SUPERUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SCRTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ENAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ETHWUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SHELLUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TRUSTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MAVIAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "HUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "LUMIAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SYNUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ORCAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TAIKOUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ANIMEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MORPHOUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MOVRUSDT",
+      "symbol": "BIGTIMEUSDT",
       "value": 0.005
     },
     {
@@ -4852,51 +4140,19 @@
       "value": 0.005
     },
     {
-      "symbol": "TSTUSDT",
+      "symbol": "CLANKERUSDT",
       "value": 0.005
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "FUSDT",
       "value": 0.005
     },
     {
-      "symbol": "DIAUSDT",
+      "symbol": "TUTUSDT",
       "value": 0.005
     },
     {
-      "symbol": "FARTCOINUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "NOTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "NMRUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "GMTUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "1000CHEEMSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ZEREBROUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ZORAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ARKUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "PLUMEUSDT",
+      "symbol": "SOPHUSDT",
       "value": 0.005
     },
     {
@@ -4904,7 +4160,403 @@
       "value": 0.005
     },
     {
-      "symbol": "BIGTIMEUSDT",
+      "symbol": "SKRUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "B2USDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "1000BONKUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "EULUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "KMNOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SPORTFUNUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ZORAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "METUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BMTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MELANIAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "XNYUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "FARTCOINUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "GMTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ESPORTSUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "1000CATUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "NILUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "VVVUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TSTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "NMRUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "VANRYUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "AERGOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "1000CHEEMSUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "VELVETUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "OPNUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "OGUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "COAIUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "GPSUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "FLOCKUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "CATIUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "EDENUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "COWUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "CETUSUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ICNTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "FIGHTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TWTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "USELESSUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "IOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "KASUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TNSRUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "HYPERUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "PROMPTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "FFUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BRETTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MYXUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "KAVAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "EPICUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "QUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TOWNSUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "KATUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SONICUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "LIGHTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ANIMEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BREVUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "VTHOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SXTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ETHWUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "THEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "LUNA2USDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "NOTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BASEDUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ATUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SCRUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BTRUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "AZTECUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "RVNUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "GOATUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BABYUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "AEVOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "LAYERUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MAVIAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ALLOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MANTAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MITOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "DEEPUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "APRUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TRBUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "PROVEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BIRBUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ZKPUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "AIUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "LITUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "CUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "HUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "HAEDALUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "FRAXUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TRIAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "1000000MOGUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ROBOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "FLUIDUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "LSKUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BOMEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "POLYXUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "NFPUSDT",
       "value": 0.005
     },
     {
@@ -4916,31 +4568,35 @@
       "value": 0.005
     },
     {
-      "symbol": "PARTIUSDT",
+      "symbol": "ENAUSDT",
       "value": 0.005
     },
     {
-      "symbol": "TAKEUSDT",
+      "symbol": "GRASSUSDT",
       "value": 0.005
     },
     {
-      "symbol": "MUBARAKUSDT",
+      "symbol": "STBLUSDT",
       "value": 0.005
     },
     {
-      "symbol": "SANTOSUSDT",
+      "symbol": "SWARMSUSDT",
       "value": 0.005
     },
     {
-      "symbol": "HOLOUSDT",
+      "symbol": "ICXUSDT",
       "value": 0.005
     },
     {
-      "symbol": "BANANAS31USDT",
+      "symbol": "KAITOUSDT",
       "value": 0.005
     },
     {
-      "symbol": "BOMEUSDT",
+      "symbol": "CHILLGUYUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ALCHUSDT",
       "value": 0.005
     },
     {
@@ -4948,19 +4604,7 @@
       "value": 0.005
     },
     {
-      "symbol": "ENSOUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "EVAAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BABYUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ZILUSDT",
+      "symbol": "SAFEUSDT",
       "value": 0.005
     },
     {
@@ -4968,7 +4612,283 @@
       "value": 0.005
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "BANKUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MEMEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TURTLEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ZKJUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ACEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "EIGENUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "B3USDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "RIVERUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "RIFUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MEGAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "FOGOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "VELODROMEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "RECALLUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "CROSSUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "DUSKUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MBOXUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "DYMUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "GLMUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "1000SATSUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SOMIUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SHELLUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "HUMAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "IMXUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "XPLUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "DODOXUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "REZUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SENTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "AVNTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ENSOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "HEMIUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SPACEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BRUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "EVAAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MEWUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "COOKIEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "AIOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BOBUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "XTZUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "PTBUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "NIGHTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MLNUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "XPINUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "FIDAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "KITEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MOODENGUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "IRUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "1MBABYDOGEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "STORJUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "DIAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BBUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "JSTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ARKUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SYRUPUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BEAMXUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "IDOLUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "LISTAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ATHUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SUPERUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MOCAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "AVAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "USUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "4USDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "AKTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "VICUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MERLUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "VINEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ACUUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TRUSTUSDT",
       "value": 0.005
     },
     {
@@ -4976,7 +4896,91 @@
       "value": 0.005
     },
     {
-      "symbol": "AIOUSDT",
+      "symbol": "SCRTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MMTUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "FLOWUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BSVUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "BANANAS31USDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ASRUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SANTOSUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TOSHIUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TAIKOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TAKEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SAHARAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "AWEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "DEGOUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ZEREBROUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "KGENUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "TAGUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ORDERUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "PLUMEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SUNUSDT",
       "value": 0.005
     },
     {
@@ -4988,179 +4992,7 @@
       "value": 0.005
     },
     {
-      "symbol": "BTRUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "COSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "IMXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "CROSSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "VVVUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BIRBUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SCRUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "KATUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BROCCOLIF3BUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "KITEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BRUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "KGENUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BBUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "AVAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "KAVAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "NEIROUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "USTCUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "FOGOUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "KASUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ORDERUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ACUUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MEMEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SOPHUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "HUMAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "EDENUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MANTAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "VANRYUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "LISTAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "TOSHIUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "RECALLUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SPACEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "FLUXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "USUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BOBUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ICXUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "MEGAUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "FLOCKUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "COOKIEUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "AEVOUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "SYSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "EULUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BLESSUSDT",
-      "value": 0.005
-    },
-    {
-      "symbol": "BEAMXUSDT",
+      "symbol": "LUMIAUSDT",
       "value": 0.005
     },
     {
@@ -5168,252 +5000,296 @@
       "value": 0.005
     },
     {
-      "symbol": "RIVERUSDT",
+      "symbol": "TRADOORUSDT",
       "value": 0.005
     },
     {
-      "symbol": "ICNTUSDT",
+      "symbol": "XAIUSDT",
       "value": 0.005
     },
     {
-      "symbol": "ESPORTSUSDT",
+      "symbol": "CTKUSDT",
       "value": 0.005
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "MONUSDT",
       "value": 0.005
     },
     {
-      "symbol": "POWRUSDT",
+      "symbol": "OPENUSDT",
       "value": 0.005
     },
     {
-      "symbol": "DYMUSDT",
+      "symbol": "PUNDIXUSDT",
       "value": 0.005
     },
     {
-      "symbol": "PTBUSDT",
+      "symbol": "1000RATSUSDT",
       "value": 0.005
     },
     {
-      "symbol": "ZKJUSDT",
+      "symbol": "LAUSDT",
       "value": 0.005
     },
     {
-      "symbol": "PHAUSDT",
-      "value": 0.00492
+      "symbol": "BLESSUSDT",
+      "value": 0.005
     },
     {
-      "symbol": "PROVEUSDT",
-      "value": 0.0049
+      "symbol": "FLUXUSDT",
+      "value": 0.005
     },
     {
-      "symbol": "2ZUSDT",
-      "value": 0.00486
+      "symbol": "KAIAUSDT",
+      "value": 0.005
     },
     {
-      "symbol": "ZENUSDT",
-      "value": 0.00479
+      "symbol": "GRIFFAINUSDT",
+      "value": 0.005
     },
     {
-      "symbol": "OGNUSDT",
-      "value": 0.00472
+      "symbol": "CCUSDT",
+      "value": 0.005
     },
     {
-      "symbol": "TLMUSDT",
-      "value": 0.00448
+      "symbol": "HMSTRUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "ALPINEUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "SQDUSDT",
+      "value": 0.005
+    },
+    {
+      "symbol": "NEIROUSDT",
+      "value": 0.00498
+    },
+    {
+      "symbol": "ACHUSDT",
+      "value": 0.00484
+    },
+    {
+      "symbol": "UNIUSDT",
+      "value": 0.00475
+    },
+    {
+      "symbol": "ZILUSDT",
+      "value": 0.00459
+    },
+    {
+      "symbol": "ARBUSDT",
+      "value": 0.00454
     },
     {
       "symbol": "BROCCOLI714USDT",
-      "value": 0.00424
+      "value": 0.0044
     },
     {
-      "symbol": "1000SHIBUSDT",
-      "value": 0.00414
+      "symbol": "MAGICUSDT",
+      "value": 0.00438
     },
     {
-      "symbol": "SAGAUSDT",
-      "value": 0.00402
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "value": 0.004
-    },
-    {
-      "symbol": "SUSHIUSDT",
-      "value": 0.00392
-    },
-    {
-      "symbol": "AIXBTUSDT",
-      "value": 0.0039
-    },
-    {
-      "symbol": "ROBOUSDT",
-      "value": 0.0038
-    },
-    {
-      "symbol": "BANANAUSDT",
-      "value": 0.00371
-    },
-    {
-      "symbol": "ROSEUSDT",
-      "value": 0.00361
-    },
-    {
-      "symbol": "1000PEPEUSDT",
-      "value": 0.0036
-    },
-    {
-      "symbol": "GRTUSDT",
-      "value": 0.00354
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "value": 0.00352
-    },
-    {
-      "symbol": "XLMUSDT",
-      "value": 0.00333
-    },
-    {
-      "symbol": "USUALUSDT",
-      "value": 0.00327
-    },
-    {
-      "symbol": "NXPCUSDT",
-      "value": 0.00313
-    },
-    {
-      "symbol": "PENDLEUSDT",
-      "value": 0.00306
-    },
-    {
-      "symbol": "AUSDT",
-      "value": 0.00301
-    },
-    {
-      "symbol": "BCHUSDT",
-      "value": 0.00294
-    },
-    {
-      "symbol": "ONGUSDT",
-      "value": 0.00281
-    },
-    {
-      "symbol": "EIGENUSDT",
-      "value": 0.00281
-    },
-    {
-      "symbol": "BIANRENSHENGUSDT",
-      "value": 0.00276
-    },
-    {
-      "symbol": "ATHUSDT",
-      "value": 0.00266
-    },
-    {
-      "symbol": "CVCUSDT",
-      "value": 0.00266
-    },
-    {
-      "symbol": "ARKMUSDT",
-      "value": 0.00259
-    },
-    {
-      "symbol": "STRKUSDT",
-      "value": 0.00236
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "value": 0.00227
-    },
-    {
-      "symbol": "SKYUSDT",
-      "value": 0.00217
-    },
-    {
-      "symbol": "STOUSDT",
-      "value": 0.00216
-    },
-    {
-      "symbol": "JTOUSDT",
-      "value": 0.00205
-    },
-    {
-      "symbol": "RAREUSDT",
-      "value": 0.00195
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "value": 0.00187
-    },
-    {
-      "symbol": "PYTHUSDT",
-      "value": 0.00185
-    },
-    {
-      "symbol": "RPLUSDT",
-      "value": 0.00174
-    },
-    {
-      "symbol": "NEWTUSDT",
-      "value": 0.00157
-    },
-    {
-      "symbol": "XRPUSDT",
-      "value": 0.00151
-    },
-    {
-      "symbol": "NIGHTUSDT",
-      "value": 0.00134
+      "symbol": "PARTIUSDT",
+      "value": 0.00438
     },
     {
       "symbol": "PUMPUSDT",
-      "value": 0.00122
+      "value": 0.00416
     },
     {
-      "symbol": "SUIUSDT",
-      "value": 0.00122
+      "symbol": "JUPUSDT",
+      "value": 0.00405
     },
     {
-      "symbol": "WETUSDT",
-      "value": 0.00107
+      "symbol": "1000SHIBUSDT",
+      "value": 0.00393
     },
     {
-      "symbol": "SAPIENUSDT",
-      "value": 0.00106
+      "symbol": "USTCUSDT",
+      "value": 0.00388
     },
     {
-      "symbol": "HYPEUSDT",
-      "value": 0.00097
+      "symbol": "PORTALUSDT",
+      "value": 0.00386
     },
     {
-      "symbol": "YBUSDT",
-      "value": 0.00065
+      "symbol": "HBARUSDT",
+      "value": 0.00384
     },
     {
-      "symbol": "LTCUSDT",
-      "value": 0.00065
+      "symbol": "PYTHUSDT",
+      "value": 0.00374
     },
     {
-      "symbol": "AAVEUSDT",
-      "value": 0.00056
+      "symbol": "WAXPUSDT",
+      "value": 0.00367
     },
     {
-      "symbol": "PNUTUSDT",
-      "value": 0.00051
+      "symbol": "CVCUSDT",
+      "value": 0.00361
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "value": 0.00358
+    },
+    {
+      "symbol": "LDOUSDT",
+      "value": 0.00341
+    },
+    {
+      "symbol": "ZKUSDT",
+      "value": 0.00338
+    },
+    {
+      "symbol": "2ZUSDT",
+      "value": 0.00331
+    },
+    {
+      "symbol": "ERAUSDT",
+      "value": 0.00321
+    },
+    {
+      "symbol": "SYNUSDT",
+      "value": 0.00308
+    },
+    {
+      "symbol": "FORMUSDT",
+      "value": 0.00305
+    },
+    {
+      "symbol": "MOVRUSDT",
+      "value": 0.00299
+    },
+    {
+      "symbol": "JOEUSDT",
+      "value": 0.00283
+    },
+    {
+      "symbol": "STRKUSDT",
+      "value": 0.0028
+    },
+    {
+      "symbol": "BANANAUSDT",
+      "value": 0.00273
+    },
+    {
+      "symbol": "ASTRUSDT",
+      "value": 0.00254
+    },
+    {
+      "symbol": "ROSEUSDT",
+      "value": 0.00252
+    },
+    {
+      "symbol": "XLMUSDT",
+      "value": 0.00234
+    },
+    {
+      "symbol": "ZENUSDT",
+      "value": 0.00224
+    },
+    {
+      "symbol": "ZRXUSDT",
+      "value": 0.00222
+    },
+    {
+      "symbol": "PHAUSDT",
+      "value": 0.00199
+    },
+    {
+      "symbol": "POPCATUSDT",
+      "value": 0.00192
+    },
+    {
+      "symbol": "ESPUSDT",
+      "value": 0.00189
+    },
+    {
+      "symbol": "MASKUSDT",
+      "value": 0.0018
     },
     {
       "symbol": "GALAUSDT",
-      "value": 0.00042
+      "value": 0.00176
     },
     {
-      "symbol": "TAOUSDT",
-      "value": 0.00019
+      "symbol": "POLUSDT",
+      "value": 0.00149
     },
     {
-      "symbol": "MINAUSDT",
-      "value": 3e-05
+      "symbol": "LTCUSDT",
+      "value": 0.00138
+    },
+    {
+      "symbol": "NEOUSDT",
+      "value": 0.00133
+    },
+    {
+      "symbol": "YGGUSDT",
+      "value": 0.00113
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "value": 0.00099
+    },
+    {
+      "symbol": "WETUSDT",
+      "value": 0.00086
+    },
+    {
+      "symbol": "SKYUSDT",
+      "value": 0.00084
+    },
+    {
+      "symbol": "AGLDUSDT",
+      "value": 0.00067
+    },
+    {
+      "symbol": "HYPEUSDT",
+      "value": 0.00066
+    },
+    {
+      "symbol": "GRTUSDT",
+      "value": 0.00064
+    },
+    {
+      "symbol": "XRPUSDT",
+      "value": 0.00044
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "value": 0.00033
+    },
+    {
+      "symbol": "STEEMUSDT",
+      "value": 0.00033
+    },
+    {
+      "symbol": "BCHUSDT",
+      "value": 0.00025
+    },
+    {
+      "symbol": "ORCAUSDT",
+      "value": 0.00017
+    },
+    {
+      "symbol": "RAYSOLUSDT",
+      "value": 0.00014
+    },
+    {
+      "symbol": "NEWTUSDT",
+      "value": 0.00013
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "value": 0.00013
+    },
+    {
+      "symbol": "DOTUSDT",
+      "value": 7e-05
     },
     {
       "symbol": "GASUSDT",
@@ -5424,448 +5300,572 @@
       "value": 0.0
     },
     {
-      "symbol": "1000LUNCUSDT",
-      "value": -0.00021
-    },
-    {
-      "symbol": "REDUSDT",
-      "value": -0.00025
-    },
-    {
-      "symbol": "LPTUSDT",
-      "value": -0.00026
-    },
-    {
-      "symbol": "LQTYUSDT",
-      "value": -0.00043
-    },
-    {
-      "symbol": "LINEAUSDT",
-      "value": -0.00045
-    },
-    {
-      "symbol": "1000FLOKIUSDT",
-      "value": -0.00092
-    },
-    {
-      "symbol": "ARBUSDT",
-      "value": -0.00122
-    },
-    {
-      "symbol": "FORMUSDT",
-      "value": -0.00132
-    },
-    {
-      "symbol": "VIRTUALUSDT",
-      "value": -0.00137
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "value": -0.00145
-    },
-    {
-      "symbol": "POLUSDT",
-      "value": -0.00152
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "value": -0.00159
-    },
-    {
-      "symbol": "CYBERUSDT",
-      "value": -0.00174
-    },
-    {
-      "symbol": "DOTUSDT",
-      "value": -0.00174
-    },
-    {
-      "symbol": "SPKUSDT",
-      "value": -0.00178
-    },
-    {
-      "symbol": "TIAUSDT",
-      "value": -0.00196
-    },
-    {
-      "symbol": "ANKRUSDT",
-      "value": -0.002
-    },
-    {
-      "symbol": "DASHUSDT",
-      "value": -0.00202
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "value": -0.00203
-    },
-    {
-      "symbol": "SSVUSDT",
-      "value": -0.00235
-    },
-    {
-      "symbol": "TONUSDT",
-      "value": -0.00241
-    },
-    {
-      "symbol": "LINKUSDT",
-      "value": -0.00249
-    },
-    {
-      "symbol": "GUNUSDT",
-      "value": -0.00255
-    },
-    {
       "symbol": "ZAMAUSDT",
-      "value": -0.00262
+      "value": -0.00017
     },
     {
-      "symbol": "HOMEUSDT",
-      "value": -0.00277
+      "symbol": "FILUSDT",
+      "value": -0.00019
     },
     {
-      "symbol": "SKLUSDT",
-      "value": -0.0031
+      "symbol": "NXPCUSDT",
+      "value": -0.00032
     },
     {
-      "symbol": "WCTUSDT",
-      "value": -0.00347
+      "symbol": "JTOUSDT",
+      "value": -0.00057
     },
     {
-      "symbol": "MANTRAUSDT",
-      "value": -0.0037
-    },
-    {
-      "symbol": "ALTUSDT",
-      "value": -0.00371
-    },
-    {
-      "symbol": "SEIUSDT",
-      "value": -0.00386
-    },
-    {
-      "symbol": "METISUSDT",
-      "value": -0.00448
-    },
-    {
-      "symbol": "THETAUSDT",
-      "value": -0.00456
-    },
-    {
-      "symbol": "MANAUSDT",
-      "value": -0.00462
-    },
-    {
-      "symbol": "ILVUSDT",
-      "value": -0.00549
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "value": -0.00559
-    },
-    {
-      "symbol": "SIRENUSDT",
-      "value": -0.00579
-    },
-    {
-      "symbol": "ICPUSDT",
-      "value": -0.0059
+      "symbol": "PIXELUSDT",
+      "value": -0.00062
     },
     {
       "symbol": "HIVEUSDT",
-      "value": -0.00592
+      "value": -0.00073
     },
     {
-      "symbol": "KSMUSDT",
-      "value": -0.0061
+      "symbol": "MINAUSDT",
+      "value": -0.00082
     },
     {
-      "symbol": "STEEMUSDT",
-      "value": -0.00613
+      "symbol": "WCTUSDT",
+      "value": -0.00098
     },
     {
-      "symbol": "POPCATUSDT",
-      "value": -0.00638
+      "symbol": "SLPUSDT",
+      "value": -0.00122
     },
     {
-      "symbol": "ADAUSDT",
-      "value": -0.00672
+      "symbol": "AIXBTUSDT",
+      "value": -0.00131
     },
     {
-      "symbol": "WIFUSDT",
-      "value": -0.00688
+      "symbol": "1000FLOKIUSDT",
+      "value": -0.00138
     },
     {
-      "symbol": "SANDUSDT",
-      "value": -0.0073
+      "symbol": "OPUSDT",
+      "value": -0.00143
     },
     {
-      "symbol": "SPXUSDT",
-      "value": -0.00736
+      "symbol": "CFGUSDT",
+      "value": -0.00147
     },
     {
-      "symbol": "BTCUSDT",
-      "value": -0.0076
+      "symbol": "SAGAUSDT",
+      "value": -0.00152
     },
     {
-      "symbol": "RUNEUSDT",
-      "value": -0.00763
+      "symbol": "SUSHIUSDT",
+      "value": -0.0016
     },
     {
-      "symbol": "INJUSDT",
-      "value": -0.0077
+      "symbol": "YBUSDT",
+      "value": -0.00163
     },
     {
-      "symbol": "VETUSDT",
-      "value": -0.00777
+      "symbol": "THETAUSDT",
+      "value": -0.00183
     },
     {
-      "symbol": "ETCUSDT",
-      "value": -0.00799
+      "symbol": "XVSUSDT",
+      "value": -0.00183
+    },
+    {
+      "symbol": "1000PEPEUSDT",
+      "value": -0.00184
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "value": -0.00195
+    },
+    {
+      "symbol": "PNUTUSDT",
+      "value": -0.00208
+    },
+    {
+      "symbol": "TIAUSDT",
+      "value": -0.00219
+    },
+    {
+      "symbol": "AUSDT",
+      "value": -0.0023
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "value": -0.0023
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "value": -0.00231
+    },
+    {
+      "symbol": "HOLOUSDT",
+      "value": -0.00273
+    },
+    {
+      "symbol": "LPTUSDT",
+      "value": -0.00276
+    },
+    {
+      "symbol": "RAREUSDT",
+      "value": -0.00283
     },
     {
       "symbol": "APEUSDT",
-      "value": -0.00842
+      "value": -0.00287
     },
     {
-      "symbol": "DYDXUSDT",
-      "value": -0.00875
+      "symbol": "SKLUSDT",
+      "value": -0.00295
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "value": -0.00876
+      "symbol": "CYBERUSDT",
+      "value": -0.00298
     },
     {
-      "symbol": "STXUSDT",
-      "value": -0.00881
+      "symbol": "TONUSDT",
+      "value": -0.00305
     },
     {
-      "symbol": "SUSDT",
-      "value": -0.00881
+      "symbol": "USUALUSDT",
+      "value": -0.00315
     },
     {
-      "symbol": "AVAXUSDT",
-      "value": -0.0092
+      "symbol": "CVXUSDT",
+      "value": -0.00319
     },
     {
-      "symbol": "ARUSDT",
-      "value": -0.00946
+      "symbol": "1000LUNCUSDT",
+      "value": -0.00328
     },
     {
-      "symbol": "ELSAUSDT",
-      "value": -0.00979
+      "symbol": "AAVEUSDT",
+      "value": -0.0034
     },
     {
-      "symbol": "AXSUSDT",
-      "value": -0.01004
+      "symbol": "SEIUSDT",
+      "value": -0.00346
     },
     {
-      "symbol": "SOLUSDT",
-      "value": -0.01032
+      "symbol": "GMXUSDT",
+      "value": -0.00365
     },
     {
-      "symbol": "ZROUSDT",
-      "value": -0.01063
+      "symbol": "PAXGUSDT",
+      "value": -0.0037
     },
     {
-      "symbol": "ALGOUSDT",
-      "value": -0.01144
+      "symbol": "ONGUSDT",
+      "value": -0.0037
     },
     {
-      "symbol": "PRLUSDT",
-      "value": -0.01183
+      "symbol": "SSVUSDT",
+      "value": -0.00375
     },
     {
-      "symbol": "RENDERUSDT",
-      "value": -0.01217
+      "symbol": "DOODUSDT",
+      "value": -0.00391
+    },
+    {
+      "symbol": "LINKUSDT",
+      "value": -0.00391
+    },
+    {
+      "symbol": "TAOUSDT",
+      "value": -0.00393
+    },
+    {
+      "symbol": "SUIUSDT",
+      "value": -0.00406
+    },
+    {
+      "symbol": "STOUSDT",
+      "value": -0.00416
+    },
+    {
+      "symbol": "EGLDUSDT",
+      "value": -0.00431
+    },
+    {
+      "symbol": "PENDLEUSDT",
+      "value": -0.00445
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "value": -0.00454
+    },
+    {
+      "symbol": "TLMUSDT",
+      "value": -0.00479
+    },
+    {
+      "symbol": "SANDUSDT",
+      "value": -0.00499
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "value": -0.00505
+    },
+    {
+      "symbol": "LINEAUSDT",
+      "value": -0.00532
+    },
+    {
+      "symbol": "COSUSDT",
+      "value": -0.00566
     },
     {
       "symbol": "WUSDT",
-      "value": -0.01243
+      "value": -0.00605
+    },
+    {
+      "symbol": "MANTRAUSDT",
+      "value": -0.0068
+    },
+    {
+      "symbol": "ICPUSDT",
+      "value": -0.00689
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "value": -0.00711
+    },
+    {
+      "symbol": "SAPIENUSDT",
+      "value": -0.00721
+    },
+    {
+      "symbol": "LQTYUSDT",
+      "value": -0.00725
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "value": -0.00729
+    },
+    {
+      "symbol": "GUNUSDT",
+      "value": -0.00753
+    },
+    {
+      "symbol": "MANAUSDT",
+      "value": -0.00764
+    },
+    {
+      "symbol": "OGNUSDT",
+      "value": -0.00778
+    },
+    {
+      "symbol": "REDUSDT",
+      "value": -0.00807
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "value": -0.00811
+    },
+    {
+      "symbol": "ALTUSDT",
+      "value": -0.00814
+    },
+    {
+      "symbol": "SPXUSDT",
+      "value": -0.00821
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "value": -0.00836
+    },
+    {
+      "symbol": "BTCUSDT",
+      "value": -0.00849
+    },
+    {
+      "symbol": "WIFUSDT",
+      "value": -0.00868
+    },
+    {
+      "symbol": "ADAUSDT",
+      "value": -0.00901
+    },
+    {
+      "symbol": "ETCUSDT",
+      "value": -0.00903
+    },
+    {
+      "symbol": "DASHUSDT",
+      "value": -0.00908
     },
     {
       "symbol": "SOLVUSDT",
-      "value": -0.01278
+      "value": -0.00958
     },
     {
-      "symbol": "ETHUSDT",
-      "value": -0.0145
+      "symbol": "ELSAUSDT",
+      "value": -0.01039
     },
     {
-      "symbol": "STABLEUSDT",
-      "value": -0.01588
+      "symbol": "INJUSDT",
+      "value": -0.01059
     },
     {
-      "symbol": "GENIUSUSDT",
-      "value": -0.01928
+      "symbol": "SPKUSDT",
+      "value": -0.01087
     },
     {
-      "symbol": "BERAUSDT",
-      "value": -0.01947
-    },
-    {
-      "symbol": "WALUSDT",
-      "value": -0.01951
+      "symbol": "SOLUSDT",
+      "value": -0.01112
     },
     {
       "symbol": "KOMAUSDT",
-      "value": -0.02027
+      "value": -0.0113
     },
     {
-      "symbol": "ATOMUSDT",
-      "value": -0.02036
+      "symbol": "STXUSDT",
+      "value": -0.01178
     },
     {
-      "symbol": "INITUSDT",
-      "value": -0.0234
+      "symbol": "SIRENUSDT",
+      "value": -0.0118
     },
     {
-      "symbol": "RESOLVUSDT",
-      "value": -0.02591
+      "symbol": "ILVUSDT",
+      "value": -0.01244
     },
     {
-      "symbol": "AEROUSDT",
-      "value": -0.02788
+      "symbol": "CHRUSDT",
+      "value": -0.01251
     },
     {
-      "symbol": "IOTXUSDT",
-      "value": -0.02827
+      "symbol": "ZROUSDT",
+      "value": -0.01258
     },
     {
-      "symbol": "IPUSDT",
-      "value": -0.0284
+      "symbol": "SUSDT",
+      "value": -0.01293
     },
     {
       "symbol": "INXUSDT",
-      "value": -0.02899
+      "value": -0.01308
     },
     {
-      "symbol": "PORTALUSDT",
-      "value": -0.0297
+      "symbol": "AXSUSDT",
+      "value": -0.01322
     },
     {
-      "symbol": "AXLUSDT",
-      "value": -0.03073
+      "symbol": "ARUSDT",
+      "value": -0.01341
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "value": -0.01366
+    },
+    {
+      "symbol": "ANKRUSDT",
+      "value": -0.0137
+    },
+    {
+      "symbol": "VETUSDT",
+      "value": -0.0142
+    },
+    {
+      "symbol": "UMAUSDT",
+      "value": -0.0143
+    },
+    {
+      "symbol": "METISUSDT",
+      "value": -0.01506
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "value": -0.01583
+    },
+    {
+      "symbol": "ETHUSDT",
+      "value": -0.01584
+    },
+    {
+      "symbol": "WALUSDT",
+      "value": -0.01587
+    },
+    {
+      "symbol": "RPLUSDT",
+      "value": -0.0169
+    },
+    {
+      "symbol": "PRLUSDT",
+      "value": -0.01856
+    },
+    {
+      "symbol": "GENIUSUSDT",
+      "value": -0.02088
+    },
+    {
+      "symbol": "IPUSDT",
+      "value": -0.0213
+    },
+    {
+      "symbol": "BERAUSDT",
+      "value": -0.02147
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "value": -0.02239
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "value": -0.02247
+    },
+    {
+      "symbol": "STABLEUSDT",
+      "value": -0.02533
+    },
+    {
+      "symbol": "INITUSDT",
+      "value": -0.02674
     },
     {
       "symbol": "ZETAUSDT",
-      "value": -0.03128
+      "value": -0.02734
     },
     {
-      "symbol": "DUSDT",
-      "value": -0.03371
+      "symbol": "KSMUSDT",
+      "value": -0.03252
     },
     {
-      "symbol": "EDUUSDT",
-      "value": -0.03414
+      "symbol": "IOTXUSDT",
+      "value": -0.03498
     },
     {
-      "symbol": "XANUSDT",
-      "value": -0.03843
+      "symbol": "RESOLVUSDT",
+      "value": -0.03616
     },
     {
-      "symbol": "SIGNUSDT",
-      "value": -0.04166
+      "symbol": "AXLUSDT",
+      "value": -0.03617
     },
     {
       "symbol": "0GUSDT",
-      "value": -0.04464
+      "value": -0.03773
     },
     {
       "symbol": "WLDUSDT",
-      "value": -0.04694
+      "value": -0.04349
     },
     {
-      "symbol": "SOONUSDT",
-      "value": -0.05319
+      "symbol": "AEROUSDT",
+      "value": -0.0441
     },
     {
-      "symbol": "PROMUSDT",
-      "value": -0.06778
+      "symbol": "SIGNUSDT",
+      "value": -0.04533
     },
     {
-      "symbol": "COMPUSDT",
-      "value": -0.07252
+      "symbol": "EDUUSDT",
+      "value": -0.04693
     },
     {
-      "symbol": "API3USDT",
-      "value": -0.07444
+      "symbol": "DUSDT",
+      "value": -0.04727
     },
     {
-      "symbol": "TREEUSDT",
-      "value": -0.08301
+      "symbol": "XANUSDT",
+      "value": -0.0549
     },
     {
       "symbol": "NOMUSDT",
-      "value": -0.08377
+      "value": -0.05598
+    },
+    {
+      "symbol": "ARKMUSDT",
+      "value": -0.05832
     },
     {
       "symbol": "VANAUSDT",
-      "value": -0.08816
+      "value": -0.07318
     },
     {
-      "symbol": "TRUUSDT",
-      "value": -0.10151
+      "symbol": "PROMUSDT",
+      "value": -0.07739
     },
     {
-      "symbol": "ALICEUSDT",
-      "value": -0.11199
-    },
-    {
-      "symbol": "ONTUSDT",
-      "value": -0.11241
-    },
-    {
-      "symbol": "DRIFTUSDT",
-      "value": -0.11808
-    },
-    {
-      "symbol": "BARDUSDT",
-      "value": -0.12532
-    },
-    {
-      "symbol": "FETUSDT",
-      "value": -0.12853
-    },
-    {
-      "symbol": "BIOUSDT",
-      "value": -0.13801
-    },
-    {
-      "symbol": "ALLUSDT",
-      "value": -0.14336
-    },
-    {
-      "symbol": "GTCUSDT",
-      "value": -0.16308
+      "symbol": "COMPUSDT",
+      "value": -0.07884
     },
     {
       "symbol": "RONINUSDT",
-      "value": -0.18567
+      "value": -0.08855
     },
     {
-      "symbol": "BLURUSDT",
-      "value": -0.26109
+      "symbol": "SOONUSDT",
+      "value": -0.09078
+    },
+    {
+      "symbol": "DRIFTUSDT",
+      "value": -0.1081
+    },
+    {
+      "symbol": "ONTUSDT",
+      "value": -0.10843
+    },
+    {
+      "symbol": "TREEUSDT",
+      "value": -0.11477
+    },
+    {
+      "symbol": "API3USDT",
+      "value": -0.11668
+    },
+    {
+      "symbol": "BIOUSDT",
+      "value": -0.12476
+    },
+    {
+      "symbol": "BARDUSDT",
+      "value": -0.13343
+    },
+    {
+      "symbol": "GTCUSDT",
+      "value": -0.13913
+    },
+    {
+      "symbol": "ALICEUSDT",
+      "value": -0.14008
+    },
+    {
+      "symbol": "FETUSDT",
+      "value": -0.14353
+    },
+    {
+      "symbol": "ALLUSDT",
+      "value": -0.14677
+    },
+    {
+      "symbol": "TRUUSDT",
+      "value": -0.17162
     },
     {
       "symbol": "PHBUSDT",
-      "value": -0.30928
-    },
-    {
-      "symbol": "KERNELUSDT",
-      "value": -0.58964
+      "value": -0.29126
     },
     {
       "symbol": "MOVEUSDT",
-      "value": -0.59466
+      "value": -0.30221
+    },
+    {
+      "symbol": "BLURUSDT",
+      "value": -0.35083
+    },
+    {
+      "symbol": "KERNELUSDT",
+      "value": -0.64484
     },
     {
       "symbol": "HIGHUSDT",
-      "value": -0.88183
+      "value": -1.07838
     },
     {
       "symbol": "ENJUSDT",
-      "value": -0.95751
+      "value": -1.08111
     }
   ],
   "weeklyRsi": [
