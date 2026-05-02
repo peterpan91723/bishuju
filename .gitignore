@@ -3,4 +3,6 @@ __pycache__/
 *.pyc
 fetch_data.log
 http_server.log
+fetch_log.txt
+data/rankings.json.bak
 .claude/
