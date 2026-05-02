@@ -1,0 +1,3164 @@
+{
+  "fetchedAt": "2026-05-02T23:46:15.086920+00:00",
+  "weeklyVolume": {
+    "BTCUSDT": 73164449376.0,
+    "XRPUSDT": 3342310269.97,
+    "LTCUSDT": 330701029.18,
+    "TRXUSDT": 353997451.99,
+    "ADAUSDT": 991548686.09,
+    "XLMUSDT": 266244998.52,
+    "BCHUSDT": 383175006.63,
+    "ETHUSDT": 56673854325.62,
+    "LINKUSDT": 617423357.49,
+    "ETCUSDT": 111253839.92,
+    "XTZUSDT": 26386780.26,
+    "XMRUSDT": 291149030.05,
+    "ATOMUSDT": 112213158.0,
+    "ONTUSDT": 68537183.59,
+    "BNBUSDT": 1612945078.0,
+    "IOTAUSDT": 17460117.69,
+    "DASHUSDT": 199735681.9,
+    "VETUSDT": 38699323.72,
+    "ZECUSDT": 3047063494.78,
+    "BATUSDT": 19330384.62,
+    "QTUMUSDT": 8446480.05,
+    "IOSTUSDT": 11000607.81,
+    "NEOUSDT": 20236067.23,
+    "THETAUSDT": 47336348.14,
+    "ZILUSDT": 15541208.42,
+    "ALGOUSDT": 121234326.19,
+    "KNCUSDT": 10954384.71,
+    "ZRXUSDT": 13910435.68,
+    "DOGEUSDT": 2959338358.98,
+    "COMPUSDT": 65393401.85,
+    "BANDUSDT": 11616465.54,
+    "KAVAUSDT": 21089490.22,
+    "RLCUSDT": 14341568.5,
+    "TRBUSDT": 44510024.43,
+    "DOTUSDT": 448651342.7,
+    "CRVUSDT": 306596499.57,
+    "SNXUSDT": 36454788.08,
+    "YFIUSDT": 13908177.79,
+    "RUNEUSDT": 102223716.01,
+    "SUSHIUSDT": 27722368.88,
+    "EGLDUSDT": 28955847.92,
+    "SOLUSDT": 9883547391.37,
+    "AVAXUSDT": 719017618.85,
+    "UNIUSDT": 244800748.65,
+    "STORJUSDT": 6129678.81,
+    "KSMUSDT": 20394961.72,
+    "ICXUSDT": 8207912.98,
+    "ENJUSDT": 435256010.56,
+    "NEARUSDT": 468646404.27,
+    "AAVEUSDT": 906806337.87,
+    "SKLUSDT": 19584758.81,
+    "RSRUSDT": 35836901.62,
+    "1INCHUSDT": 15759355.75,
+    "FILUSDT": 491742027.87,
+    "SANDUSDT": 120616729.63,
+    "BELUSDT": 7008740.38,
+    "CHZUSDT": 274867889.32,
+    "GRTUSDT": 28158263.87,
+    "AXSUSDT": 1106131724.62,
+    "ZENUSDT": 87609647.95,
+    "RVNUSDT": 22101304.52,
+    "ANKRUSDT": 12373996.73,
+    "CHRUSDT": 23319537.88,
+    "MANAUSDT": 41564756.28,
+    "HBARUSDT": 157952697.71,
+    "SFPUSDT": 8780394.73,
+    "ALICEUSDT": 104394864.66,
+    "CELRUSDT": 7709657.43,
+    "COTIUSDT": 12908926.08,
+    "ONEUSDT": 9727920.17,
+    "HOTUSDT": 8672961.03,
+    "1000SHIBUSDT": 222640369.17,
+    "GTCUSDT": 34617862.27,
+    "MTLUSDT": 4610861.16,
+    "OGNUSDT": 13723924.53,
+    "MASKUSDT": 167719342.29,
+    "BTCDOMUSDT": 34045832.14,
+    "IOTXUSDT": 5387819.08,
+    "ATAUSDT": 7390486.53,
+    "C98USDT": 12156272.14,
+    "GALAUSDT": 369921995.46,
+    "CELOUSDT": 17267970.92,
+    "1000XECUSDT": 4999283.9,
+    "ARUSDT": 45971638.02,
+    "DYDXUSDT": 123060653.9,
+    "CTSIUSDT": 29962709.98,
+    "ARPAUSDT": 7086725.03,
+    "LPTUSDT": 41912279.04,
+    "PEOPLEUSDT": 33269858.72,
+    "ENSUSDT": 42266722.2,
+    "ROSEUSDT": 24511524.01,
+    "FLOWUSDT": 31479740.33,
+    "GMTUSDT": 50801712.27,
+    "IMXUSDT": 59063774.13,
+    "APEUSDT": 2032932195.75,
+    "DUSKUSDT": 30142558.12,
+    "JASMYUSDT": 26333354.45,
+    "WOOUSDT": 16372463.36,
+    "API3USDT": 373057730.95,
+    "OPUSDT": 197790731.62,
+    "STGUSDT": 13298538.22,
+    "APTUSDT": 190317047.56,
+    "FETUSDT": 163739389.59,
+    "QNTUSDT": 19324506.11,
+    "LUNA2USDT": 34360594.33,
+    "1000LUNCUSDT": 120799874.3,
+    "INJUSDT": 179684507.88,
+    "SPELLUSDT": 8190817.72,
+    "LDOUSDT": 333012211.0,
+    "ICPUSDT": 92151594.0,
+    "MAGICUSDT": 20476279.32,
+    "TUSDT": 5325789.34,
+    "ASTRUSDT": 8591137.18,
+    "MINAUSDT": 35673369.77,
+    "HIGHUSDT": 565261840.14,
+    "STXUSDT": 30102903.29,
+    "PHBUSDT": 44734796.3,
+    "GMXUSDT": 10577669.54,
+    "ACHUSDT": 16120625.26,
+    "CFXUSDT": 47517548.24,
+    "SSVUSDT": 37462032.45,
+    "CKBUSDT": 19048804.56,
+    "LQTYUSDT": 10587496.65,
+    "JOEUSDT": 16227536.57,
+    "TLMUSDT": 15740508.9,
+    "HFTUSDT": 12518449.95,
+    "ARBUSDT": 256381536.1,
+    "IDUSDT": 33746806.05,
+    "XVSUSDT": 7231243.5,
+    "BLURUSDT": 233363265.39,
+    "EDUUSDT": 457968225.04,
+    "1000FLOKIUSDT": 83345533.92,
+    "1000PEPEUSDT": 1576007417.82,
+    "XVGUSDT": 19011604.32,
+    "SUIUSDT": 783499824.51,
+    "NMRUSDT": 23715738.13,
+    "MAVUSDT": 15954916.0,
+    "UMAUSDT": 38939079.18,
+    "PENDLEUSDT": 80786459.91,
+    "WLDUSDT": 323679572.47,
+    "ARKMUSDT": 42049656.83,
+    "YGGUSDT": 39129644.64,
+    "AGLDUSDT": 13570412.98,
+    "DODOXUSDT": 22146812.67,
+    "BNTUSDT": 6160599.76,
+    "ARKUSDT": 5178352.07,
+    "BICOUSDT": 21450804.77,
+    "BIGTIMEUSDT": 19798960.28,
+    "SEIUSDT": 162519204.77,
+    "CYBERUSDT": 29230071.15,
+    "GASUSDT": 10131901.59,
+    "WAXPUSDT": 6981321.45,
+    "POLYXUSDT": 9951012.7,
+    "POWRUSDT": 6344202.53,
+    "CAKEUSDT": 35979170.17,
+    "BSVUSDT": 8569081.23,
+    "TIAUSDT": 127570733.04,
+    "TWTUSDT": 16252414.15,
+    "MEMEUSDT": 47093703.18,
+    "RIFUSDT": 9242188.25,
+    "KASUSDT": 24608356.79,
+    "STEEMUSDT": 5070425.36,
+    "ORDIUSDT": 808953199.69,
+    "ILVUSDT": 27804157.55,
+    "1000BONKUSDT": 196574289.6,
+    "ONGUSDT": 13646410.51,
+    "SUPERUSDT": 181739903.48,
+    "BEAMXUSDT": 6852708.49,
+    "PYTHUSDT": 57346180.21,
+    "USTCUSDT": 13546403.53,
+    "JTOUSDT": 63688924.16,
+    "ETHWUSDT": 14308629.02,
+    "AUCTIONUSDT": 13976371.38,
+    "1000SATSUSDT": 57306402.42,
+    "1000RATSUSDT": 72999488.76,
+    "MOVRUSDT": 726672181.83,
+    "ACEUSDT": 24506660.64,
+    "XAIUSDT": 20953087.15,
+    "WIFUSDT": 218522499.79,
+    "NFPUSDT": 13414320.98,
+    "LSKUSDT": 7519077.08,
+    "MANTAUSDT": 7947521.55,
+    "ONDOUSDT": 153217922.54,
+    "JUPUSDT": 46803828.22,
+    "ALTUSDT": 22454501.57,
+    "DYMUSDT": 54609881.37,
+    "ZETAUSDT": 13825000.12,
+    "PIXELUSDT": 64500213.81,
+    "STRKUSDT": 187429180.91,
+    "RONINUSDT": 33749670.42,
+    "PORTALUSDT": 108398325.79,
+    "TONUSDT": 144917018.08,
+    "AXLUSDT": 82959283.3,
+    "GLMUSDT": 8591856.06,
+    "METISUSDT": 36416563.73,
+    "AEVOUSDT": 34585327.28,
+    "VANRYUSDT": 9923406.84,
+    "BOMEUSDT": 174949241.11,
+    "ENAUSDT": 549612592.89,
+    "ETHFIUSDT": 59274636.0,
+    "TNSRUSDT": 24531576.75,
+    "SAGAUSDT": 53809341.48,
+    "TAOUSDT": 733765247.76,
+    "REZUSDT": 25693607.62,
+    "TURBOUSDT": 36030635.79,
+    "ZKUSDT": 32383056.35,
+    "NOTUSDT": 29287907.61,
+    "WUSDT": 104381693.65,
+    "IOUSDT": 25336532.06,
+    "BBUSDT": 78894459.29,
+    "MEWUSDT": 11434841.07,
+    "LISTAUSDT": 16667222.2,
+    "RENDERUSDT": 105612090.99,
+    "RAREUSDT": 62427585.64,
+    "ZROUSDT": 157781480.38,
+    "GUSDT": 8337798.86,
+    "SYNUSDT": 8803224.87,
+    "BANANAUSDT": 14383295.38,
+    "BRETTUSDT": 15246714.08,
+    "SYSUSDT": 5490264.75,
+    "SUNUSDT": 8640800.5,
+    "MBOXUSDT": 18489177.36,
+    "RPLUSDT": 6400321.84,
+    "1MBABYDOGEUSDT": 15966514.62,
+    "POPCATUSDT": 23192557.3,
+    "POLUSDT": 98343931.22,
+    "DOGSUSDT": 19208288.16,
+    "FIDAUSDT": 15599943.43,
+    "NEIROUSDT": 213732923.29,
+    "FLUXUSDT": 13944520.0,
+    "CATIUSDT": 7005156.61,
+    "EIGENUSDT": 56601290.17,
+    "COSUSDT": 7873838.71,
+    "1000CATUSDT": 9850623.79,
+    "DIAUSDT": 6950855.06,
+    "SAFEUSDT": 43374165.69,
+    "SCRUSDT": 11325985.35,
+    "HMSTRUSDT": 8465658.13,
+    "GOATUSDT": 12867975.23,
+    "MOODENGUSDT": 69986251.09,
+    "SANTOSUSDT": 10420500.49,
+    "COWUSDT": 8613802.1,
+    "1000000MOGUSDT": 45194384.88,
+    "CETUSUSDT": 49385952.55,
+    "DRIFTUSDT": 15940940.37,
+    "GRASSUSDT": 73332102.14,
+    "PNUTUSDT": 125116874.29,
+    "ACTUSDT": 21376997.1,
+    "AKTUSDT": 11260340.24,
+    "BANUSDT": 63098395.39,
+    "KAIAUSDT": 10421560.25,
+    "1000CHEEMSUSDT": 10495859.43,
+    "CHILLGUYUSDT": 14683137.93,
+    "MORPHOUSDT": 47191860.38,
+    "MOVEUSDT": 42992642.87,
+    "AEROUSDT": 67854791.39,
+    "THEUSDT": 22422579.79,
+    "ORCAUSDT": 1246827909.33,
+    "SCRTUSDT": 26867401.03,
+    "ACXUSDT": 4834588.83,
+    "RAYSOLUSDT": 120346968.73,
+    "MEUSDT": 38831120.89,
+    "SPXUSDT": 84789216.27,
+    "KOMAUSDT": 7522459.31,
+    "VIRTUALUSDT": 153012498.69,
+    "VANAUSDT": 26907574.11,
+    "PENGUUSDT": 658995283.56,
+    "AVAUSDT": 10659663.16,
+    "MOCAUSDT": 7882739.13,
+    "VELODROMEUSDT": 5004141.8,
+    "LUMIAUSDT": 26771283.9,
+    "FARTCOINUSDT": 286657287.44,
+    "AIXBTUSDT": 29578599.02,
+    "CGPTUSDT": 14647626.6,
+    "HIVEUSDT": 4699149.92,
+    "DEXEUSDT": 222199553.49,
+    "USUALUSDT": 18083137.65,
+    "GRIFFAINUSDT": 151011874.65,
+    "KMNOUSDT": 12205579.9,
+    "PHAUSDT": 25537682.01,
+    "BIOUSDT": 329007296.53,
+    "ZEREBROUSDT": 93765853.71,
+    "ALCHUSDT": 9400081.56,
+    "COOKIEUSDT": 10777905.62,
+    "PROMUSDT": 110671413.43,
+    "SONICUSDT": 23886287.38,
+    "SOLVUSDT": 24347205.88,
+    "SWARMSUSDT": 32496988.64,
+    "SUSDT": 35077484.66,
+    "DUSDT": 220786583.39,
+    "AVAAIUSDT": 14357336.92,
+    "ARCUSDT": 26173741.7,
+    "TRUMPUSDT": 1147434788.25,
+    "MELANIAUSDT": 18184644.6,
+    "ANIMEUSDT": 25963202.33,
+    "PIPPINUSDT": 266053849.7,
+    "TSTUSDT": 18176192.77,
+    "BERAUSDT": 47177812.11,
+    "VTHOUSDT": 3899079.33,
+    "VVVUSDT": 127864704.14,
+    "REDUSDT": 114669301.66,
+    "SHELLUSDT": 13179012.01,
+    "IPUSDT": 119936615.23,
+    "LAYERUSDT": 21617945.11,
+    "KAITOUSDT": 37679371.6,
+    "EPICUSDT": 12545228.55,
+    "BMTUSDT": 11310508.62,
+    "GPSUSDT": 60355689.5,
+    "HEIUSDT": 11288941.7,
+    "VICUSDT": 7502953.58,
+    "MUBARAKUSDT": 12368902.67,
+    "FORMUSDT": 14444958.9,
+    "BROCCOLI714USDT": 18987187.64,
+    "TUTUSDT": 8905622.99,
+    "BROCCOLIF3BUSDT": 4228368.35,
+    "BRUSDT": 28817686.06,
+    "PLUMEUSDT": 73920574.79,
+    "NILUSDT": 21684963.0,
+    "SIRENUSDT": 231025496.96,
+    "BANANAS31USDT": 71296030.58,
+    "PARTIUSDT": 35972957.17,
+    "MAVIAUSDT": 10240766.65,
+    "JELLYJELLYUSDT": 18603066.56,
+    "MLNUSDT": 7793425.69,
+    "BABYUSDT": 11212607.99,
+    "ATHUSDT": 15639476.95,
+    "GUNUSDT": 640844134.31,
+    "PAXGUSDT": 499372738.78,
+    "WALUSDT": 15622632.69,
+    "PROMPTUSDT": 6507075.7,
+    "FHEUSDT": 17235671.12,
+    "KERNELUSDT": 57004018.7,
+    "STOUSDT": 286035621.33,
+    "WCTUSDT": 41962386.74,
+    "HYPERUSDT": 856843339.7,
+    "AERGOUSDT": 4262720.5,
+    "INITUSDT": 32266138.17,
+    "BANKUSDT": 19165757.36,
+    "DEEPUSDT": 8843586.99,
+    "JSTUSDT": 44060720.37,
+    "CTKUSDT": 5418921.76,
+    "PUNDIXUSDT": 5964173.97,
+    "SIGNUSDT": 48691886.47,
+    "AIOTUSDT": 153847766.03,
+    "ALPINEUSDT": 8874471.56,
+    "HAEDALUSDT": 17517249.59,
+    "DOLOUSDT": 6924035.54,
+    "ASRUSDT": 9172242.52,
+    "B2USDT": 5285802.88,
+    "SXTUSDT": 15787673.72,
+    "CVCUSDT": 5913079.0,
+    "DOODUSDT": 13077427.5,
+    "OGUSDT": 14109698.82,
+    "BUSDT": 57575748.71,
+    "SYRUPUSDT": 24141952.56,
+    "SOONUSDT": 780028190.01,
+    "NXPCUSDT": 12975679.46,
+    "AGTUSDT": 149570945.29,
+    "SKYAIUSDT": 463685570.11,
+    "AWEUSDT": 22680573.61,
+    "AUSDT": 21734583.65,
+    "SOPHUSDT": 13290898.35,
+    "HUMAUSDT": 133653072.96,
+    "1000000BOBUSDT": 3927283.08,
+    "RESOLVUSDT": 35262973.8,
+    "MERLUSDT": 123075695.77,
+    "LAUSDT": 18816768.37,
+    "HYPEUSDT": 1889237084.4,
+    "HOMEUSDT": 11981421.44,
+    "TAIKOUSDT": 4958663.91,
+    "SPKUSDT": 1492768490.41,
+    "SQDUSDT": 4428929.67,
+    "MYXUSDT": 69224718.64,
+    "PUMPBTCUSDT": 77434798.12,
+    "NEWTUSDT": 80638417.66,
+    "HUSDT": 184562711.06,
+    "ICNTUSDT": 16045891.42,
+    "FUSDT": 20505846.1,
+    "SAHARAUSDT": 152167794.27,
+    "BULLAUSDT": 142202402.54,
+    "IDOLUSDT": 4243162.1,
+    "CROSSUSDT": 41235374.34,
+    "PUMPUSDT": 236763955.55,
+    "CUSDT": 79802409.34,
+    "MUSDT": 429554690.0,
+    "VELVETUSDT": 82127289.05,
+    "AINUSDT": 18683763.15,
+    "ERAUSDT": 20035942.49,
+    "TAUSDT": 15760919.07,
+    "TACUSDT": 83282914.28,
+    "CVXUSDT": 5883335.54,
+    "ESPORTSUSDT": 64368672.69,
+    "TAGUSDT": 10010355.64,
+    "NAORISUSDT": 138054059.62,
+    "SLPUSDT": 54701730.01,
+    "PROVEUSDT": 18002584.04,
+    "TOWNSUSDT": 20585640.67,
+    "TREEUSDT": 77490139.4,
+    "PLAYUSDT": 124155525.57,
+    "ZORAUSDT": 15292582.48,
+    "CARVUSDT": 14824649.44,
+    "ALLUSDT": 4098720.61,
+    "USELESSUSDT": 26271684.35,
+    "SOMIUSDT": 109720734.3,
+    "AIOUSDT": 12016872.02,
+    "SAPIENUSDT": 60796019.64,
+    "INUSDT": 25386052.04,
+    "WLFIUSDT": 163932045.36,
+    "XPLUSDT": 266419046.15,
+    "XNYUSDT": 27072963.55,
+    "HEMIUSDT": 61697211.26,
+    "BASUSDT": 452487265.49,
+    "BTRUSDT": 23813361.67,
+    "LINEAUSDT": 55648151.05,
+    "TAKEUSDT": 38203566.19,
+    "ARIAUSDT": 119991218.8,
+    "MITOUSDT": 8864063.59,
+    "QUSDT": 135338161.27,
+    "PTBUSDT": 24142456.12,
+    "OPENUSDT": 44322023.28,
+    "HOLOUSDT": 56296398.19,
+    "FLOCKUSDT": 32566114.97,
+    "XPINUSDT": 14873708.54,
+    "SKYUSDT": 47261942.59,
+    "AVNTUSDT": 124543833.24,
+    "UBUSDT": 356691889.73,
+    "STBLUSDT": 9433581.75,
+    "ZKCUSDT": 16076141.89,
+    "TOSHIUSDT": 8720349.18,
+    "0GUSDT": 32333880.48,
+    "ASTERUSDT": 330117728.38,
+    "BARDUSDT": 51940969.4,
+    "BLESSUSDT": 94916146.15,
+    "FLUIDUSDT": 40516718.21,
+    "TRADOORUSDT": 733407686.77,
+    "HANAUSDT": 8090094.92,
+    "MIRAUSDT": 50970046.14,
+    "AKEUSDT": 30290578.55,
+    "COAIUSDT": 36449623.26,
+    "ORDERUSDT": 12650792.34,
+    "LIGHTUSDT": 24702442.23,
+    "EDENUSDT": 17677508.99,
+    "NOMUSDT": 58087899.69,
+    "XANUSDT": 60213017.97,
+    "FFUSDT": 45001299.1,
+    "2ZUSDT": 14705411.22,
+    "LYNUSDT": 63911576.38,
+    "EVAAUSDT": 45842063.85,
+    "TRUTHUSDT": 10262233.87,
+    "KGENUSDT": 20012917.06,
+    "YBUSDT": 22894455.22,
+    "METUSDT": 306848913.5,
+    "CLOUSDT": 64455289.17,
+    "RECALLUSDT": 9598384.75,
+    "ENSOUSDT": 333124308.32,
+    "4USDT": 28125626.1,
+    "GIGGLEUSDT": 249550867.74,
+    "MONUSDT": 180601353.29,
+    "EULUSDT": 65272914.78,
+    "ZBTUSDT": 989015251.2,
+    "RIVERUSDT": 677571743.32,
+    "币安人生USDT": 1170223574.12,
+    "APRUSDT": 41452967.63,
+    "ATUSDT": 9595572.3,
+    "LABUSDT": 562694746.61,
+    "KITEUSDT": 68613239.13,
+    "TURTLEUSDT": 10900020.64,
+    "BLUAIUSDT": 50258063.14,
+    "ONUSDT": 82731447.77,
+    "CCUSDT": 44684946.2,
+    "TRUSTUSDT": 13074350.2,
+    "UAIUSDT": 337856743.1,
+    "ALLOUSDT": 44228648.64,
+    "JCTUSDT": 43919214.54,
+    "MMTUSDT": 28218022.33,
+    "FOLKSUSDT": 69074472.28,
+    "PIEVERSEUSDT": 1899966954.35,
+    "CLANKERUSDT": 7632789.9,
+    "STABLEUSDT": 240886118.86,
+    "BEATUSDT": 149892259.84,
+    "IRYSUSDT": 62714113.93,
+    "POWERUSDT": 40869321.94,
+    "SENTUSDT": 107717894.54,
+    "NIGHTUSDT": 36126566.72,
+    "USUSDT": 6874207.09,
+    "WETUSDT": 19970156.72,
+    "RAVEUSDT": 5779867832.82,
+    "CYSUSDT": 67081920.48,
+    "ZKPUSDT": 45748264.0,
+    "GUAUSDT": 85661996.41,
+    "LITUSDT": 72285405.84,
+    "BREVUSDT": 24705882.11,
+    "COLLECTUSDT": 48285546.04,
+    "FOGOUSDT": 16880742.48,
+    "MAGMAUSDT": 174378141.21,
+    "ZAMAUSDT": 115608486.56,
+    "SPORTFUNUSDT": 33789413.7,
+    "AIAUSDT": 58977851.44,
+    "FRAXUSDT": 20529320.08,
+    "ACUUSDT": 21682695.23,
+    "我踏马来了USDT": 52784858.97,
+    "SKRUSDT": 171012657.79,
+    "FIGHTUSDT": 61437801.54,
+    "BIRBUSDT": 20739983.07,
+    "INXUSDT": 60504048.71,
+    "GWEIUSDT": 243385672.22,
+    "SPACEUSDT": 44101352.81,
+    "ELSAUSDT": 18001184.06,
+    "MEGAUSDT": 25457356.18,
+    "TRIAUSDT": 94401109.92,
+    "ESPUSDT": 64510242.28,
+    "AZTECUSDT": 16520105.29,
+    "MANTRAUSDT": 21389422.6,
+    "OPNUSDT": 78848549.31,
+    "ROBOUSDT": 109173826.45,
+    "CFGUSDT": 119806781.18,
+    "龙虾USDT": 27057185.43,
+    "EDGEUSDT": 244475113.73,
+    "BSBUSDT": 1644804049.54,
+    "XAUTUSDT": 133105736.54,
+    "CHIPUSDT": 5922052955.53,
+    "PRLUSDT": 98851242.54,
+    "BASEDUSDT": 828085143.92,
+    "OPGUSDT": 455352657.63,
+    "GENIUSUSDT": 239223014.82,
+    "KATUSDT": 2192770984.94,
+    "AIGENSYNUSDT": 0
+  },
+  "weeklyRsi": {
+    "ETHUSDT": {
+      "closedVolume": 56673854325.62,
+      "rsiCurr": 44.81,
+      "rsiPrev": 41.99
+    },
+    "TRXUSDT": {
+      "closedVolume": 353997451.99,
+      "rsiCurr": 58.9,
+      "rsiPrev": 61.88
+    },
+    "XLMUSDT": {
+      "closedVolume": 266244998.52,
+      "rsiCurr": 40.24,
+      "rsiPrev": 38.88
+    },
+    "LTCUSDT": {
+      "closedVolume": 330701029.18,
+      "rsiCurr": 36.28,
+      "rsiPrev": 33.02
+    },
+    "BTCUSDT": {
+      "closedVolume": 73164449376.0,
+      "rsiCurr": 47.27,
+      "rsiPrev": 41.73
+    },
+    "LINKUSDT": {
+      "closedVolume": 617423357.49,
+      "rsiCurr": 39.59,
+      "rsiPrev": 36.94
+    },
+    "ADAUSDT": {
+      "closedVolume": 991548686.09,
+      "rsiCurr": 33.07,
+      "rsiPrev": 31.22
+    },
+    "BCHUSDT": {
+      "closedVolume": 383175006.63,
+      "rsiCurr": 43.64,
+      "rsiPrev": 40.57
+    },
+    "XRPUSDT": {
+      "closedVolume": 3342310269.97,
+      "rsiCurr": 37.61,
+      "rsiPrev": 35.78
+    },
+    "ETCUSDT": {
+      "closedVolume": 111253839.92,
+      "rsiCurr": 34.27,
+      "rsiPrev": 31.98
+    },
+    "XMRUSDT": {
+      "closedVolume": 291149030.05,
+      "rsiCurr": 53.75,
+      "rsiPrev": 47.93
+    },
+    "ZECUSDT": {
+      "closedVolume": 3047063494.78,
+      "rsiCurr": 55.35,
+      "rsiPrev": 51.58
+    },
+    "ATOMUSDT": {
+      "closedVolume": 112213158.0,
+      "rsiCurr": 42.39,
+      "rsiPrev": 35.82
+    },
+    "XTZUSDT": {
+      "closedVolume": 26386780.26,
+      "rsiCurr": 38.84,
+      "rsiPrev": 36.41
+    },
+    "BATUSDT": {
+      "closedVolume": 19330384.62,
+      "rsiCurr": 40.09,
+      "rsiPrev": 37.25
+    },
+    "IOTAUSDT": {
+      "closedVolume": 17460117.69,
+      "rsiCurr": 31.8,
+      "rsiPrev": 30.66
+    },
+    "ONTUSDT": {
+      "closedVolume": 68537183.59,
+      "rsiCurr": 49.85,
+      "rsiPrev": 51.31
+    },
+    "BNBUSDT": {
+      "closedVolume": 1612945078.0,
+      "rsiCurr": 40.25,
+      "rsiPrev": 37.84
+    },
+    "DASHUSDT": {
+      "closedVolume": 199735681.9,
+      "rsiCurr": 48.45,
+      "rsiPrev": 46.82
+    },
+    "VETUSDT": {
+      "closedVolume": 38699323.72,
+      "rsiCurr": 34.27,
+      "rsiPrev": 31.81
+    },
+    "NEOUSDT": {
+      "closedVolume": 20236067.23,
+      "rsiCurr": 39.72,
+      "rsiPrev": 37.38
+    },
+    "QTUMUSDT": {
+      "closedVolume": 8446480.05,
+      "rsiCurr": 36.87,
+      "rsiPrev": 35.68
+    },
+    "THETAUSDT": {
+      "closedVolume": 47336348.14,
+      "rsiCurr": 36.33,
+      "rsiPrev": 35.88
+    },
+    "ALGOUSDT": {
+      "closedVolume": 121234326.19,
+      "rsiCurr": 48.48,
+      "rsiPrev": 42.16
+    },
+    "IOSTUSDT": {
+      "closedVolume": 11000607.81,
+      "rsiCurr": 33.26,
+      "rsiPrev": 32.05
+    },
+    "ZRXUSDT": {
+      "closedVolume": 13910435.68,
+      "rsiCurr": 41.07,
+      "rsiPrev": 34.79
+    },
+    "KNCUSDT": {
+      "closedVolume": 10954384.71,
+      "rsiCurr": 35.98,
+      "rsiPrev": 31.39
+    },
+    "ZILUSDT": {
+      "closedVolume": 15541208.42,
+      "rsiCurr": 36.68,
+      "rsiPrev": 32.89
+    },
+    "DOGEUSDT": {
+      "closedVolume": 2959338358.98,
+      "rsiCurr": 39.28,
+      "rsiPrev": 36.07
+    },
+    "COMPUSDT": {
+      "closedVolume": 65393401.85,
+      "rsiCurr": 45.61,
+      "rsiPrev": 48.34
+    },
+    "KAVAUSDT": {
+      "closedVolume": 21089490.22,
+      "rsiCurr": 31.68,
+      "rsiPrev": 27.69
+    },
+    "BANDUSDT": {
+      "closedVolume": 11616465.54,
+      "rsiCurr": 35.87,
+      "rsiPrev": 32.49
+    },
+    "SNXUSDT": {
+      "closedVolume": 36454788.08,
+      "rsiCurr": 41.06,
+      "rsiPrev": 38.06
+    },
+    "RLCUSDT": {
+      "closedVolume": 14341568.5,
+      "rsiCurr": 37.39,
+      "rsiPrev": 36.48
+    },
+    "CRVUSDT": {
+      "closedVolume": 306596499.57,
+      "rsiCurr": 34.68,
+      "rsiPrev": 33.27
+    },
+    "RUNEUSDT": {
+      "closedVolume": 102223716.01,
+      "rsiCurr": 42.13,
+      "rsiPrev": 33.51
+    },
+    "DOTUSDT": {
+      "closedVolume": 448651342.7,
+      "rsiCurr": 31.33,
+      "rsiPrev": 30.6
+    },
+    "TRBUSDT": {
+      "closedVolume": 44510024.43,
+      "rsiCurr": 46.51,
+      "rsiPrev": 44.75
+    },
+    "YFIUSDT": {
+      "closedVolume": 13908177.79,
+      "rsiCurr": 39.6,
+      "rsiPrev": 36.37
+    },
+    "EGLDUSDT": {
+      "closedVolume": 28955847.92,
+      "rsiCurr": 34.26,
+      "rsiPrev": 30.13
+    },
+    "SOLUSDT": {
+      "closedVolume": 9883547391.37,
+      "rsiCurr": 35.87,
+      "rsiPrev": 33.49
+    },
+    "SUSHIUSDT": {
+      "closedVolume": 27722368.88,
+      "rsiCurr": 37.08,
+      "rsiPrev": 33.96
+    },
+    "STORJUSDT": {
+      "closedVolume": 6129678.81,
+      "rsiCurr": 37.13,
+      "rsiPrev": 35.58
+    },
+    "UNIUSDT": {
+      "closedVolume": 244800748.65,
+      "rsiCurr": 35.13,
+      "rsiPrev": 34.47
+    },
+    "AVAXUSDT": {
+      "closedVolume": 719017618.85,
+      "rsiCurr": 37.24,
+      "rsiPrev": 34.92
+    },
+    "ENJUSDT": {
+      "closedVolume": 435256010.56,
+      "rsiCurr": 67.95,
+      "rsiPrev": 67.21
+    },
+    "ICXUSDT": {
+      "closedVolume": 8207912.98,
+      "rsiCurr": 33.54,
+      "rsiPrev": 31.6
+    },
+    "NEARUSDT": {
+      "closedVolume": 468646404.27,
+      "rsiCurr": 44.79,
+      "rsiPrev": 42.8
+    },
+    "KSMUSDT": {
+      "closedVolume": 20394961.72,
+      "rsiCurr": 34.17,
+      "rsiPrev": 32.34
+    },
+    "AAVEUSDT": {
+      "closedVolume": 906806337.87,
+      "rsiCurr": 33.42,
+      "rsiPrev": 30.59
+    },
+    "ZENUSDT": {
+      "closedVolume": 87609647.95,
+      "rsiCurr": 44.47,
+      "rsiPrev": 42.92
+    },
+    "RSRUSDT": {
+      "closedVolume": 35836901.62,
+      "rsiCurr": 38.27,
+      "rsiPrev": 35.95
+    },
+    "FILUSDT": {
+      "closedVolume": 491742027.87,
+      "rsiCurr": 38.22,
+      "rsiPrev": 36.74
+    },
+    "SANDUSDT": {
+      "closedVolume": 120616729.63,
+      "rsiCurr": 33.56,
+      "rsiPrev": 31.82
+    },
+    "1INCHUSDT": {
+      "closedVolume": 15759355.75,
+      "rsiCurr": 36.06,
+      "rsiPrev": 33.83
+    },
+    "SKLUSDT": {
+      "closedVolume": 19584758.81,
+      "rsiCurr": 36.38,
+      "rsiPrev": 33.98
+    },
+    "BELUSDT": {
+      "closedVolume": 7008740.38,
+      "rsiCurr": 39.62,
+      "rsiPrev": 36.99
+    },
+    "AXSUSDT": {
+      "closedVolume": 1106131724.62,
+      "rsiCurr": 49.91,
+      "rsiPrev": 40.87
+    },
+    "CHZUSDT": {
+      "closedVolume": 274867889.32,
+      "rsiCurr": 59.23,
+      "rsiPrev": 51.22
+    },
+    "GRTUSDT": {
+      "closedVolume": 28158263.87,
+      "rsiCurr": 29.58,
+      "rsiPrev": 28.14
+    },
+    "COTIUSDT": {
+      "closedVolume": 12908926.08,
+      "rsiCurr": 36.58,
+      "rsiPrev": 35.82
+    },
+    "CHRUSDT": {
+      "closedVolume": 23319537.88,
+      "rsiCurr": 34.81,
+      "rsiPrev": 30.58
+    },
+    "SFPUSDT": {
+      "closedVolume": 8780394.73,
+      "rsiCurr": 54.08,
+      "rsiPrev": 43.92
+    },
+    "MANAUSDT": {
+      "closedVolume": 41564756.28,
+      "rsiCurr": 35.25,
+      "rsiPrev": 32.89
+    },
+    "ANKRUSDT": {
+      "closedVolume": 12373996.73,
+      "rsiCurr": 34.67,
+      "rsiPrev": 32.35
+    },
+    "CELRUSDT": {
+      "closedVolume": 7709657.43,
+      "rsiCurr": 39.92,
+      "rsiPrev": 33.52
+    },
+    "ONEUSDT": {
+      "closedVolume": 9727920.17,
+      "rsiCurr": 32.24,
+      "rsiPrev": 30.38
+    },
+    "RVNUSDT": {
+      "closedVolume": 22101304.52,
+      "rsiCurr": 38.98,
+      "rsiPrev": 36.11
+    },
+    "HBARUSDT": {
+      "closedVolume": 157952697.71,
+      "rsiCurr": 36.77,
+      "rsiPrev": 33.41
+    },
+    "ALICEUSDT": {
+      "closedVolume": 104394864.66,
+      "rsiCurr": 44.09,
+      "rsiPrev": 42.72
+    },
+    "1000SHIBUSDT": {
+      "closedVolume": 222640369.17,
+      "rsiCurr": 39.91,
+      "rsiPrev": 37.08
+    },
+    "MTLUSDT": {
+      "closedVolume": 4610861.16,
+      "rsiCurr": 38.56,
+      "rsiPrev": 36.03
+    },
+    "IOTXUSDT": {
+      "closedVolume": 5387819.08,
+      "rsiCurr": 29.15,
+      "rsiPrev": 26.62
+    },
+    "HOTUSDT": {
+      "closedVolume": 8672961.03,
+      "rsiCurr": 42.32,
+      "rsiPrev": 35.83
+    },
+    "C98USDT": {
+      "closedVolume": 12156272.14,
+      "rsiCurr": 39.8,
+      "rsiPrev": 39.67
+    },
+    "OGNUSDT": {
+      "closedVolume": 13723924.53,
+      "rsiCurr": 37.8,
+      "rsiPrev": 35.12
+    },
+    "BTCDOMUSDT": {
+      "closedVolume": 34045832.14,
+      "rsiCurr": 73.77,
+      "rsiPrev": 70.33
+    },
+    "GTCUSDT": {
+      "closedVolume": 34617862.27,
+      "rsiCurr": 38.15,
+      "rsiPrev": 41.84
+    },
+    "MASKUSDT": {
+      "closedVolume": 167719342.29,
+      "rsiCurr": 44.81,
+      "rsiPrev": 36.94
+    },
+    "ATAUSDT": {
+      "closedVolume": 7390486.53,
+      "rsiCurr": 31.88,
+      "rsiPrev": 31.97
+    },
+    "DYDXUSDT": {
+      "closedVolume": 123060653.9,
+      "rsiCurr": 43.09,
+      "rsiPrev": 38.75
+    },
+    "CELOUSDT": {
+      "closedVolume": 17267970.92,
+      "rsiCurr": 39.41,
+      "rsiPrev": 35.44
+    },
+    "GALAUSDT": {
+      "closedVolume": 369921995.46,
+      "rsiCurr": 31.72,
+      "rsiPrev": 29.86
+    },
+    "CTSIUSDT": {
+      "closedVolume": 29962709.98,
+      "rsiCurr": 46.16,
+      "rsiPrev": 46.06
+    },
+    "LPTUSDT": {
+      "closedVolume": 41912279.04,
+      "rsiCurr": 31.2,
+      "rsiPrev": 28.35
+    },
+    "ARPAUSDT": {
+      "closedVolume": 7086725.03,
+      "rsiCurr": 37.43,
+      "rsiPrev": 34.95
+    },
+    "1000XECUSDT": {
+      "closedVolume": 4999283.9,
+      "rsiCurr": 31.42,
+      "rsiPrev": 29.74
+    },
+    "PEOPLEUSDT": {
+      "closedVolume": 33269858.72,
+      "rsiCurr": 42.52,
+      "rsiPrev": 39.8
+    },
+    "ENSUSDT": {
+      "closedVolume": 42266722.2,
+      "rsiCurr": 34.16,
+      "rsiPrev": 31.34
+    },
+    "ROSEUSDT": {
+      "closedVolume": 24511524.01,
+      "rsiCurr": 39.05,
+      "rsiPrev": 40.32
+    },
+    "FLOWUSDT": {
+      "closedVolume": 31479740.33,
+      "rsiCurr": 25.08,
+      "rsiPrev": 22.41
+    },
+    "DUSKUSDT": {
+      "closedVolume": 30142558.12,
+      "rsiCurr": 56.86,
+      "rsiPrev": 61.95
+    },
+    "GMTUSDT": {
+      "closedVolume": 50801712.27,
+      "rsiCurr": 34.71,
+      "rsiPrev": 32.08
+    },
+    "IMXUSDT": {
+      "closedVolume": 59063774.13,
+      "rsiCurr": 38.52,
+      "rsiPrev": 35.02
+    },
+    "WOOUSDT": {
+      "closedVolume": 16372463.36,
+      "rsiCurr": 38.04,
+      "rsiPrev": 33.86
+    },
+    "ARUSDT": {
+      "closedVolume": 45971638.02,
+      "rsiCurr": 37.44,
+      "rsiPrev": 38.07
+    },
+    "APEUSDT": {
+      "closedVolume": 2032932195.75,
+      "rsiCurr": 38.99,
+      "rsiPrev": 28.72
+    },
+    "JASMYUSDT": {
+      "closedVolume": 26333354.45,
+      "rsiCurr": 40.92,
+      "rsiPrev": 38.61
+    },
+    "API3USDT": {
+      "closedVolume": 373057730.95,
+      "rsiCurr": 40.78,
+      "rsiPrev": 37.86
+    },
+    "OPUSDT": {
+      "closedVolume": 197790731.62,
+      "rsiCurr": 30.78,
+      "rsiPrev": 29.84
+    },
+    "FETUSDT": {
+      "closedVolume": 163739389.59,
+      "rsiCurr": 41.34,
+      "rsiPrev": 40.94
+    },
+    "LDOUSDT": {
+      "closedVolume": 333012211.0,
+      "rsiCurr": 45.16,
+      "rsiPrev": 37.6
+    },
+    "ICPUSDT": {
+      "closedVolume": 92151594.0,
+      "rsiCurr": 42.19,
+      "rsiPrev": 41.71
+    },
+    "QNTUSDT": {
+      "closedVolume": 19324506.11,
+      "rsiCurr": 45.34,
+      "rsiPrev": 46.99
+    },
+    "STGUSDT": {
+      "closedVolume": 13298538.22,
+      "rsiCurr": 57.3,
+      "rsiPrev": 55.1
+    },
+    "INJUSDT": {
+      "closedVolume": 179684507.88,
+      "rsiCurr": 39.69,
+      "rsiPrev": 34.28
+    },
+    "1000LUNCUSDT": {
+      "closedVolume": 120799874.3,
+      "rsiCurr": 66.49,
+      "rsiPrev": 49.03
+    },
+    "SPELLUSDT": {
+      "closedVolume": 8190817.72,
+      "rsiCurr": 29.11,
+      "rsiPrev": 27.21
+    },
+    "APTUSDT": {
+      "closedVolume": 190317047.56,
+      "rsiCurr": 33.02,
+      "rsiPrev": 30.94
+    },
+    "LUNA2USDT": {
+      "closedVolume": 34360594.33,
+      "rsiCurr": 41.22,
+      "rsiPrev": 35.53
+    },
+    "TUSDT": {
+      "closedVolume": 5325789.34,
+      "rsiCurr": 28.47,
+      "rsiPrev": 27.56
+    },
+    "MINAUSDT": {
+      "closedVolume": 35673369.77,
+      "rsiCurr": 36.87,
+      "rsiPrev": 33.5
+    },
+    "ASTRUSDT": {
+      "closedVolume": 8591137.18,
+      "rsiCurr": 35.25,
+      "rsiPrev": 31.84
+    },
+    "HIGHUSDT": {
+      "closedVolume": 565261840.14,
+      "rsiCurr": 47.36,
+      "rsiPrev": 52.01
+    },
+    "MAGICUSDT": {
+      "closedVolume": 20476279.32,
+      "rsiCurr": 38.79,
+      "rsiPrev": 35.12
+    },
+    "GMXUSDT": {
+      "closedVolume": 10577669.54,
+      "rsiCurr": 45.72,
+      "rsiPrev": 34.86
+    },
+    "PHBUSDT": {
+      "closedVolume": 44734796.3,
+      "rsiCurr": 33.36,
+      "rsiPrev": 34.52
+    },
+    "CFXUSDT": {
+      "closedVolume": 47517548.24,
+      "rsiCurr": 43.83,
+      "rsiPrev": 41.72
+    },
+    "STXUSDT": {
+      "closedVolume": 30102903.29,
+      "rsiCurr": 35.96,
+      "rsiPrev": 33.76
+    },
+    "ACHUSDT": {
+      "closedVolume": 16120625.26,
+      "rsiCurr": 36.98,
+      "rsiPrev": 34.36
+    },
+    "CKBUSDT": {
+      "closedVolume": 19048804.56,
+      "rsiCurr": 35.66,
+      "rsiPrev": 32.19
+    },
+    "IDUSDT": {
+      "closedVolume": 33746806.05,
+      "rsiCurr": 27.03,
+      "rsiPrev": 24.9
+    },
+    "JOEUSDT": {
+      "closedVolume": 16227536.57,
+      "rsiCurr": 37.66,
+      "rsiPrev": 37.11
+    },
+    "ARBUSDT": {
+      "closedVolume": 256381536.1,
+      "rsiCurr": 39.18,
+      "rsiPrev": 37.19
+    },
+    "SSVUSDT": {
+      "closedVolume": 37462032.45,
+      "rsiCurr": 41.89,
+      "rsiPrev": 35.5
+    },
+    "HFTUSDT": {
+      "closedVolume": 12518449.95,
+      "rsiCurr": 33.87,
+      "rsiPrev": 33.73
+    },
+    "LQTYUSDT": {
+      "closedVolume": 10587496.65,
+      "rsiCurr": 41.36,
+      "rsiPrev": 37.0
+    },
+    "TLMUSDT": {
+      "closedVolume": 15740508.9,
+      "rsiCurr": 40.19,
+      "rsiPrev": 36.99
+    },
+    "XVSUSDT": {
+      "closedVolume": 7231243.5,
+      "rsiCurr": 34.72,
+      "rsiPrev": 35.15
+    },
+    "BLURUSDT": {
+      "closedVolume": 233363265.39,
+      "rsiCurr": 42.76,
+      "rsiPrev": 47.12
+    },
+    "EDUUSDT": {
+      "closedVolume": 457968225.04,
+      "rsiCurr": 32.0,
+      "rsiPrev": 30.5
+    },
+    "SUIUSDT": {
+      "closedVolume": 783499824.51,
+      "rsiCurr": 35.39,
+      "rsiPrev": 34.55
+    },
+    "1000PEPEUSDT": {
+      "closedVolume": 1576007417.82,
+      "rsiCurr": 42.4,
+      "rsiPrev": 40.38
+    },
+    "UMAUSDT": {
+      "closedVolume": 38939079.18,
+      "rsiCurr": 36.46,
+      "rsiPrev": 31.63
+    },
+    "NMRUSDT": {
+      "closedVolume": 23715738.13,
+      "rsiCurr": 49.39,
+      "rsiPrev": 44.63
+    },
+    "1000FLOKIUSDT": {
+      "closedVolume": 83345533.92,
+      "rsiCurr": 40.47,
+      "rsiPrev": 37.77
+    },
+    "MAVUSDT": {
+      "closedVolume": 15954916.0,
+      "rsiCurr": 35.12,
+      "rsiPrev": 33.28
+    },
+    "XVGUSDT": {
+      "closedVolume": 19011604.32,
+      "rsiCurr": 36.23,
+      "rsiPrev": 37.51
+    },
+    "WLDUSDT": {
+      "closedVolume": 323679572.47,
+      "rsiCurr": 31.12,
+      "rsiPrev": 31.03
+    },
+    "PENDLEUSDT": {
+      "closedVolume": 80786459.91,
+      "rsiCurr": 38.75,
+      "rsiPrev": 36.34
+    },
+    "ARKMUSDT": {
+      "closedVolume": 42049656.83,
+      "rsiCurr": 35.09,
+      "rsiPrev": 36.28
+    },
+    "YGGUSDT": {
+      "closedVolume": 39129644.64,
+      "rsiCurr": 35.97,
+      "rsiPrev": 33.41
+    },
+    "BNTUSDT": {
+      "closedVolume": 6160599.76,
+      "rsiCurr": 41.06,
+      "rsiPrev": 37.63
+    },
+    "SEIUSDT": {
+      "closedVolume": 162519204.77,
+      "rsiCurr": 32.12,
+      "rsiPrev": 27.86
+    },
+    "DODOXUSDT": {
+      "closedVolume": 22146812.67,
+      "rsiCurr": 45.74,
+      "rsiPrev": 39.54
+    },
+    "BICOUSDT": {
+      "closedVolume": 21450804.77,
+      "rsiCurr": 39.69,
+      "rsiPrev": 32.77
+    },
+    "ARKUSDT": {
+      "closedVolume": 5178352.07,
+      "rsiCurr": 35.54,
+      "rsiPrev": 32.75
+    },
+    "CYBERUSDT": {
+      "closedVolume": 29230071.15,
+      "rsiCurr": 38.85,
+      "rsiPrev": 35.92
+    },
+    "AGLDUSDT": {
+      "closedVolume": 13570412.98,
+      "rsiCurr": 43.41,
+      "rsiPrev": 42.44
+    },
+    "BIGTIMEUSDT": {
+      "closedVolume": 19798960.28,
+      "rsiCurr": 32.79,
+      "rsiPrev": 30.03
+    },
+    "BSVUSDT": {
+      "closedVolume": 8569081.23,
+      "rsiCurr": 44.03,
+      "rsiPrev": 42.1
+    },
+    "RIFUSDT": {
+      "closedVolume": 9242188.25,
+      "rsiCurr": 56.85,
+      "rsiPrev": 55.63
+    },
+    "GASUSDT": {
+      "closedVolume": 10131901.59,
+      "rsiCurr": 41.77,
+      "rsiPrev": 40.8
+    },
+    "WAXPUSDT": {
+      "closedVolume": 6981321.45,
+      "rsiCurr": 33.91,
+      "rsiPrev": 30.29
+    },
+    "MEMEUSDT": {
+      "closedVolume": 47093703.18,
+      "rsiCurr": 33.63,
+      "rsiPrev": 32.87
+    },
+    "TWTUSDT": {
+      "closedVolume": 16252414.15,
+      "rsiCurr": 33.35,
+      "rsiPrev": 29.14
+    },
+    "CAKEUSDT": {
+      "closedVolume": 35979170.17,
+      "rsiCurr": 42.81,
+      "rsiPrev": 41.92
+    },
+    "POWRUSDT": {
+      "closedVolume": 6344202.53,
+      "rsiCurr": 36.19,
+      "rsiPrev": 32.77
+    },
+    "POLYXUSDT": {
+      "closedVolume": 9951012.7,
+      "rsiCurr": 39.63,
+      "rsiPrev": 38.08
+    },
+    "TIAUSDT": {
+      "closedVolume": 127570733.04,
+      "rsiCurr": 34.2,
+      "rsiPrev": 34.69
+    },
+    "STEEMUSDT": {
+      "closedVolume": 5070425.36,
+      "rsiCurr": 37.67,
+      "rsiPrev": 36.4
+    },
+    "ORDIUSDT": {
+      "closedVolume": 808953199.69,
+      "rsiCurr": 52.26,
+      "rsiPrev": 49.79
+    },
+    "BEAMXUSDT": {
+      "closedVolume": 6852708.49,
+      "rsiCurr": 35.27,
+      "rsiPrev": 32.81
+    },
+    "ILVUSDT": {
+      "closedVolume": 27804157.55,
+      "rsiCurr": 41.29,
+      "rsiPrev": 37.39
+    },
+    "USTCUSDT": {
+      "closedVolume": 13546403.53,
+      "rsiCurr": 45.25,
+      "rsiPrev": 37.35
+    },
+    "PYTHUSDT": {
+      "closedVolume": 57346180.21,
+      "rsiCurr": 39.94,
+      "rsiPrev": 35.67
+    },
+    "1000BONKUSDT": {
+      "closedVolume": 196574289.6,
+      "rsiCurr": 38.11,
+      "rsiPrev": 36.12
+    },
+    "SUPERUSDT": {
+      "closedVolume": 181739903.48,
+      "rsiCurr": 34.48,
+      "rsiPrev": 32.09
+    },
+    "ONGUSDT": {
+      "closedVolume": 13646410.51,
+      "rsiCurr": 42.13,
+      "rsiPrev": 45.17
+    },
+    "KASUSDT": {
+      "closedVolume": 24608356.79,
+      "rsiCurr": 40.51,
+      "rsiPrev": 40.73
+    },
+    "JTOUSDT": {
+      "closedVolume": 63688924.16,
+      "rsiCurr": 36.42,
+      "rsiPrev": 32.31
+    },
+    "ETHWUSDT": {
+      "closedVolume": 14308629.02,
+      "rsiCurr": 32.79,
+      "rsiPrev": 28.79
+    },
+    "1000SATSUSDT": {
+      "closedVolume": 57306402.42,
+      "rsiCurr": 41.87,
+      "rsiPrev": 40.41
+    },
+    "AUCTIONUSDT": {
+      "closedVolume": 13976371.38,
+      "rsiCurr": 42.96,
+      "rsiPrev": 41.09
+    },
+    "1000RATSUSDT": {
+      "closedVolume": 72999488.76,
+      "rsiCurr": 47.91,
+      "rsiPrev": 45.03
+    },
+    "XAIUSDT": {
+      "closedVolume": 20953087.15,
+      "rsiCurr": 33.56,
+      "rsiPrev": 31.27
+    },
+    "ACEUSDT": {
+      "closedVolume": 24506660.64,
+      "rsiCurr": 31.5,
+      "rsiPrev": 29.61
+    },
+    "MOVRUSDT": {
+      "closedVolume": 726672181.83,
+      "rsiCurr": 46.81,
+      "rsiPrev": 42.13
+    },
+    "WIFUSDT": {
+      "closedVolume": 218522499.79,
+      "rsiCurr": 32.44,
+      "rsiPrev": 33.61
+    },
+    "NFPUSDT": {
+      "closedVolume": 13414320.98,
+      "rsiCurr": 33.48,
+      "rsiPrev": 29.39
+    },
+    "ONDOUSDT": {
+      "closedVolume": 153217922.54,
+      "rsiCurr": 33.92,
+      "rsiPrev": 31.25
+    },
+    "ALTUSDT": {
+      "closedVolume": 22454501.57,
+      "rsiCurr": 34.31,
+      "rsiPrev": 30.22
+    },
+    "JUPUSDT": {
+      "closedVolume": 46803828.22,
+      "rsiCurr": 40.71,
+      "rsiPrev": 37.41
+    },
+    "MANTAUSDT": {
+      "closedVolume": 7947521.55,
+      "rsiCurr": 35.93,
+      "rsiPrev": 34.66
+    },
+    "ZETAUSDT": {
+      "closedVolume": 13825000.12,
+      "rsiCurr": 33.84,
+      "rsiPrev": 31.04
+    },
+    "PIXELUSDT": {
+      "closedVolume": 64500213.81,
+      "rsiCurr": 40.15,
+      "rsiPrev": 37.54
+    },
+    "RONINUSDT": {
+      "closedVolume": 33749670.42,
+      "rsiCurr": 31.74,
+      "rsiPrev": 29.78
+    },
+    "LSKUSDT": {
+      "closedVolume": 7519077.08,
+      "rsiCurr": 34.9,
+      "rsiPrev": 33.99
+    },
+    "DYMUSDT": {
+      "closedVolume": 54609881.37,
+      "rsiCurr": 27.45,
+      "rsiPrev": 26.64
+    },
+    "STRKUSDT": {
+      "closedVolume": 187429180.91,
+      "rsiCurr": 35.68,
+      "rsiPrev": 32.42
+    },
+    "GLMUSDT": {
+      "closedVolume": 8591856.06,
+      "rsiCurr": 39.93,
+      "rsiPrev": 36.88
+    },
+    "PORTALUSDT": {
+      "closedVolume": 108398325.79,
+      "rsiCurr": 35.8,
+      "rsiPrev": 34.76
+    },
+    "AEVOUSDT": {
+      "closedVolume": 34585327.28,
+      "rsiCurr": 36.22,
+      "rsiPrev": 34.38
+    },
+    "BOMEUSDT": {
+      "closedVolume": 174949241.11,
+      "rsiCurr": 41.4,
+      "rsiPrev": 43.13
+    },
+    "TONUSDT": {
+      "closedVolume": 144917018.08,
+      "rsiCurr": 38.87,
+      "rsiPrev": 37.81
+    },
+    "AXLUSDT": {
+      "closedVolume": 82959283.3,
+      "rsiCurr": 32.77,
+      "rsiPrev": 32.66
+    },
+    "ETHFIUSDT": {
+      "closedVolume": 59274636.0,
+      "rsiCurr": 37.03,
+      "rsiPrev": 37.36
+    },
+    "ENAUSDT": {
+      "closedVolume": 549612592.89,
+      "rsiCurr": 36.52,
+      "rsiPrev": 36.85
+    },
+    "VANRYUSDT": {
+      "closedVolume": 9923406.84,
+      "rsiCurr": 33.13,
+      "rsiPrev": 32.48
+    },
+    "METISUSDT": {
+      "closedVolume": 36416563.73,
+      "rsiCurr": 33.17,
+      "rsiPrev": 31.94
+    },
+    "SAGAUSDT": {
+      "closedVolume": 53809341.48,
+      "rsiCurr": 28.25,
+      "rsiPrev": 28.37
+    },
+    "TAOUSDT": {
+      "closedVolume": 733765247.76,
+      "rsiCurr": 47.92,
+      "rsiPrev": 46.49
+    },
+    "BBUSDT": {
+      "closedVolume": 78894459.29,
+      "rsiCurr": 35.41,
+      "rsiPrev": 33.38
+    },
+    "IOUSDT": {
+      "closedVolume": 25336532.06,
+      "rsiCurr": 34.41,
+      "rsiPrev": 32.94
+    },
+    "NOTUSDT": {
+      "closedVolume": 29287907.61,
+      "rsiCurr": 33.54,
+      "rsiPrev": 30.17
+    },
+    "ZKUSDT": {
+      "closedVolume": 32383056.35,
+      "rsiCurr": 33.83,
+      "rsiPrev": 33.0
+    },
+    "TURBOUSDT": {
+      "closedVolume": 36030635.79,
+      "rsiCurr": 40.05,
+      "rsiPrev": 38.17
+    },
+    "TNSRUSDT": {
+      "closedVolume": 24531576.75,
+      "rsiCurr": 37.11,
+      "rsiPrev": 36.0
+    },
+    "REZUSDT": {
+      "closedVolume": 25693607.62,
+      "rsiCurr": 39.28,
+      "rsiPrev": 36.36
+    },
+    "WUSDT": {
+      "closedVolume": 104381693.65,
+      "rsiCurr": 27.67,
+      "rsiPrev": 26.02
+    },
+    "ZROUSDT": {
+      "closedVolume": 157781480.38,
+      "rsiCurr": 43.8,
+      "rsiPrev": 44.95
+    },
+    "MEWUSDT": {
+      "closedVolume": 11434841.07,
+      "rsiCurr": 34.73,
+      "rsiPrev": 32.11
+    },
+    "LISTAUSDT": {
+      "closedVolume": 16667222.2,
+      "rsiCurr": 37.85,
+      "rsiPrev": 38.38
+    },
+    "BANANAUSDT": {
+      "closedVolume": 14383295.38,
+      "rsiCurr": 35.56,
+      "rsiPrev": 33.94
+    },
+    "RENDERUSDT": {
+      "closedVolume": 105612090.99,
+      "rsiCurr": 46.8,
+      "rsiPrev": 45.09
+    },
+    "SYNUSDT": {
+      "closedVolume": 8803224.87,
+      "rsiCurr": 42.99,
+      "rsiPrev": 40.72
+    },
+    "BRETTUSDT": {
+      "closedVolume": 15246714.08,
+      "rsiCurr": 35.14,
+      "rsiPrev": 34.25
+    },
+    "GUSDT": {
+      "closedVolume": 8337798.86,
+      "rsiCurr": 34.22,
+      "rsiPrev": 32.14
+    },
+    "SYSUSDT": {
+      "closedVolume": 5490264.75,
+      "rsiCurr": 30.84,
+      "rsiPrev": 31.05
+    },
+    "POPCATUSDT": {
+      "closedVolume": 23192557.3,
+      "rsiCurr": 39.02,
+      "rsiPrev": 37.81
+    },
+    "FLUXUSDT": {
+      "closedVolume": 13944520.0,
+      "rsiCurr": 40.43,
+      "rsiPrev": 35.9
+    },
+    "DOGSUSDT": {
+      "closedVolume": 19208288.16,
+      "rsiCurr": 35.49,
+      "rsiPrev": 36.31
+    },
+    "MBOXUSDT": {
+      "closedVolume": 18489177.36,
+      "rsiCurr": 27.95,
+      "rsiPrev": 25.31
+    },
+    "SUNUSDT": {
+      "closedVolume": 8640800.5,
+      "rsiCurr": 47.5,
+      "rsiPrev": 46.18
+    },
+    "1MBABYDOGEUSDT": {
+      "closedVolume": 15966514.62,
+      "rsiCurr": 36.55,
+      "rsiPrev": 35.26
+    },
+    "RPLUSDT": {
+      "closedVolume": 6400321.84,
+      "rsiCurr": 42.02,
+      "rsiPrev": 39.6
+    },
+    "POLUSDT": {
+      "closedVolume": 98343931.22,
+      "rsiCurr": 37.48,
+      "rsiPrev": 35.33
+    },
+    "RAREUSDT": {
+      "closedVolume": 62427585.64,
+      "rsiCurr": 36.82,
+      "rsiPrev": 33.82
+    },
+    "NEIROUSDT": {
+      "closedVolume": 213732923.29,
+      "rsiCurr": 41.84,
+      "rsiPrev": 41.95
+    },
+    "FIDAUSDT": {
+      "closedVolume": 15599943.43,
+      "rsiCurr": 32.31,
+      "rsiPrev": 30.47
+    },
+    "COSUSDT": {
+      "closedVolume": 7873838.71,
+      "rsiCurr": 39.35,
+      "rsiPrev": 38.9
+    },
+    "EIGENUSDT": {
+      "closedVolume": 56601290.17,
+      "rsiCurr": 32.09,
+      "rsiPrev": 31.37
+    },
+    "CATIUSDT": {
+      "closedVolume": 7005156.61,
+      "rsiCurr": 38.43,
+      "rsiPrev": 37.1
+    },
+    "HMSTRUSDT": {
+      "closedVolume": 8465658.13,
+      "rsiCurr": 28.87,
+      "rsiPrev": 27.16
+    },
+    "SCRUSDT": {
+      "closedVolume": 11325985.35,
+      "rsiCurr": 31.84,
+      "rsiPrev": 29.08
+    },
+    "GOATUSDT": {
+      "closedVolume": 12867975.23,
+      "rsiCurr": 34.53,
+      "rsiPrev": 33.82
+    },
+    "DIAUSDT": {
+      "closedVolume": 6950855.06,
+      "rsiCurr": 36.41,
+      "rsiPrev": 34.56
+    },
+    "1000CATUSDT": {
+      "closedVolume": 9850623.79,
+      "rsiCurr": 36.91,
+      "rsiPrev": 35.26
+    },
+    "MOODENGUSDT": {
+      "closedVolume": 69986251.09,
+      "rsiCurr": 44.73,
+      "rsiPrev": 41.99
+    },
+    "SAFEUSDT": {
+      "closedVolume": 43374165.69,
+      "rsiCurr": 42.11,
+      "rsiPrev": 42.23
+    },
+    "CETUSUSDT": {
+      "closedVolume": 49385952.55,
+      "rsiCurr": 45.87,
+      "rsiPrev": 37.17
+    },
+    "ACTUSDT": {
+      "closedVolume": 21376997.1,
+      "rsiCurr": 36.63,
+      "rsiPrev": 35.52
+    },
+    "SANTOSUSDT": {
+      "closedVolume": 10420500.49,
+      "rsiCurr": 42.72,
+      "rsiPrev": 41.87
+    },
+    "1000000MOGUSDT": {
+      "closedVolume": 45194384.88,
+      "rsiCurr": 38.14,
+      "rsiPrev": 36.05
+    },
+    "GRASSUSDT": {
+      "closedVolume": 73332102.14,
+      "rsiCurr": 47.44,
+      "rsiPrev": 43.18
+    },
+    "DRIFTUSDT": {
+      "closedVolume": 15940940.37,
+      "rsiCurr": 27.94,
+      "rsiPrev": 27.88
+    },
+    "PNUTUSDT": {
+      "closedVolume": 125116874.29,
+      "rsiCurr": 35.84,
+      "rsiPrev": 36.31
+    },
+    "BANUSDT": {
+      "closedVolume": 63098395.39,
+      "rsiCurr": 50.82,
+      "rsiPrev": 46.6
+    },
+    "COWUSDT": {
+      "closedVolume": 8613802.1,
+      "rsiCurr": 44.46,
+      "rsiPrev": 42.19
+    },
+    "AKTUSDT": {
+      "closedVolume": 11260340.24,
+      "rsiCurr": 45.1,
+      "rsiPrev": 42.86
+    },
+    "SCRTUSDT": {
+      "closedVolume": 26867401.03,
+      "rsiCurr": 49.04,
+      "rsiPrev": 45.4
+    },
+    "THEUSDT": {
+      "closedVolume": 22422579.79,
+      "rsiCurr": 32.52,
+      "rsiPrev": 31.46
+    },
+    "1000CHEEMSUSDT": {
+      "closedVolume": 10495859.43,
+      "rsiCurr": 42.4,
+      "rsiPrev": 36.65
+    },
+    "AEROUSDT": {
+      "closedVolume": 67854791.39,
+      "rsiCurr": 46.1,
+      "rsiPrev": 38.4
+    },
+    "MOVEUSDT": {
+      "closedVolume": 42992642.87,
+      "rsiCurr": 29.08,
+      "rsiPrev": 29.13
+    },
+    "ACXUSDT": {
+      "closedVolume": 4834588.83,
+      "rsiCurr": 32.35,
+      "rsiPrev": 30.86
+    },
+    "MORPHOUSDT": {
+      "closedVolume": 47191860.38,
+      "rsiCurr": 59.22,
+      "rsiPrev": 58.12
+    },
+    "ORCAUSDT": {
+      "closedVolume": 1246827909.33,
+      "rsiCurr": 53.91,
+      "rsiPrev": 36.97
+    },
+    "KAIAUSDT": {
+      "closedVolume": 10421560.25,
+      "rsiCurr": 34.72,
+      "rsiPrev": 33.54
+    },
+    "CHILLGUYUSDT": {
+      "closedVolume": 14683137.93,
+      "rsiCurr": 36.82,
+      "rsiPrev": 37.87
+    },
+    "KOMAUSDT": {
+      "closedVolume": 7522459.31,
+      "rsiCurr": 39.67,
+      "rsiPrev": 39.92
+    },
+    "VIRTUALUSDT": {
+      "closedVolume": 153012498.69,
+      "rsiCurr": 45.05,
+      "rsiPrev": 43.18
+    },
+    "MEUSDT": {
+      "closedVolume": 38831120.89,
+      "rsiCurr": 25.36,
+      "rsiPrev": 23.91
+    },
+    "AVAUSDT": {
+      "closedVolume": 10659663.16,
+      "rsiCurr": 42.87,
+      "rsiPrev": 36.54
+    },
+    "VELODROMEUSDT": {
+      "closedVolume": 5004141.8,
+      "rsiCurr": 33.96,
+      "rsiPrev": 30.32
+    },
+    "PENGUUSDT": {
+      "closedVolume": 658995283.56,
+      "rsiCurr": 44.82,
+      "rsiPrev": 38.15
+    },
+    "RAYSOLUSDT": {
+      "closedVolume": 120346968.73,
+      "rsiCurr": 38.76,
+      "rsiPrev": 33.91
+    },
+    "SPXUSDT": {
+      "closedVolume": 84789216.27,
+      "rsiCurr": 44.44,
+      "rsiPrev": 40.12
+    },
+    "VANAUSDT": {
+      "closedVolume": 26907574.11,
+      "rsiCurr": 32.72,
+      "rsiPrev": 29.67
+    },
+    "MOCAUSDT": {
+      "closedVolume": 7882739.13,
+      "rsiCurr": 28.11,
+      "rsiPrev": 25.73
+    },
+    "USUALUSDT": {
+      "closedVolume": 18083137.65,
+      "rsiCurr": 24.4,
+      "rsiPrev": 22.9
+    },
+    "LUMIAUSDT": {
+      "closedVolume": 26771283.9,
+      "rsiCurr": 52.91,
+      "rsiPrev": 44.45
+    },
+    "AIXBTUSDT": {
+      "closedVolume": 29578599.02,
+      "rsiCurr": 40.87,
+      "rsiPrev": 39.0
+    },
+    "FARTCOINUSDT": {
+      "closedVolume": 286657287.44,
+      "rsiCurr": 41.36,
+      "rsiPrev": 39.81
+    },
+    "KMNOUSDT": {
+      "closedVolume": 12205579.9,
+      "rsiCurr": 34.92,
+      "rsiPrev": 34.35
+    },
+    "DEXEUSDT": {
+      "closedVolume": 222199553.49,
+      "rsiCurr": 73.24,
+      "rsiPrev": 79.49
+    },
+    "PHAUSDT": {
+      "closedVolume": 25537682.01,
+      "rsiCurr": 39.9,
+      "rsiPrev": 35.88
+    },
+    "HIVEUSDT": {
+      "closedVolume": 4699149.92,
+      "rsiCurr": 29.04,
+      "rsiPrev": 27.11
+    },
+    "CGPTUSDT": {
+      "closedVolume": 14647626.6,
+      "rsiCurr": 39.86,
+      "rsiPrev": 35.03
+    },
+    "GRIFFAINUSDT": {
+      "closedVolume": 151011874.65,
+      "rsiCurr": 43.66,
+      "rsiPrev": 42.44
+    },
+    "BIOUSDT": {
+      "closedVolume": 329007296.53,
+      "rsiCurr": 37.53,
+      "rsiPrev": 36.25
+    },
+    "ZEREBROUSDT": {
+      "closedVolume": 93765853.71,
+      "rsiCurr": 39.66,
+      "rsiPrev": 36.67
+    },
+    "COOKIEUSDT": {
+      "closedVolume": 10777905.62,
+      "rsiCurr": 30.34,
+      "rsiPrev": 30.34
+    },
+    "SWARMSUSDT": {
+      "closedVolume": 32496988.64,
+      "rsiCurr": 52.18,
+      "rsiPrev": 53.43
+    },
+    "SONICUSDT": {
+      "closedVolume": 23886287.38,
+      "rsiCurr": 25.1,
+      "rsiPrev": 22.16
+    },
+    "SUSDT": {
+      "closedVolume": 35077484.66,
+      "rsiCurr": 32.52,
+      "rsiPrev": 30.09
+    },
+    "ALCHUSDT": {
+      "closedVolume": 9400081.56,
+      "rsiCurr": 44.64,
+      "rsiPrev": 42.15
+    },
+    "DUSDT": {
+      "closedVolume": 220786583.39,
+      "rsiCurr": 47.53,
+      "rsiPrev": 39.38
+    },
+    "PROMUSDT": {
+      "closedVolume": 110671413.43,
+      "rsiCurr": 38.69,
+      "rsiPrev": 38.93
+    },
+    "SOLVUSDT": {
+      "closedVolume": 24347205.88,
+      "rsiCurr": 30.28,
+      "rsiPrev": 28.32
+    },
+    "AVAAIUSDT": {
+      "closedVolume": 14357336.92,
+      "rsiCurr": 37.74,
+      "rsiPrev": 37.9
+    },
+    "TRUMPUSDT": {
+      "closedVolume": 1147434788.25,
+      "rsiCurr": 27.1,
+      "rsiPrev": 27.92
+    },
+    "ARCUSDT": {
+      "closedVolume": 26173741.7,
+      "rsiCurr": 53.92,
+      "rsiPrev": 52.84
+    },
+    "MELANIAUSDT": {
+      "closedVolume": 18184644.6,
+      "rsiCurr": 31.31,
+      "rsiPrev": 28.21
+    },
+    "PIPPINUSDT": {
+      "closedVolume": 266053849.7,
+      "rsiCurr": 40.55,
+      "rsiPrev": 40.23
+    },
+    "ANIMEUSDT": {
+      "closedVolume": 25963202.33,
+      "rsiCurr": 31.62,
+      "rsiPrev": 28.78
+    },
+    "BERAUSDT": {
+      "closedVolume": 47177812.11,
+      "rsiCurr": 34.79,
+      "rsiPrev": 34.86
+    },
+    "VVVUSDT": {
+      "closedVolume": 127864704.14,
+      "rsiCurr": 76.45,
+      "rsiPrev": 74.82
+    },
+    "VTHOUSDT": {
+      "closedVolume": 3899079.33,
+      "rsiCurr": 27.54,
+      "rsiPrev": 25.15
+    },
+    "TSTUSDT": {
+      "closedVolume": 18176192.77,
+      "rsiCurr": 34.21,
+      "rsiPrev": 32.24
+    },
+    "IPUSDT": {
+      "closedVolume": 119936615.23,
+      "rsiCurr": 34.67,
+      "rsiPrev": 34.05
+    },
+    "KAITOUSDT": {
+      "closedVolume": 37679371.6,
+      "rsiCurr": 38.78,
+      "rsiPrev": 39.27
+    },
+    "REDUSDT": {
+      "closedVolume": 114669301.66,
+      "rsiCurr": 36.77,
+      "rsiPrev": 36.78
+    },
+    "BMTUSDT": {
+      "closedVolume": 11310508.62,
+      "rsiCurr": 31.23,
+      "rsiPrev": 29.68
+    },
+    "SHELLUSDT": {
+      "closedVolume": 13179012.01,
+      "rsiCurr": 36.5,
+      "rsiPrev": 34.95
+    },
+    "HEIUSDT": {
+      "closedVolume": 11288941.7,
+      "rsiCurr": 32.05,
+      "rsiPrev": 32.09
+    },
+    "LAYERUSDT": {
+      "closedVolume": 21617945.11,
+      "rsiCurr": 36.28,
+      "rsiPrev": 35.01
+    },
+    "EPICUSDT": {
+      "closedVolume": 12545228.55,
+      "rsiCurr": 36.5,
+      "rsiPrev": 34.9
+    },
+    "GPSUSDT": {
+      "closedVolume": 60355689.5,
+      "rsiCurr": 35.26,
+      "rsiPrev": 38.48
+    },
+    "VICUSDT": {
+      "closedVolume": 7502953.58,
+      "rsiCurr": 35.37,
+      "rsiPrev": 33.05
+    },
+    "MUBARAKUSDT": {
+      "closedVolume": 12368902.67,
+      "rsiCurr": 36.09,
+      "rsiPrev": 35.74
+    },
+    "SIRENUSDT": {
+      "closedVolume": 231025496.96,
+      "rsiCurr": 53.09,
+      "rsiPrev": 52.88
+    },
+    "BROCCOLI714USDT": {
+      "closedVolume": 18987187.64,
+      "rsiCurr": 47.99,
+      "rsiPrev": 43.43
+    },
+    "FORMUSDT": {
+      "closedVolume": 14444958.9,
+      "rsiCurr": 34.52,
+      "rsiPrev": 34.09
+    },
+    "BANANAS31USDT": {
+      "closedVolume": 71296030.58,
+      "rsiCurr": 59.73,
+      "rsiPrev": 59.26
+    },
+    "TUTUSDT": {
+      "closedVolume": 8905622.99,
+      "rsiCurr": 40.45,
+      "rsiPrev": 39.53
+    },
+    "NILUSDT": {
+      "closedVolume": 21684963.0,
+      "rsiCurr": 34.06,
+      "rsiPrev": 31.87
+    },
+    "BROCCOLIF3BUSDT": {
+      "closedVolume": 4228368.35,
+      "rsiCurr": 43.18,
+      "rsiPrev": 44.78
+    },
+    "BRUSDT": {
+      "closedVolume": 28817686.06,
+      "rsiCurr": 59.68,
+      "rsiPrev": 55.84
+    },
+    "PLUMEUSDT": {
+      "closedVolume": 73920574.79,
+      "rsiCurr": 32.75,
+      "rsiPrev": 30.03
+    },
+    "PARTIUSDT": {
+      "closedVolume": 35972957.17,
+      "rsiCurr": 33.07,
+      "rsiPrev": 32.27
+    },
+    "WALUSDT": {
+      "closedVolume": 15622632.69,
+      "rsiCurr": 31.72,
+      "rsiPrev": 29.92
+    },
+    "PAXGUSDT": {
+      "closedVolume": 499372738.78,
+      "rsiCurr": 53.59,
+      "rsiPrev": 55.37
+    },
+    "MAVIAUSDT": {
+      "closedVolume": 10240766.65,
+      "rsiCurr": 36.08,
+      "rsiPrev": 33.86
+    },
+    "ATHUSDT": {
+      "closedVolume": 15639476.95,
+      "rsiCurr": 35.47,
+      "rsiPrev": 34.72
+    },
+    "GUNUSDT": {
+      "closedVolume": 640844134.31,
+      "rsiCurr": 44.43,
+      "rsiPrev": 48.59
+    },
+    "BABYUSDT": {
+      "closedVolume": 11212607.99,
+      "rsiCurr": 41.22,
+      "rsiPrev": 40.56
+    },
+    "MLNUSDT": {
+      "closedVolume": 7793425.69,
+      "rsiCurr": 39.35,
+      "rsiPrev": 35.89
+    },
+    "PROMPTUSDT": {
+      "closedVolume": 6507075.7,
+      "rsiCurr": 37.01,
+      "rsiPrev": 34.54
+    },
+    "JELLYJELLYUSDT": {
+      "closedVolume": 18603066.56,
+      "rsiCurr": 47.12,
+      "rsiPrev": 45.5
+    },
+    "STOUSDT": {
+      "closedVolume": 286035621.33,
+      "rsiCurr": 47.49,
+      "rsiPrev": 48.12
+    },
+    "KERNELUSDT": {
+      "closedVolume": 57004018.7,
+      "rsiCurr": 41.69,
+      "rsiPrev": 40.78
+    },
+    "WCTUSDT": {
+      "closedVolume": 41962386.74,
+      "rsiCurr": 34.3,
+      "rsiPrev": 31.08
+    },
+    "INITUSDT": {
+      "closedVolume": 32266138.17,
+      "rsiCurr": 38.35,
+      "rsiPrev": 37.97
+    },
+    "FHEUSDT": {
+      "closedVolume": 17235671.12,
+      "rsiCurr": 43.08,
+      "rsiPrev": 42.76
+    },
+    "AERGOUSDT": {
+      "closedVolume": 4262720.5,
+      "rsiCurr": 32.44,
+      "rsiPrev": 28.28
+    },
+    "DEEPUSDT": {
+      "closedVolume": 8843586.99,
+      "rsiCurr": 37.88,
+      "rsiPrev": 36.67
+    },
+    "HYPERUSDT": {
+      "closedVolume": 856843339.7,
+      "rsiCurr": 49.56,
+      "rsiPrev": 39.5
+    },
+    "BANKUSDT": {
+      "closedVolume": 19165757.36,
+      "rsiCurr": 44.35,
+      "rsiPrev": 44.14
+    },
+    "JSTUSDT": {
+      "closedVolume": 44060720.37,
+      "rsiCurr": 79.14,
+      "rsiPrev": 75.31
+    },
+    "SIGNUSDT": {
+      "closedVolume": 48691886.47,
+      "rsiCurr": 37.35,
+      "rsiPrev": 37.33
+    },
+    "PUNDIXUSDT": {
+      "closedVolume": 5964173.97,
+      "rsiCurr": 30.28,
+      "rsiPrev": 27.36
+    },
+    "CTKUSDT": {
+      "closedVolume": 5418921.76,
+      "rsiCurr": 40.13,
+      "rsiPrev": 37.57
+    },
+    "DOLOUSDT": {
+      "closedVolume": 6924035.54,
+      "rsiCurr": 43.18,
+      "rsiPrev": 42.71
+    },
+    "SXTUSDT": {
+      "closedVolume": 15787673.72,
+      "rsiCurr": 18.94,
+      "rsiPrev": 18.56
+    },
+    "AIOTUSDT": {
+      "closedVolume": 153847766.03,
+      "rsiCurr": 39.24,
+      "rsiPrev": 37.18
+    },
+    "HAEDALUSDT": {
+      "closedVolume": 17517249.59,
+      "rsiCurr": 38.86,
+      "rsiPrev": 38.05
+    },
+    "ASRUSDT": {
+      "closedVolume": 9172242.52,
+      "rsiCurr": 45.48,
+      "rsiPrev": 44.73
+    },
+    "ALPINEUSDT": {
+      "closedVolume": 8874471.56,
+      "rsiCurr": 44.6,
+      "rsiPrev": 43.19
+    },
+    "B2USDT": {
+      "closedVolume": 5285802.88,
+      "rsiCurr": 45.87,
+      "rsiPrev": 45.37
+    },
+    "SKYAIUSDT": {
+      "closedVolume": 463685570.11,
+      "rsiCurr": 89.72,
+      "rsiPrev": 89.2
+    },
+    "AWEUSDT": {
+      "closedVolume": 22680573.61,
+      "rsiCurr": 48.17,
+      "rsiPrev": 45.47
+    },
+    "SOONUSDT": {
+      "closedVolume": 780028190.01,
+      "rsiCurr": 43.76,
+      "rsiPrev": 43.49
+    },
+    "DOODUSDT": {
+      "closedVolume": 13077427.5,
+      "rsiCurr": 41.78,
+      "rsiPrev": 39.68
+    },
+    "CVCUSDT": {
+      "closedVolume": 5913079.0,
+      "rsiCurr": 32.9,
+      "rsiPrev": 26.48
+    },
+    "SYRUPUSDT": {
+      "closedVolume": 24141952.56,
+      "rsiCurr": 46.66,
+      "rsiPrev": 43.28
+    },
+    "OGUSDT": {
+      "closedVolume": 14109698.82,
+      "rsiCurr": 35.89,
+      "rsiPrev": 34.08
+    },
+    "NXPCUSDT": {
+      "closedVolume": 12975679.46,
+      "rsiCurr": 27.49,
+      "rsiPrev": 25.41
+    },
+    "BUSDT": {
+      "closedVolume": 57575748.71,
+      "rsiCurr": 42.53,
+      "rsiPrev": 37.48
+    },
+    "AGTUSDT": {
+      "closedVolume": 149570945.29,
+      "rsiCurr": 80.92,
+      "rsiPrev": 69.92
+    },
+    "HUMAUSDT": {
+      "closedVolume": 133653072.96,
+      "rsiCurr": 52.89,
+      "rsiPrev": 46.91
+    },
+    "MERLUSDT": {
+      "closedVolume": 123075695.77,
+      "rsiCurr": 35.06,
+      "rsiPrev": 34.43
+    },
+    "AUSDT": {
+      "closedVolume": 21734583.65,
+      "rsiCurr": 28.93,
+      "rsiPrev": 24.03
+    },
+    "SOPHUSDT": {
+      "closedVolume": 13290898.35,
+      "rsiCurr": 30.58,
+      "rsiPrev": 26.95
+    },
+    "1000000BOBUSDT": {
+      "closedVolume": 3927283.08,
+      "rsiCurr": 35.76,
+      "rsiPrev": 34.91
+    },
+    "RESOLVUSDT": {
+      "closedVolume": 35262973.8,
+      "rsiCurr": 37.24,
+      "rsiPrev": 37.57
+    },
+    "HOMEUSDT": {
+      "closedVolume": 11981421.44,
+      "rsiCurr": 37.96,
+      "rsiPrev": 36.77
+    },
+    "HYPEUSDT": {
+      "closedVolume": 1889237084.4,
+      "rsiCurr": 61.51,
+      "rsiPrev": 59.49
+    },
+    "LAUSDT": {
+      "closedVolume": 18816768.37,
+      "rsiCurr": 26.54,
+      "rsiPrev": 23.66
+    },
+    "TAIKOUSDT": {
+      "closedVolume": 4958663.91,
+      "rsiCurr": 32.27,
+      "rsiPrev": 29.14
+    },
+    "SQDUSDT": {
+      "closedVolume": 4428929.67,
+      "rsiCurr": 34.24,
+      "rsiPrev": 34.56
+    },
+    "FUSDT": {
+      "closedVolume": 20505846.1,
+      "rsiCurr": 45.41,
+      "rsiPrev": 43.37
+    },
+    "SAHARAUSDT": {
+      "closedVolume": 152167794.27,
+      "rsiCurr": 36.08,
+      "rsiPrev": 32.17
+    },
+    "MYXUSDT": {
+      "closedVolume": 69224718.64,
+      "rsiCurr": 40.91,
+      "rsiPrev": 40.65
+    },
+    "SPKUSDT": {
+      "closedVolume": 1492768490.41,
+      "rsiCurr": 61.1,
+      "rsiPrev": 48.94
+    },
+    "NEWTUSDT": {
+      "closedVolume": 80638417.66,
+      "rsiCurr": 38.66,
+      "rsiPrev": 33.88
+    },
+    "HUSDT": {
+      "closedVolume": 184562711.06,
+      "rsiCurr": 54.12,
+      "rsiPrev": 47.78
+    },
+    "ICNTUSDT": {
+      "closedVolume": 16045891.42,
+      "rsiCurr": 51.49,
+      "rsiPrev": 52.49
+    },
+    "PUMPBTCUSDT": {
+      "closedVolume": 77434798.12,
+      "rsiCurr": 51.71,
+      "rsiPrev": 47.21
+    },
+    "BULLAUSDT": {
+      "closedVolume": 142202402.54,
+      "rsiCurr": 32.93,
+      "rsiPrev": 34.67
+    },
+    "IDOLUSDT": {
+      "closedVolume": 4243162.1,
+      "rsiCurr": 48.72,
+      "rsiPrev": 47.4
+    },
+    "CUSDT": {
+      "closedVolume": 79802409.34,
+      "rsiCurr": 44.38,
+      "rsiPrev": 41.33
+    },
+    "AINUSDT": {
+      "closedVolume": 18683763.15,
+      "rsiCurr": 52.83,
+      "rsiPrev": 46.42
+    },
+    "CROSSUSDT": {
+      "closedVolume": 41235374.34,
+      "rsiCurr": 52.82,
+      "rsiPrev": 46.21
+    },
+    "VELVETUSDT": {
+      "closedVolume": 82127289.05,
+      "rsiCurr": 51.04,
+      "rsiPrev": 42.57
+    },
+    "TACUSDT": {
+      "closedVolume": 83282914.28,
+      "rsiCurr": 63.74,
+      "rsiPrev": 46.81
+    },
+    "MUSDT": {
+      "closedVolume": 429554690.0,
+      "rsiCurr": 83.9,
+      "rsiPrev": 79.12
+    },
+    "PUMPUSDT": {
+      "closedVolume": 236763955.55,
+      "rsiCurr": 38.31,
+      "rsiPrev": 38.43
+    },
+    "ERAUSDT": {
+      "closedVolume": 20035942.49,
+      "rsiCurr": 24.59,
+      "rsiPrev": 21.82
+    },
+    "TAUSDT": {
+      "closedVolume": 15760919.07,
+      "rsiCurr": 50.28,
+      "rsiPrev": 51.6
+    },
+    "CVXUSDT": {
+      "closedVolume": 5883335.54,
+      "rsiCurr": 36.33,
+      "rsiPrev": 34.83
+    },
+    "ESPORTSUSDT": {
+      "closedVolume": 64368672.69,
+      "rsiCurr": 48.64,
+      "rsiPrev": 55.23
+    },
+    "ZORAUSDT": {
+      "closedVolume": 15292582.48,
+      "rsiCurr": 31.07,
+      "rsiPrev": 30.64
+    },
+    "SLPUSDT": {
+      "closedVolume": 54701730.01,
+      "rsiCurr": 39.96,
+      "rsiPrev": 33.68
+    },
+    "TREEUSDT": {
+      "closedVolume": 77490139.4,
+      "rsiCurr": 25.81,
+      "rsiPrev": 21.42
+    },
+    "PLAYUSDT": {
+      "closedVolume": 124155525.57,
+      "rsiCurr": 68.92,
+      "rsiPrev": 67.58
+    },
+    "TAGUSDT": {
+      "closedVolume": 10010355.64,
+      "rsiCurr": 55.05,
+      "rsiPrev": 55.41
+    },
+    "NAORISUSDT": {
+      "closedVolume": 138054059.62,
+      "rsiCurr": 66.28,
+      "rsiPrev": 54.78
+    },
+    "TOWNSUSDT": {
+      "closedVolume": 20585640.67,
+      "rsiCurr": 21.7,
+      "rsiPrev": 19.41
+    },
+    "PROVEUSDT": {
+      "closedVolume": 18002584.04,
+      "rsiCurr": 22.99,
+      "rsiPrev": 18.03
+    },
+    "CARVUSDT": {
+      "closedVolume": 14824649.44,
+      "rsiCurr": 25.33,
+      "rsiPrev": 22.29
+    },
+    "AIOUSDT": {
+      "closedVolume": 12016872.02,
+      "rsiCurr": 48.95,
+      "rsiPrev": 46.56
+    },
+    "SAPIENUSDT": {
+      "closedVolume": 60796019.64,
+      "rsiCurr": 45.49,
+      "rsiPrev": 44.62
+    },
+    "WLFIUSDT": {
+      "closedVolume": 163932045.36,
+      "rsiCurr": 33.28,
+      "rsiPrev": 33.7
+    },
+    "ALLUSDT": {
+      "closedVolume": 4098720.61,
+      "rsiCurr": 42.55,
+      "rsiPrev": 37.21
+    },
+    "USELESSUSDT": {
+      "closedVolume": 26271684.35,
+      "rsiCurr": 36.37,
+      "rsiPrev": 36.13
+    },
+    "XNYUSDT": {
+      "closedVolume": 27072963.55,
+      "rsiCurr": 48.49,
+      "rsiPrev": 44.15
+    },
+    "INUSDT": {
+      "closedVolume": 25386052.04,
+      "rsiCurr": 48.57,
+      "rsiPrev": 46.41
+    },
+    "XPLUSDT": {
+      "closedVolume": 266419046.15,
+      "rsiCurr": 42.42,
+      "rsiPrev": 42.61
+    },
+    "SOMIUSDT": {
+      "closedVolume": 109720734.3,
+      "rsiCurr": 22.74,
+      "rsiPrev": 20.08
+    },
+    "MITOUSDT": {
+      "closedVolume": 8864063.59,
+      "rsiCurr": 30.95,
+      "rsiPrev": 28.9
+    },
+    "HEMIUSDT": {
+      "closedVolume": 61697211.26,
+      "rsiCurr": 44.71,
+      "rsiPrev": 42.76
+    },
+    "BTRUSDT": {
+      "closedVolume": 23813361.67,
+      "rsiCurr": 43.63,
+      "rsiPrev": 44.6
+    },
+    "LINEAUSDT": {
+      "closedVolume": 55648151.05,
+      "rsiCurr": 20.98,
+      "rsiPrev": 18.8
+    },
+    "BASUSDT": {
+      "closedVolume": 452487265.49,
+      "rsiCurr": 57.33,
+      "rsiPrev": 45.91
+    },
+    "TAKEUSDT": {
+      "closedVolume": 38203566.19,
+      "rsiCurr": 40.28,
+      "rsiPrev": 38.75
+    },
+    "OPENUSDT": {
+      "closedVolume": 44322023.28,
+      "rsiCurr": 33.2,
+      "rsiPrev": 26.88
+    },
+    "QUSDT": {
+      "closedVolume": 135338161.27,
+      "rsiCurr": 46.46,
+      "rsiPrev": 45.03
+    },
+    "ARIAUSDT": {
+      "closedVolume": 119991218.8,
+      "rsiCurr": 45.36,
+      "rsiPrev": 45.37
+    },
+    "PTBUSDT": {
+      "closedVolume": 24142456.12,
+      "rsiCurr": 24.82,
+      "rsiPrev": 24.96
+    },
+    "XPINUSDT": {
+      "closedVolume": 14873708.54,
+      "rsiCurr": 47.48,
+      "rsiPrev": 46.08
+    },
+    "AVNTUSDT": {
+      "closedVolume": 124543833.24,
+      "rsiCurr": 43.64,
+      "rsiPrev": 41.65
+    },
+    "FLOCKUSDT": {
+      "closedVolume": 32566114.97,
+      "rsiCurr": 24.11,
+      "rsiPrev": 17.78
+    },
+    "SKYUSDT": {
+      "closedVolume": 47261942.59,
+      "rsiCurr": 66.92,
+      "rsiPrev": 56.1
+    },
+    "ZKCUSDT": {
+      "closedVolume": 16076141.89,
+      "rsiCurr": 16.56,
+      "rsiPrev": 14.1
+    },
+    "HOLOUSDT": {
+      "closedVolume": 56296398.19,
+      "rsiCurr": 19.93,
+      "rsiPrev": 16.48
+    },
+    "TOSHIUSDT": {
+      "closedVolume": 8720349.18,
+      "rsiCurr": 25.15,
+      "rsiPrev": 22.89
+    },
+    "UBUSDT": {
+      "closedVolume": 356691889.73,
+      "rsiCurr": 59.0,
+      "rsiPrev": 54.83
+    },
+    "STBLUSDT": {
+      "closedVolume": 9433581.75,
+      "rsiCurr": 18.1,
+      "rsiPrev": 17.91
+    },
+    "0GUSDT": {
+      "closedVolume": 32333880.48,
+      "rsiCurr": 30.98,
+      "rsiPrev": 31.1
+    },
+    "BARDUSDT": {
+      "closedVolume": 51940969.4,
+      "rsiCurr": 30.74,
+      "rsiPrev": 30.03
+    },
+    "ASTERUSDT": {
+      "closedVolume": 330117728.38,
+      "rsiCurr": 38.44,
+      "rsiPrev": 38.81
+    },
+    "BLESSUSDT": {
+      "closedVolume": 94916146.15,
+      "rsiCurr": 30.56,
+      "rsiPrev": 27.55
+    },
+    "COAIUSDT": {
+      "closedVolume": 36449623.26,
+      "rsiCurr": 50.55,
+      "rsiPrev": 50.2
+    },
+    "TRADOORUSDT": {
+      "closedVolume": 733407686.77,
+      "rsiCurr": 42.71,
+      "rsiPrev": 70.83
+    },
+    "HANAUSDT": {
+      "closedVolume": 8090094.92,
+      "rsiCurr": 47.05,
+      "rsiPrev": 47.1
+    },
+    "FLUIDUSDT": {
+      "closedVolume": 40516718.21,
+      "rsiCurr": 25.55,
+      "rsiPrev": 21.89
+    },
+    "MIRAUSDT": {
+      "closedVolume": 50970046.14,
+      "rsiCurr": 10.96,
+      "rsiPrev": 8.97
+    },
+    "AKEUSDT": {
+      "closedVolume": 30290578.55,
+      "rsiCurr": 35.58,
+      "rsiPrev": 41.08
+    },
+    "ORDERUSDT": {
+      "closedVolume": 12650792.34,
+      "rsiCurr": 36.0,
+      "rsiPrev": 34.82
+    },
+    "LIGHTUSDT": {
+      "closedVolume": 24702442.23,
+      "rsiCurr": 42.36,
+      "rsiPrev": 42.12
+    },
+    "FFUSDT": {
+      "closedVolume": 45001299.1,
+      "rsiCurr": 33.09,
+      "rsiPrev": 33.88
+    },
+    "NOMUSDT": {
+      "closedVolume": 58087899.69,
+      "rsiCurr": 26.97,
+      "rsiPrev": 27.01
+    },
+    "EDENUSDT": {
+      "closedVolume": 17677508.99,
+      "rsiCurr": 20.34,
+      "rsiPrev": 18.32
+    },
+    "LYNUSDT": {
+      "closedVolume": 63911576.38,
+      "rsiCurr": 40.59,
+      "rsiPrev": 38.57
+    },
+    "XANUSDT": {
+      "closedVolume": 60213017.97,
+      "rsiCurr": 21.79,
+      "rsiPrev": 19.62
+    },
+    "TRUTHUSDT": {
+      "closedVolume": 10262233.87,
+      "rsiCurr": 47.12,
+      "rsiPrev": 47.1
+    },
+    "2ZUSDT": {
+      "closedVolume": 14705411.22,
+      "rsiCurr": 25.75,
+      "rsiPrev": 24.1
+    },
+    "EVAAUSDT": {
+      "closedVolume": 45842063.85,
+      "rsiCurr": 44.39,
+      "rsiPrev": 45.08
+    },
+    "KGENUSDT": {
+      "closedVolume": 20012917.06,
+      "rsiCurr": 48.07,
+      "rsiPrev": 46.07
+    },
+    "YBUSDT": {
+      "closedVolume": 22894455.22,
+      "rsiCurr": 21.6,
+      "rsiPrev": 20.37
+    },
+    "MONUSDT": {
+      "closedVolume": 180601353.29,
+      "rsiCurr": 40.17,
+      "rsiPrev": 38.31
+    },
+    "ZBTUSDT": {
+      "closedVolume": 989015251.2,
+      "rsiCurr": 56.65,
+      "rsiPrev": 34.89
+    },
+    "ENSOUSDT": {
+      "closedVolume": 333124308.32,
+      "rsiCurr": 41.06,
+      "rsiPrev": 37.04
+    },
+    "4USDT": {
+      "closedVolume": 28125626.1,
+      "rsiCurr": 18.34,
+      "rsiPrev": 17.6
+    },
+    "RECALLUSDT": {
+      "closedVolume": 9598384.75,
+      "rsiCurr": 17.06,
+      "rsiPrev": 16.52
+    },
+    "GIGGLEUSDT": {
+      "closedVolume": 249550867.74,
+      "rsiCurr": 40.8,
+      "rsiPrev": 40.13
+    },
+    "METUSDT": {
+      "closedVolume": 306848913.5,
+      "rsiCurr": 16.21,
+      "rsiPrev": 13.42
+    },
+    "EULUSDT": {
+      "closedVolume": 65272914.78,
+      "rsiCurr": 29.25,
+      "rsiPrev": 25.32
+    },
+    "CLOUSDT": {
+      "closedVolume": 64455289.17,
+      "rsiCurr": 46.12,
+      "rsiPrev": 45.72
+    },
+    "LABUSDT": {
+      "closedVolume": 562694746.61,
+      "rsiCurr": 85.34,
+      "rsiPrev": 78.63
+    },
+    "币安人生USDT": {
+      "closedVolume": 1170223574.12,
+      "rsiCurr": 60.82,
+      "rsiPrev": 70.57
+    },
+    "BLUAIUSDT": {
+      "closedVolume": 50258063.14,
+      "rsiCurr": 39.2,
+      "rsiPrev": 31.98
+    },
+    "ONUSDT": {
+      "closedVolume": 82731447.77,
+      "rsiCurr": 42.63,
+      "rsiPrev": 41.34
+    },
+    "APRUSDT": {
+      "closedVolume": 41452967.63,
+      "rsiCurr": 42.12,
+      "rsiPrev": 36.94
+    },
+    "KITEUSDT": {
+      "closedVolume": 68613239.13,
+      "rsiCurr": 47.37,
+      "rsiPrev": 43.58
+    },
+    "TURTLEUSDT": {
+      "closedVolume": 10900020.64,
+      "rsiCurr": 23.35,
+      "rsiPrev": 19.96
+    },
+    "ATUSDT": {
+      "closedVolume": 9595572.3,
+      "rsiCurr": 28.97,
+      "rsiPrev": 28.21
+    },
+    "RIVERUSDT": {
+      "closedVolume": 677571743.32,
+      "rsiCurr": 47.03,
+      "rsiPrev": 46.6
+    },
+    "CCUSDT": {
+      "closedVolume": 44684946.2,
+      "rsiCurr": 47.65,
+      "rsiPrev": 46.71
+    },
+    "STABLEUSDT": {
+      "closedVolume": 240886118.86,
+      "rsiCurr": 45.88,
+      "rsiPrev": 38.41
+    },
+    "UAIUSDT": {
+      "closedVolume": 337856743.1,
+      "rsiCurr": 58.2,
+      "rsiPrev": 49.47
+    },
+    "MMTUSDT": {
+      "closedVolume": 28218022.33,
+      "rsiCurr": 21.1,
+      "rsiPrev": 18.54
+    },
+    "ALLOUSDT": {
+      "closedVolume": 44228648.64,
+      "rsiCurr": 36.42,
+      "rsiPrev": 31.33
+    },
+    "CLANKERUSDT": {
+      "closedVolume": 7632789.9,
+      "rsiCurr": 28.4,
+      "rsiPrev": 27.51
+    },
+    "TRUSTUSDT": {
+      "closedVolume": 13074350.2,
+      "rsiCurr": 32.08,
+      "rsiPrev": 29.43
+    },
+    "FOLKSUSDT": {
+      "closedVolume": 69074472.28,
+      "rsiCurr": 45.05,
+      "rsiPrev": 44.34
+    },
+    "JCTUSDT": {
+      "closedVolume": 43919214.54,
+      "rsiCurr": 47.19,
+      "rsiPrev": 52.21
+    },
+    "BEATUSDT": {
+      "closedVolume": 149892259.84,
+      "rsiCurr": 51.6,
+      "rsiPrev": 50.85
+    },
+    "PIEVERSEUSDT": {
+      "closedVolume": 1899966954.35,
+      "rsiCurr": 56.55,
+      "rsiPrev": 69.3
+    },
+    "SENTUSDT": {
+      "closedVolume": 107717894.54,
+      "rsiCurr": 31.06,
+      "rsiPrev": 27.2
+    },
+    "USUSDT": {
+      "closedVolume": 6874207.09,
+      "rsiCurr": 28.7,
+      "rsiPrev": 27.32
+    },
+    "IRYSUSDT": {
+      "closedVolume": 62714113.93,
+      "rsiCurr": 55.22,
+      "rsiPrev": 51.23
+    },
+    "NIGHTUSDT": {
+      "closedVolume": 36126566.72,
+      "rsiCurr": 40.01,
+      "rsiPrev": 40.26
+    },
+    "CYSUSDT": {
+      "closedVolume": 67081920.48,
+      "rsiCurr": 54.97,
+      "rsiPrev": 53.95
+    },
+    "WETUSDT": {
+      "closedVolume": 19970156.72,
+      "rsiCurr": 31.75,
+      "rsiPrev": 32.79
+    },
+    "POWERUSDT": {
+      "closedVolume": 40869321.94,
+      "rsiCurr": 48.81,
+      "rsiPrev": 48.69
+    },
+    "RAVEUSDT": {
+      "closedVolume": 5779867832.82,
+      "rsiCurr": 50.93,
+      "rsiPrev": 49.73
+    },
+    "ZKPUSDT": {
+      "closedVolume": 45748264.0,
+      "rsiCurr": 33.83,
+      "rsiPrev": 24.31
+    },
+    "GUAUSDT": {
+      "closedVolume": 85661996.41,
+      "rsiCurr": 95.72,
+      "rsiPrev": 95.45
+    },
+    "LITUSDT": {
+      "closedVolume": 72285405.84,
+      "rsiCurr": 13.98,
+      "rsiPrev": 13.36
+    },
+    "COLLECTUSDT": {
+      "closedVolume": 48285546.04,
+      "rsiCurr": 41.42,
+      "rsiPrev": 42.79
+    },
+    "ZAMAUSDT": {
+      "closedVolume": 115608486.56,
+      "rsiCurr": 9.72,
+      "rsiPrev": 9.76
+    },
+    "BREVUSDT": {
+      "closedVolume": 24705882.11,
+      "rsiCurr": 10.59,
+      "rsiPrev": 6.23
+    },
+    "FOGOUSDT": {
+      "closedVolume": 16880742.48,
+      "rsiCurr": 19.54,
+      "rsiPrev": 19.72
+    },
+    "SPORTFUNUSDT": {
+      "closedVolume": 33789413.7,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "FRAXUSDT": {
+      "closedVolume": 20529320.08,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "MAGMAUSDT": {
+      "closedVolume": 174378141.21,
+      "rsiCurr": 60.48,
+      "rsiPrev": 58.34
+    },
+    "AIAUSDT": {
+      "closedVolume": 58977851.44,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "ACUUSDT": {
+      "closedVolume": 21682695.23,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "SKRUSDT": {
+      "closedVolume": 171012657.79,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "SPACEUSDT": {
+      "closedVolume": 44101352.81,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "ELSAUSDT": {
+      "closedVolume": 18001184.06,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "INXUSDT": {
+      "closedVolume": 60504048.71,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "MEGAUSDT": {
+      "closedVolume": 25457356.18,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "TRIAUSDT": {
+      "closedVolume": 94401109.92,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "BIRBUSDT": {
+      "closedVolume": 20739983.07,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "GWEIUSDT": {
+      "closedVolume": 243385672.22,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "我踏马来了USDT": {
+      "closedVolume": 52784858.97,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "FIGHTUSDT": {
+      "closedVolume": 61437801.54,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "OPNUSDT": {
+      "closedVolume": 78848549.31,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "MANTRAUSDT": {
+      "closedVolume": 21389422.6,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "KATUSDT": {
+      "closedVolume": 2192770984.94,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "ESPUSDT": {
+      "closedVolume": 64510242.28,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "龙虾USDT": {
+      "closedVolume": 27057185.43,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "CFGUSDT": {
+      "closedVolume": 119806781.18,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "AZTECUSDT": {
+      "closedVolume": 16520105.29,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "ROBOUSDT": {
+      "closedVolume": 109173826.45,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "EDGEUSDT": {
+      "closedVolume": 244475113.73,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "BSBUSDT": {
+      "closedVolume": 1644804049.54,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "BASEDUSDT": {
+      "closedVolume": 828085143.92,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "PRLUSDT": {
+      "closedVolume": 98851242.54,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "GENIUSUSDT": {
+      "closedVolume": 239223014.82,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "OPGUSDT": {
+      "closedVolume": 411147275.55,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "XAUTUSDT": {
+      "closedVolume": 133105736.54,
+      "rsiCurr": null,
+      "rsiPrev": null
+    },
+    "CHIPUSDT": {
+      "closedVolume": 5922052955.53,
+      "rsiCurr": null,
+      "rsiPrev": null
+    }
+  }
+}

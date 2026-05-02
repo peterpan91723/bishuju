@@ -120,6 +120,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/rankings.json
+          git add data/rankings.json data/cache_weekly.json data/cache_monthly.json
           git diff --staged --quiet || git commit -m "自动更新数据 $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push

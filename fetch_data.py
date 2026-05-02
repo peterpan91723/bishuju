@@ -157,39 +157,56 @@ def calc_rsi_last_two(closes, period=14):
 
 
 def get_weekly_rsi(symbols):
-    """获取周线RSI(14)（分批并发）"""
+    """获取周线RSI(14) 与 最新已收盘周线 USDT 成交额（分批并发）"""
     params = {"interval": "1w", "limit": 100}
 
     all_klines = batch_fetch_klines(symbols, params)
     results = {}
     for symbol, klines in all_klines.items():
-        if len(klines) >= 17:
-            closes = [float(k[4]) for k in klines[:-1]]
+        if len(klines) < 2:
+            continue
+        # klines[-1] 是当前未收盘那根；klines[:-1][-1] 即最新已收盘周线
+        closed = klines[:-1]
+        closed_volume = float(closed[-1][7])
+
+        rsi_prev = None
+        rsi_curr = None
+        if len(closed) >= 16:
+            closes = [float(k[4]) for k in closed]
             rsi_prev, rsi_curr = calc_rsi_last_two(closes)
-            if rsi_curr is not None and rsi_prev is not None:
-                results[symbol] = {
-                    "rsiCurr": rsi_curr,
-                    "rsiPrev": rsi_prev,
-                }
+
+        results[symbol] = {
+            "closedVolume": round(closed_volume, 2),
+            "rsiCurr": rsi_curr,
+            "rsiPrev": rsi_prev,
+        }
 
     return results
 
 
 def get_monthly_rsi(symbols):
-    """获取月线RSI(14)（分批并发）"""
+    """获取月线RSI(14) 与 最新已收盘月线 USDT 成交额（分批并发）"""
     params = {"interval": "1M", "limit": 100}
 
     all_klines = batch_fetch_klines(symbols, params)
     results = {}
     for symbol, klines in all_klines.items():
-        if len(klines) >= 17:
-            closes = [float(k[4]) for k in klines[:-1]]
+        if len(klines) < 2:
+            continue
+        closed = klines[:-1]
+        closed_volume = float(closed[-1][7])
+
+        rsi_prev = None
+        rsi_curr = None
+        if len(closed) >= 16:
+            closes = [float(k[4]) for k in closed]
             rsi_prev, rsi_curr = calc_rsi_last_two(closes)
-            if rsi_curr is not None and rsi_prev is not None:
-                results[symbol] = {
-                    "rsiCurr": rsi_curr,
-                    "rsiPrev": rsi_prev,
-                }
+
+        results[symbol] = {
+            "closedVolume": round(closed_volume, 2),
+            "rsiCurr": rsi_curr,
+            "rsiPrev": rsi_prev,
+        }
 
     return results
 
@@ -314,10 +331,24 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
         }
         for s, v in rsi_data.items()
         if s in valid_symbols
+        and v.get("rsiCurr") is not None
+        and v.get("rsiPrev") is not None
         and v["rsiCurr"] > v["rsiPrev"]
         and s in yesterday_data
     ]
     weekly_rsi.sort(key=lambda x: x["value"], reverse=True)
+
+    # 收盘周线成交额 - 最新已收盘周K线的 USDT 成交额
+    weekly_closed_volume = [
+        {
+            "symbol": rename_symbol(s),
+            "value": v["closedVolume"],
+            "valueFormatted": format_volume(v["closedVolume"]),
+        }
+        for s, v in rsi_data.items()
+        if s in valid_symbols
+    ]
+    weekly_closed_volume.sort(key=lambda x: x["value"], reverse=True)
 
     # 收盘月线RSI - 仅显示递增的，按USDT成交额排序
     monthly_rsi = [
@@ -330,10 +361,24 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
         }
         for s, v in monthly_rsi_data.items()
         if s in valid_symbols
+        and v.get("rsiCurr") is not None
+        and v.get("rsiPrev") is not None
         and v["rsiCurr"] > v["rsiPrev"]
         and s in yesterday_data
     ]
     monthly_rsi.sort(key=lambda x: x["value"], reverse=True)
+
+    # 收盘月线成交额 - 最新已收盘月K线的 USDT 成交额
+    monthly_closed_volume = [
+        {
+            "symbol": rename_symbol(s),
+            "value": v["closedVolume"],
+            "valueFormatted": format_volume(v["closedVolume"]),
+        }
+        for s, v in monthly_rsi_data.items()
+        if s in valid_symbols
+    ]
+    monthly_closed_volume.sort(key=lambda x: x["value"], reverse=True)
 
     rsi_momentum = [
         {
@@ -353,6 +398,8 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
         "yesterdayChange": yesterday_change,
         "yesterdayVolume": yesterday_volume[:TOP_N],
         "weeklyVolume": weekly_volume[:TOP_N],
+        "weeklyClosedVolume": weekly_closed_volume[:TOP_N],
+        "monthlyClosedVolume": monthly_closed_volume[:TOP_N],
         "fundingRate": funding_list,
         "weeklyRsi": weekly_rsi,
         "monthlyRsi": monthly_rsi,
@@ -369,6 +416,43 @@ def save_data(output):
 FUNDING_INTERVAL = 30  # 资金费率刷新间隔（秒）
 FULL_UPDATE_HOUR = 8  # 全量更新时间（UTC+8 早上8点）
 
+# === 周/月数据缓存 ===
+# 周线 K 线只在周一 UTC 00:00 切换，月线只在每月 1 号 UTC 00:00 切换
+# 缓存避免每小时重复抓取这些低频数据
+WEEKLY_CACHE_PATH = "data/cache_weekly.json"
+MONTHLY_CACHE_PATH = "data/cache_monthly.json"
+
+
+def _last_weekly_close_utc():
+    """最近一次周线收盘的 UTC 时间（最近一个周一 00:00 UTC）"""
+    now = datetime.now(timezone.utc)
+    monday = now - timedelta(days=now.weekday())
+    return monday.replace(hour=0, minute=0, second=0, microsecond=0)
+
+
+def _last_monthly_close_utc():
+    """最近一次月线收盘的 UTC 时间（本月 1 号 00:00 UTC）"""
+    now = datetime.now(timezone.utc)
+    return now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+
+
+def _load_cache(path):
+    """读取缓存 JSON，文件缺失/损坏返回 None"""
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def _save_cache(path, data):
+    """写入缓存 JSON"""
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
 
 def fetch_daily_data(symbols):
     """抓取每日更新的数据"""
@@ -384,21 +468,58 @@ def fetch_daily_data(symbols):
     return yesterday_data, funding_data, momentum_data
 
 
-def fetch_weekly_data(symbols):
-    """抓取每周更新的数据"""
-    print("正在获取上周成交量...")
+def fetch_weekly_data(symbols, force=False):
+    """抓取每周更新的数据。仅在最近一次周线收盘后首次运行时抓新数据，否则复用缓存。"""
+    cache = _load_cache(WEEKLY_CACHE_PATH)
+    last_close = _last_weekly_close_utc()
+
+    if not force and cache:
+        try:
+            fetched_at = datetime.fromisoformat(cache["fetchedAt"])
+            if fetched_at >= last_close:
+                print(f"[周线] 复用缓存 (fetchedAt={cache['fetchedAt']})")
+                return cache["weeklyVolume"], cache["weeklyRsi"]
+        except (KeyError, ValueError):
+            pass  # 缓存格式异常，回退到重新抓
+
+    print("[周线] 抓取上周成交量...")
     weekly_data = get_weekly_volume(symbols)
 
-    print("正在获取周线RSI...")
+    print("[周线] 抓取周线RSI/成交额...")
     rsi_data = get_weekly_rsi(symbols)
+
+    _save_cache(WEEKLY_CACHE_PATH, {
+        "fetchedAt": datetime.now(timezone.utc).isoformat(),
+        "weeklyVolume": weekly_data,
+        "weeklyRsi": rsi_data,
+    })
+    print(f"[周线] 缓存已写入 {WEEKLY_CACHE_PATH}")
 
     return weekly_data, rsi_data
 
 
-def fetch_monthly_data(symbols):
-    """抓取每月更新的数据"""
-    print("正在获取月线RSI...")
+def fetch_monthly_data(symbols, force=False):
+    """抓取每月更新的数据。仅在最近一次月线收盘后首次运行时抓新数据，否则复用缓存。"""
+    cache = _load_cache(MONTHLY_CACHE_PATH)
+    last_close = _last_monthly_close_utc()
+
+    if not force and cache:
+        try:
+            fetched_at = datetime.fromisoformat(cache["fetchedAt"])
+            if fetched_at >= last_close:
+                print(f"[月线] 复用缓存 (fetchedAt={cache['fetchedAt']})")
+                return cache["monthlyRsi"]
+        except (KeyError, ValueError):
+            pass
+
+    print("[月线] 抓取月线RSI/成交额...")
     monthly_rsi_data = get_monthly_rsi(symbols)
+
+    _save_cache(MONTHLY_CACHE_PATH, {
+        "fetchedAt": datetime.now(timezone.utc).isoformat(),
+        "monthlyRsi": monthly_rsi_data,
+    })
+    print(f"[月线] 缓存已写入 {MONTHLY_CACHE_PATH}")
 
     return monthly_rsi_data
 
