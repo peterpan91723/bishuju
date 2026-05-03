@@ -29,9 +29,9 @@ python -c "
 from fetch_data import *
 symbols = get_usdt_perpetual_symbols()
 yesterday_data, funding_data, momentum_data = fetch_daily_data(symbols)
-weekly_data, rsi_data = fetch_weekly_data(symbols)
+rsi_data = fetch_weekly_data(symbols)
 monthly_rsi_data = fetch_monthly_data(symbols)
-output = build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
+output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
 save_data(output)
 print(output['updateTime'])
 "
@@ -57,9 +57,9 @@ GitHub Actions (每小时) → fetch_data.py → data/rankings.json → GitHub P
 - `get_usdt_perpetual_symbols()` — 获取全部 USDT 永续合约列表
 - `batch_fetch_klines(symbols, params)` — 分批并发请求 K 线（50/批，10 并发，批间 0.5s 延迟，防限频）
 - `fetch_daily_data(symbols)` → `(yesterday_data, funding_data, momentum_data)` — 每次都抓
-- `fetch_weekly_data(symbols, force=False)` → `(weekly_data, rsi_data)` — **带缓存**
+- `fetch_weekly_data(symbols, force=False)` → `rsi_data` — **带缓存**
 - `fetch_monthly_data(symbols, force=False)` → `monthly_rsi_data` — **带缓存**
-- `build_rankings(...)` — 组装 9 个排行榜数据
+- `build_rankings(...)` — 组装 8 个排行榜数据
 - `save_data(output)` — 写入 `data/rankings.json`
 
 ### 周/月数据缓存
@@ -74,13 +74,12 @@ GitHub Actions (每小时) → fetch_data.py → data/rankings.json → GitHub P
 
 效果：周线 API 抓取从每小时 1 次 → 每周 1 次（减少 ~96%）；月线从每小时 1 次 → 每月 1 次（减少 ~99.9%）。
 
-### 9 个排行榜 Tab
+### 8 个排行榜 Tab
 
 | Tab key | 数据来源 | 排序 |
 |---|---|---|
 | `yesterdayChange` | 日K收盘涨跌幅 | 按涨幅 |
 | `yesterdayVolume` | 日K USDT成交额 | 按成交额，取 TOP 50 |
-| `weeklyVolume` | 上周7日USDT成交额合计 | 按成交额，取 TOP 50 |
 | `weeklyClosedVolume` | 最新已收盘周K线 USDT 成交额 | 按成交额，取 TOP 50 |
 | `monthlyClosedVolume` | 最新已收盘月K线 USDT 成交额 | 按成交额，取 TOP 50 |
 | `fundingRate` | 实时资金费率 | 默认升序 |

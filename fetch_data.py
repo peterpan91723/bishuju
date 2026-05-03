@@ -103,27 +103,6 @@ def get_yesterday_change(symbols):
     return results
 
 
-def get_weekly_volume(symbols):
-    """通过日K线计算上周成交量（分批并发）"""
-    now = datetime.now(timezone.utc)
-    today = now.replace(hour=0, minute=0, second=0, microsecond=0)
-    days_since_monday = today.weekday()
-    last_monday = today - timedelta(days=days_since_monday + 7)
-    last_sunday = last_monday + timedelta(days=7)
-
-    start_time = int(last_monday.timestamp() * 1000)
-    end_time = int(last_sunday.timestamp() * 1000)
-    params = {"interval": "1d", "startTime": start_time, "endTime": end_time, "limit": 7}
-
-    all_klines = batch_fetch_klines(symbols, params)
-    results = {}
-    for symbol, klines in all_klines.items():
-        total_volume = sum(float(k[7]) for k in klines)
-        results[symbol] = round(total_volume, 2)
-
-    return results
-
-
 def calc_rsi(closes, period=14):
     """计算RSI（Wilder's smoothing，与TradingView一致）"""
     if len(closes) < period + 1:
@@ -279,7 +258,7 @@ def format_volume(vol):
     return f"{vol:.2f}"
 
 
-def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, monthly_rsi_data, momentum_data):
+def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data):
     """构建排行榜数据"""
     valid_symbols = set(symbols)
 
@@ -305,13 +284,6 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
         if s in valid_symbols
     ]
     yesterday_volume.sort(key=lambda x: x["value"], reverse=True)
-
-    weekly_volume = [
-        {"symbol": rename_symbol(s), "value": v, "valueFormatted": format_volume(v)}
-        for s, v in weekly_data.items()
-        if s in valid_symbols
-    ]
-    weekly_volume.sort(key=lambda x: x["value"], reverse=True)
 
     funding_list = [
         {"symbol": rename_symbol(s), "value": round(d["fundingRate"], 5)}
@@ -397,7 +369,6 @@ def build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data,
         "updateTime": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "yesterdayChange": yesterday_change,
         "yesterdayVolume": yesterday_volume[:TOP_N],
-        "weeklyVolume": weekly_volume[:TOP_N],
         "weeklyClosedVolume": weekly_closed_volume[:TOP_N],
         "monthlyClosedVolume": monthly_closed_volume[:TOP_N],
         "fundingRate": funding_list,
@@ -476,26 +447,22 @@ def fetch_weekly_data(symbols, force=False):
     if not force and cache:
         try:
             fetched_at = datetime.fromisoformat(cache["fetchedAt"])
-            if fetched_at >= last_close:
+            if fetched_at >= last_close and "weeklyRsi" in cache:
                 print(f"[周线] 复用缓存 (fetchedAt={cache['fetchedAt']})")
-                return cache["weeklyVolume"], cache["weeklyRsi"]
+                return cache["weeklyRsi"]
         except (KeyError, ValueError):
             pass  # 缓存格式异常，回退到重新抓
-
-    print("[周线] 抓取上周成交量...")
-    weekly_data = get_weekly_volume(symbols)
 
     print("[周线] 抓取周线RSI/成交额...")
     rsi_data = get_weekly_rsi(symbols)
 
     _save_cache(WEEKLY_CACHE_PATH, {
         "fetchedAt": datetime.now(timezone.utc).isoformat(),
-        "weeklyVolume": weekly_data,
         "weeklyRsi": rsi_data,
     })
     print(f"[周线] 缓存已写入 {WEEKLY_CACHE_PATH}")
 
-    return weekly_data, rsi_data
+    return rsi_data
 
 
 def fetch_monthly_data(symbols, force=False):
@@ -531,10 +498,10 @@ def main():
     print(f"共 {len(symbols)} 个USDT永续合约")
 
     yesterday_data, funding_data, momentum_data = fetch_daily_data(symbols)
-    weekly_data, rsi_data = fetch_weekly_data(symbols)
+    rsi_data = fetch_weekly_data(symbols)
     monthly_rsi_data = fetch_monthly_data(symbols)
 
-    output = build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
+    output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
     save_data(output)
     print(f"\n全量数据已保存 | 更新时间: {output['updateTime']}")
 
@@ -569,7 +536,7 @@ def main():
                     if now_utc8.weekday() == 0 and current_week != last_weekly_update_week:
                         time.sleep(4)
                         print(f"[周线更新]")
-                        weekly_data, rsi_data = fetch_weekly_data(symbols)
+                        rsi_data = fetch_weekly_data(symbols)
                         last_weekly_update_week = current_week
                         print(f"[周线更新完成]")
 
@@ -586,7 +553,7 @@ def main():
                     # 更新资金费率
                     funding_data = get_funding_rates()
 
-                output = build_rankings(symbols, yesterday_data, weekly_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
+                output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
                 save_data(output)
                 print(f"[已更新] {output['updateTime']}")
             except Exception as e:
