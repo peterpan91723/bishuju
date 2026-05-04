@@ -211,6 +211,84 @@ def calc_ema(closes, period):
     return ema
 
 
+def calc_ema_last_two(values, period):
+    """单次遍历返回 EMA 序列的 (prev, curr) 两个值，与 calc_ema 同样 first-bar init。"""
+    n = len(values)
+    if n < period + 1:
+        return None, None
+    alpha = 2 / (period + 1)
+    ema = values[0]
+    ema_prev = None
+    for i in range(1, n):
+        ema_prev = ema
+        ema = alpha * values[i] + (1 - alpha) * ema
+    return ema_prev, ema
+
+
+def calc_cvd_last_two(klines, period=14):
+    """计算最新已收盘 K 线和上一根的 CVD = cumulative_buying - cumulative_selling。
+
+    与 TradingView Pine "Cumulative Volume Delta" (Ankit_1618) 对齐：
+      - 按 K 线形状拆分 buying/selling volume：
+          阳线 (close > open): buying = (body% + wick%/2) * vol; selling = wick%/2 * vol
+          阴线 (close < open): buying = wick%/2 * vol;            selling = (body% + wick%/2) * vol
+          平盘 (close == open): body=0, buying = selling = wick%/2 * vol = vol/2
+      - 两个序列分别 EMA(period) 平滑（first-bar init，与 ta.ema 一致）
+      - CVD = buying_ema - selling_ema
+      - volume 用 k[5] 币本位（与 TV 默认 volume 一致）
+
+    返回 (cvd_prev, cvd_curr)。klines 应为已收盘 K 线列表。
+    """
+    n = len(klines)
+    if n < period + 1:
+        return None, None
+
+    buying_vol = []
+    selling_vol = []
+    for k in klines:
+        open_ = float(k[1])
+        high = float(k[2])
+        low = float(k[3])
+        close = float(k[4])
+        volume = float(k[5])  # 币本位
+
+        spread = high - low
+        if spread == 0:
+            # high == low 极端情况，平均拆分
+            buying_vol.append(volume / 2)
+            selling_vol.append(volume / 2)
+            continue
+
+        # 影线长度（与 Pine 公式一致）
+        if close > open_:
+            upper_wick = high - close
+            lower_wick = open_ - low
+        else:
+            upper_wick = high - open_
+            lower_wick = close - low
+
+        body_length = spread - (upper_wick + lower_wick)
+        body_pct = body_length / spread
+        wick_half_pct = ((upper_wick + lower_wick) / spread) / 2
+
+        if close > open_:
+            buying_vol.append((body_pct + wick_half_pct) * volume)
+            selling_vol.append(wick_half_pct * volume)
+        elif close < open_:
+            buying_vol.append(wick_half_pct * volume)
+            selling_vol.append((body_pct + wick_half_pct) * volume)
+        else:
+            # close == open: body=0
+            buying_vol.append(wick_half_pct * volume)
+            selling_vol.append(wick_half_pct * volume)
+
+    buy_prev, buy_curr = calc_ema_last_two(buying_vol, period)
+    sell_prev, sell_curr = calc_ema_last_two(selling_vol, period)
+    if buy_prev is None or sell_prev is None:
+        return None, None
+    return buy_prev - sell_prev, buy_curr - sell_curr
+
+
 def calc_sar(highs, lows, closes, start=0.02, inc=0.02, max_af=0.2):
     """Parabolic SAR — 严格对齐 TradingView Pine v5 `ta.sar(start, inc, max)`。
 
@@ -277,10 +355,10 @@ def get_daily_indicators(symbols):
     """一次抓取日线 K 线，同时计算多个筛选结果（避免重复请求）。
 
     返回 (rsi70_data, rsi60_data):
-      rsi70_data: {symbol: {rsi, ema9, ema21, ema55, sar, volume}}
-        筛选: RSI >= 70 + EMA9>21>55 + 百分比间距扩张 + 量>SMA20 + SAR 多头
-      rsi60_data: {symbol: {rsi, ema9, ema21, ema55, sar, volume}}
-        筛选: RSI >= 60 + EMA9>21>55 + 百分比间距扩张 + 量>SMA20 + SAR 多头
+      rsi70_data: {symbol: {rsi, ema9, ema21, ema55, sar, cvdCurr, cvdPrev, volume}}
+        筛选: RSI >= 70 + EMA9>21>55 + 百分比间距扩张 + 量>SMA20 + SAR 多头 + CVD 递增
+      rsi60_data: {symbol: {rsi, ema9, ema21, ema55, sar, cvdCurr, cvdPrev, volume}}
+        筛选: RSI >= 60 + EMA9>21>55 + 百分比间距扩张 + 量>SMA20 + SAR 多头 + CVD 递增
     """
     # limit=499 用于 EMA55 充分暖机，让 EMA 数值与 TradingView 长图精度对齐。
     # Binance fapi /klines 权重按 limit 分桶: [100, 500) = weight 2, [500, 1000] = weight 5。
@@ -350,12 +428,20 @@ def get_daily_indicators(symbols):
         if not sar_uptrend:
             continue
 
+        # CVD 递增：最新已收盘 K 线 CVD > 上一根 CVD
+        # （与 TradingView Pine "Cumulative Volume Delta" by Ankit_1618 对齐）
+        cvd_prev, cvd_curr = calc_cvd_last_two(closed, period=14)
+        if cvd_prev is None or cvd_curr is None or cvd_curr <= cvd_prev:
+            continue
+
         entry = {
             "rsi": round(rsi_curr, 6),
             "ema9": round(ema9, 6),
             "ema21": round(ema21, 6),
             "ema55": round(ema55, 6),
             "sar": round(sar_value, 6),
+            "cvdPrev": round(cvd_prev, 6),
+            "cvdCurr": round(cvd_curr, 6),
             "volume": round(volume_usdt, 2),
         }
         if rsi_curr >= 70:
@@ -464,6 +550,8 @@ def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_
             "ema21": d["ema21"],
             "ema55": d["ema55"],
             "sar": d["sar"],
+            "cvdPrev": d["cvdPrev"],
+            "cvdCurr": d["cvdCurr"],
         }
         for s, d in rsi70_data.items()
         if s in valid_symbols
@@ -480,6 +568,8 @@ def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_
             "ema21": d["ema21"],
             "ema55": d["ema55"],
             "sar": d["sar"],
+            "cvdPrev": d["cvdPrev"],
+            "cvdCurr": d["cvdCurr"],
         }
         for s, d in rsi60_data.items()
         if s in valid_symbols

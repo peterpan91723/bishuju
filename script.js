@@ -4,8 +4,8 @@ const TABS_CONFIG = {
     monthlyClosedVolume: { header: "成交额 (USDT)", format: v => v.valueFormatted },
     fundingRate: { header: "费率 (%)", format: v => formatFunding(v.value) },
     weeklyRsi: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI: ${v.rsiPrev.toFixed(2)} → ${v.rsiCurr.toFixed(2)} ↑ 递增` },
-    dailyRsi70: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI ${v.rsi.toFixed(2)} | EMA 9>21>55 间距扩张 | 量>MA20 | SAR多头` },
-    dailyRsi60: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI ${v.rsi.toFixed(2)} | EMA 9>21>55 间距扩张 | 量>MA20 | SAR多头` },
+    dailyRsi70: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI ${v.rsi.toFixed(2)} | EMA 9>21>55 间距扩张 | 量>MA20 | SAR多头 | CVD↑` },
+    dailyRsi60: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI ${v.rsi.toFixed(2)} | EMA 9>21>55 间距扩张 | 量>MA20 | SAR多头 | CVD↑` },
 };
 
 let data = null;
