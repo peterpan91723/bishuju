@@ -107,11 +107,11 @@ jobs:
           symbols = get_usdt_perpetual_symbols()
           print(f'{len(symbols)} 个合约')
 
-          yesterday_data, funding_data, momentum_data = fetch_daily_data(symbols)
+          yesterday_data, funding_data, momentum_data, rsi70_data = fetch_daily_data(symbols)
           rsi_data = fetch_weekly_data(symbols)
           monthly_rsi_data = fetch_monthly_data(symbols)
 
-          output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
+          output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data, rsi70_data)
           save_data(output)
           print(f'数据已更新: {output[\"updateTime\"]}')
           "

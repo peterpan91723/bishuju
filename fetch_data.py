@@ -201,37 +201,83 @@ def calc_ema(closes, period):
     return ema
 
 
-def get_daily_rsi_momentum(symbols):
-    """获取日线RSI动能递增的币种（分批并发）
-    筛选：EMA9 > EMA21 且 最新收盘日线RSI > 上一根收盘日线RSI
-    返回：symbol, rsi_curr, rsi_prev, ema9, ema21, volume(昨日USDT成交额)
+def get_daily_indicators(symbols):
+    """一次抓取日线 K 线，同时计算多个筛选结果（避免重复请求）。
+
+    返回 (momentum_data, rsi70_data):
+      momentum_data: {symbol: {rsiCurr, rsiPrev, ema9, ema21, volume}}
+        筛选: EMA9 > EMA21 且 最新收盘日线 RSI > 上一根 RSI
+      rsi70_data:    {symbol: {rsi, ema9, ema21, ema55, volume}}
+        筛选: 最新已收盘日线 RSI(14) >= 70
+              且 EMA9 > EMA21 > EMA55
+              且 (EMA9-EMA21) 与 (EMA21-EMA55) 两个间距均较上一根 K 线扩大
     """
     params = {"interval": "1d", "limit": 100}
 
     all_klines = batch_fetch_klines(symbols, params)
-    results = {}
+    momentum_data = {}
+    rsi70_data = {}
+
     for symbol, klines in all_klines.items():
-        if len(klines) >= 23:
-            closed = klines[:-1]
-            closes = [float(k[4]) for k in closed]
+        if len(klines) < 23:
+            continue
+        closed = klines[:-1]
+        if len(closed) < 23:
+            continue
+        closes = [float(k[4]) for k in closed]
+        volume_usdt = float(closed[-1][7])
 
-            ema9 = calc_ema(closes, 9)
-            ema21 = calc_ema(closes, 21)
-            if ema9 is None or ema21 is None or ema9 <= ema21:
-                continue
+        ema9 = calc_ema(closes, 9)
+        ema21 = calc_ema(closes, 21)
+        if ema9 is None or ema21 is None:
+            continue
 
-            rsi_prev, rsi_curr = calc_rsi_last_two(closes)
-            if rsi_prev is not None and rsi_curr is not None and rsi_curr > rsi_prev:
-                volume_usdt = float(closed[-1][7])
-                results[symbol] = {
-                    "rsiCurr": rsi_curr,
-                    "rsiPrev": rsi_prev,
-                    "ema9": round(ema9, 6),
-                    "ema21": round(ema21, 6),
-                    "volume": round(volume_usdt, 2),
-                }
+        rsi_prev, rsi_curr = calc_rsi_last_two(closes)
+        if rsi_prev is None or rsi_curr is None:
+            continue
 
-    return results
+        # === RSI 动能：EMA9>EMA21 且 RSI 递增 ===
+        if ema9 > ema21 and rsi_curr > rsi_prev:
+            momentum_data[symbol] = {
+                "rsiCurr": rsi_curr,
+                "rsiPrev": rsi_prev,
+                "ema9": round(ema9, 6),
+                "ema21": round(ema21, 6),
+                "volume": round(volume_usdt, 2),
+            }
+
+        # === RSI70：RSI≥70 + 三均线多头排列 + 间距扩张 ===
+        if rsi_curr < 70:
+            continue
+        if len(closed) < 56:  # 需要算 EMA55 当前值与上一根
+            continue
+        ema55 = calc_ema(closes, 55)
+        if ema55 is None or not (ema9 > ema21 > ema55):
+            continue
+
+        # 上一根 K 线收盘时的 EMA（用 closes[:-1]）
+        ema9_prev = calc_ema(closes[:-1], 9)
+        ema21_prev = calc_ema(closes[:-1], 21)
+        ema55_prev = calc_ema(closes[:-1], 55)
+        if ema9_prev is None or ema21_prev is None or ema55_prev is None:
+            continue
+
+        gap1_curr = ema9 - ema21
+        gap1_prev = ema9_prev - ema21_prev
+        gap2_curr = ema21 - ema55
+        gap2_prev = ema21_prev - ema55_prev
+        if not (gap1_curr > gap1_prev and gap2_curr > gap2_prev):
+            continue
+
+        rsi70_data[symbol] = {
+            "rsi": rsi_curr,
+            "ema9": round(ema9, 6),
+            "ema21": round(ema21, 6),
+            "ema55": round(ema55, 6),
+            "volume": round(volume_usdt, 2),
+        }
+
+    return momentum_data, rsi70_data
 
 
 def get_funding_rates():
@@ -258,7 +304,7 @@ def format_volume(vol):
     return f"{vol:.2f}"
 
 
-def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data):
+def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data, rsi70_data):
     """构建排行榜数据"""
     valid_symbols = set(symbols)
 
@@ -365,6 +411,21 @@ def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_
     ]
     rsi_momentum.sort(key=lambda x: x["value"], reverse=True)
 
+    daily_rsi70 = [
+        {
+            "symbol": rename_symbol(s),
+            "value": d["volume"],
+            "valueFormatted": format_volume(d["volume"]),
+            "rsi": d["rsi"],
+            "ema9": d["ema9"],
+            "ema21": d["ema21"],
+            "ema55": d["ema55"],
+        }
+        for s, d in rsi70_data.items()
+        if s in valid_symbols
+    ]
+    daily_rsi70.sort(key=lambda x: x["value"], reverse=True)
+
     return {
         "updateTime": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "yesterdayChange": yesterday_change,
@@ -375,6 +436,7 @@ def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_
         "weeklyRsi": weekly_rsi,
         "monthlyRsi": monthly_rsi,
         "rsiMomentum": rsi_momentum,
+        "dailyRsi70": daily_rsi70,
     }
 
 
@@ -433,10 +495,10 @@ def fetch_daily_data(symbols):
     print("正在获取资金费率...")
     funding_data = get_funding_rates()
 
-    print("正在获取日线RSI动能...")
-    momentum_data = get_daily_rsi_momentum(symbols)
+    print("正在获取日线指标 (RSI动能 + RSI70)...")
+    momentum_data, rsi70_data = get_daily_indicators(symbols)
 
-    return yesterday_data, funding_data, momentum_data
+    return yesterday_data, funding_data, momentum_data, rsi70_data
 
 
 def fetch_weekly_data(symbols, force=False):
@@ -497,11 +559,11 @@ def main():
     symbols = get_usdt_perpetual_symbols()
     print(f"共 {len(symbols)} 个USDT永续合约")
 
-    yesterday_data, funding_data, momentum_data = fetch_daily_data(symbols)
+    yesterday_data, funding_data, momentum_data, rsi70_data = fetch_daily_data(symbols)
     rsi_data = fetch_weekly_data(symbols)
     monthly_rsi_data = fetch_monthly_data(symbols)
 
-    output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
+    output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data, rsi70_data)
     save_data(output)
     print(f"\n全量数据已保存 | 更新时间: {output['updateTime']}")
 
@@ -529,7 +591,7 @@ def main():
 
                     # 刷新合约列表
                     symbols = get_usdt_perpetual_symbols()
-                    yesterday_data, funding_data, momentum_data = fetch_daily_data(symbols)
+                    yesterday_data, funding_data, momentum_data, rsi70_data = fetch_daily_data(symbols)
 
                     # 周一额外更新周线数据
                     current_week = now_utc8.isocalendar()[1]
@@ -553,7 +615,7 @@ def main():
                     # 更新资金费率
                     funding_data = get_funding_rates()
 
-                output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data)
+                output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data, rsi70_data)
                 save_data(output)
                 print(f"[已更新] {output['updateTime']}")
             except Exception as e:
