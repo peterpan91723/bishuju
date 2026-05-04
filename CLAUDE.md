@@ -99,9 +99,9 @@ GitHub Actions (每小时) → fetch_data.py → data/rankings.json → GitHub P
 
 ### RSI 计算
 
-使用 Wilder's Smoothing（与 TradingView ta.rsi 对齐）。周线/月线 K 线末根为未收盘K线，计算时排除（`klines[:-1]`）。`calc_rsi_last_two()` 返回倒数第二根和最新收盘 RSI，用于判断递增。
+使用 Wilder's Smoothing（与 TradingView ta.rsi 对齐）。周线/月线 K 线末根为未收盘K线，计算时排除（`klines[:-1]`）。`calc_rsi_last_two()` 单遍 Wilder 递推同时返回倒数第二根和最新收盘 RSI，用于判断递增。
 
-**精度要求**：`calc_rsi` 返回**未经四舍五入的 float**，阈值比较（如 `< 60`、`>= 70`）必须用全精度，否则 59.996 会错误地舍入为 60.00 通过过滤。展示侧统一用 `.toFixed(2)`。
+**精度要求**：`calc_rsi` 返回**未经四舍五入的 float**，阈值比较（如 `< 59`、`>= 70`）必须用全精度，否则 58.996 会错误地舍入为 59.00 通过过滤。展示侧统一用 `.toFixed(2)`。
 
 ### EMA 计算
 
@@ -130,6 +130,41 @@ Binance 对美国 IP 返回 HTTP 451，需通过 VLESS 代理：
 
 ### 前端
 
-`script.js` 中 `TABS_CONFIG` 对象定义每个 tab 的表头文字、数值格式化函数和副标题。新增 tab 时需同步修改：`TABS_CONFIG`（script.js）、`fetch_data.py` 的 `build_rankings()` 输出、`index.html` 的 tab 按钮。
+`script.js` 中 `TABS_CONFIG` 对象定义每个 tab 的表头文字、数值格式化函数和副标题。
 
 TradingView 导出格式：`BINANCE:SYMBOLUSDT.P`（永续合约后缀 `.P`）。
+
+### 增删/重命名 Tab 的修改清单
+
+新增、删除或重命名 tab 时，**所有以下位置必须同步**（漏改会导致 workflow 报错或前端拿不到数据）：
+
+1. `fetch_data.py`：
+   - `get_daily_indicators()` 内部 dict 名（如 `rsi70_data` / `rsi59_data`）
+   - 函数返回签名 + docstring
+   - `fetch_daily_data()` 解构和返回签名
+   - `build_rankings()` 函数签名
+   - `build_rankings()` 内部新构建的 list 变量名
+   - `build_rankings()` 返回 dict 的 key（`"dailyRsi70"` / `"dailyRsi59"` 等）
+   - `main()` 内 tuple 解构 + `build_rankings()` 调用
+   - `main()` 循环模式内的 tuple 解构 + `build_rankings()` 调用
+2. `.github/workflows/update-data.yml`：inline Python 中的解构和 `build_rankings()` 调用
+3. `index.html`：`<button class="tab" data-tab="...">` 标签 + bump `script.js?v=N` 缓存版本
+4. `script.js`：
+   - `TABS_CONFIG` 中对应 key 和 subFormat
+   - `getColorClass()` 中需要 neutral 颜色的 tab 列表
+5. `CLAUDE.md`：本表格 + 数据流注释
+
+完成后用 `Grep` 搜旧名字（如 `rsi60`/`RSI60`）确认无残留。
+
+### 精度对齐 TradingView 的关键细节
+
+所有日线指标（RSI、EMA、SAR、CVD）都做了 bit 级别对齐：
+
+- **RSI**：calc_rsi 全精度返回，**绝不**在阈值比较前 round
+- **EMA**：first-bar 初始化（不是 SMA-init），与 Pine `ta.ema` 内部递推一致
+- **SAR**：bar 1 初始化、反转 EP+边界、AF 累加，全部按 Pine v5 `ta.sar` 语义
+- **CVD**：按 K 线形状拆分 buying/selling volume → EMA(14) 平滑 → 做差，与 Pine "Cumulative Volume Delta" by Ankit_1618 对齐
+- **暖机**：日 K `limit=499`，EMA55 残差 ~1e-8，远低于 TV 显示精度；周/月 K `limit=100`（短周期 RSI(14) 收敛足够）
+- **量能**：过滤判断用 k[5] 币本位（与 TV volume 指标一致）；列表排序用 k[7] USDT 成交额
+
+修改任何指标公式前，先在 TV 上找一根已知 K 线对照确认 1-2 位小数一致再 commit。
