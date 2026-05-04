@@ -251,12 +251,14 @@ def get_daily_indicators(symbols):
         if rsi_curr < 60:
             continue
 
-        # 量能确认：最新已收盘日线成交额 > 近 20 根 SMA
-        volumes = [float(k[7]) for k in closed]
-        if len(volumes) < 20:
+        # 量能确认：最新已收盘日线 **币本位** 成交量 > 近 20 根 SMA
+        # 用 k[5] 而非 k[7]，与 TradingView 默认 volume 指标 (币本位) 严格对齐。
+        # 注意：列表的 sort/display 仍用 USDT 成交额 (volume_usdt)，与其它 tab 体感一致。
+        base_volumes = [float(k[5]) for k in closed]
+        if len(base_volumes) < 20:
             continue
-        volume_ma20 = sum(volumes[-20:]) / 20
-        if volume_usdt <= volume_ma20:
+        base_vol_ma20 = sum(base_volumes[-20:]) / 20
+        if base_volumes[-1] <= base_vol_ma20:
             continue
 
         if len(closed) < 56:  # 需要算 EMA55 当前值与上一根
