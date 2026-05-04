@@ -93,7 +93,17 @@ GitHub Actions (每小时) → fetch_data.py → data/rankings.json → GitHub P
 
 ### RSI 计算
 
-使用 Wilder's Smoothing（与 TradingView 一致）。周线/月线 K 线末根为未收盘K线，计算时排除（`klines[:-1]`）。`calc_rsi_last_two()` 返回倒数第二根和最新收盘 RSI，用于判断递增。
+使用 Wilder's Smoothing（与 TradingView ta.rsi 对齐）。周线/月线 K 线末根为未收盘K线，计算时排除（`klines[:-1]`）。`calc_rsi_last_two()` 返回倒数第二根和最新收盘 RSI，用于判断递增。
+
+**精度要求**：`calc_rsi` 返回**未经四舍五入的 float**，阈值比较（如 `< 60`、`>= 70`）必须用全精度，否则 59.996 会错误地舍入为 60.00 通过过滤。展示侧统一用 `.toFixed(2)`。
+
+### EMA 计算
+
+`calc_ema` 使用 first-bar 初始化（与 TradingView Pine `ta.ema` 内部递推方式一致），`ema = closes[0]`，逐根递推 `ema = α·price + (1-α)·ema`，α=2/(period+1)。
+
+**暖机长度**：日线 K 线 `limit=499`，使 EMA55 有 ≥444 根递归，初始残差 ≈ 1e-8（机器精度内）与 TV 长图对齐。
+
+**Binance fapi /klines 权重分桶**：`[1,100)→1`、`[100,500)→2`、`[500,1000]→5`、`>1000→10`。`limit=499` 仍属 weight=2 区间，IP 权重与 `limit=100` 完全一致，**无任何限流增加风险**。如需进一步增大暖机（暖机至 ≥999 根），需接受 weight=5 即每次抓取 IP 权重升 2.5x，每分钟限额下仍有充足余量。
 
 ### 中文合约名处理
 

@@ -3,9 +3,9 @@ const TABS_CONFIG = {
     weeklyClosedVolume: { header: "成交额 (USDT)", format: v => v.valueFormatted },
     monthlyClosedVolume: { header: "成交额 (USDT)", format: v => v.valueFormatted },
     fundingRate: { header: "费率 (%)", format: v => formatFunding(v.value) },
-    weeklyRsi: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI: ${v.rsiPrev} → ${v.rsiCurr} ↑ 递增` },
-    dailyRsi70: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI ${v.rsi} | EMA 9>21>55 间距扩张 | 量>MA20` },
-    dailyRsi60: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI ${v.rsi} | EMA 9>21>55 间距扩张 | 量>MA20` },
+    weeklyRsi: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI: ${v.rsiPrev.toFixed(2)} → ${v.rsiCurr.toFixed(2)} ↑ 递增` },
+    dailyRsi70: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI ${v.rsi.toFixed(2)} | EMA 9>21>55 间距扩张 | 量>MA20` },
+    dailyRsi60: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI ${v.rsi.toFixed(2)} | EMA 9>21>55 间距扩张 | 量>MA20` },
 };
 
 let data = null;

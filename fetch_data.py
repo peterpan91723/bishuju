@@ -104,7 +104,11 @@ def get_yesterday_change(symbols):
 
 
 def calc_rsi(closes, period=14):
-    """计算RSI（Wilder's smoothing，与TradingView一致）"""
+    """计算 RSI（Wilder's smoothing，与 TradingView ta.rsi 对齐）。
+
+    返回未经 round 的 float —— 阈值比较必须用全精度，否则 59.996 会被
+    错误地舍入到 60.00 通过过滤。展示侧请自行 round/toFixed。
+    """
     if len(closes) < period + 1:
         return None
     deltas = [closes[i] - closes[i - 1] for i in range(1, len(closes))]
@@ -121,7 +125,7 @@ def calc_rsi(closes, period=14):
     if avg_loss == 0:
         return 100.0
     rs = avg_gain / avg_loss
-    return round(100 - 100 / (1 + rs), 2)
+    return 100 - 100 / (1 + rs)
 
 
 def calc_rsi_last_two(closes, period=14):
@@ -156,8 +160,8 @@ def get_weekly_rsi(symbols):
 
         results[symbol] = {
             "closedVolume": round(closed_volume, 2),
-            "rsiCurr": rsi_curr,
-            "rsiPrev": rsi_prev,
+            "rsiCurr": round(rsi_curr, 6) if rsi_curr is not None else None,
+            "rsiPrev": round(rsi_prev, 6) if rsi_prev is not None else None,
         }
 
     return results
@@ -183,21 +187,27 @@ def get_monthly_rsi(symbols):
 
         results[symbol] = {
             "closedVolume": round(closed_volume, 2),
-            "rsiCurr": rsi_curr,
-            "rsiPrev": rsi_prev,
+            "rsiCurr": round(rsi_curr, 6) if rsi_curr is not None else None,
+            "rsiPrev": round(rsi_prev, 6) if rsi_prev is not None else None,
         }
 
     return results
 
 
 def calc_ema(closes, period):
-    """计算EMA（与TradingView一致）"""
+    """计算 EMA（与 TradingView ta.ema 对齐）。
+
+    Pine 内部从第一根 K 线 source[0] 起递推（非 SMA 初始化），
+    在 bar < length-1 时输出 na；等同于 SMA 初始化的旧实现差异主要在
+    早期暖机阶段，足够长的窗口（>5x period）下两者收敛到机器精度内。
+    本实现采用 first-bar 初始化以严格对齐 Pine。
+    """
     if len(closes) < period:
         return None
-    multiplier = 2 / (period + 1)
-    ema = sum(closes[:period]) / period  # 初始值用SMA
-    for price in closes[period:]:
-        ema = (price - ema) * multiplier + ema
+    alpha = 2 / (period + 1)
+    ema = closes[0]
+    for price in closes[1:]:
+        ema = alpha * price + (1 - alpha) * ema
     return ema
 
 
@@ -210,7 +220,10 @@ def get_daily_indicators(symbols):
       rsi60_data: {symbol: {rsi, ema9, ema21, ema55, volume}}
         筛选: RSI >= 60 + EMA9>21>55 + 百分比间距扩张 + 成交额>SMA20
     """
-    params = {"interval": "1d", "limit": 100}
+    # limit=499 用于 EMA55 充分暖机，让 EMA 数值与 TradingView 长图精度对齐。
+    # Binance fapi /klines 权重按 limit 分桶: [100, 500) = weight 2, [500, 1000] = weight 5。
+    # 选 499 即同桶内最大值，IP 权重和 limit=100 完全一致，无限流风险。
+    params = {"interval": "1d", "limit": 499}
 
     all_klines = batch_fetch_klines(symbols, params)
     rsi70_data = {}
@@ -267,7 +280,7 @@ def get_daily_indicators(symbols):
             continue
 
         entry = {
-            "rsi": rsi_curr,
+            "rsi": round(rsi_curr, 6),
             "ema9": round(ema9, 6),
             "ema21": round(ema21, 6),
             "ema55": round(ema55, 6),
