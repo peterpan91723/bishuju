@@ -206,9 +206,9 @@ def get_daily_indicators(symbols):
 
     返回 (rsi70_data, rsi60_data):
       rsi70_data: {symbol: {rsi, ema9, ema21, ema55, volume}}
-        筛选: RSI >= 70 + EMA9>21>55 + 间距扩张
+        筛选: RSI >= 70 + EMA9>21>55 + 百分比间距扩张 + 成交额>SMA20
       rsi60_data: {symbol: {rsi, ema9, ema21, ema55, volume}}
-        筛选: RSI >= 60 + EMA9>21>55 + 间距扩张
+        筛选: RSI >= 60 + EMA9>21>55 + 百分比间距扩张 + 成交额>SMA20
     """
     params = {"interval": "1d", "limit": 100}
 
@@ -234,9 +234,18 @@ def get_daily_indicators(symbols):
         if rsi_prev is None or rsi_curr is None:
             continue
 
-        # === RSI60/RSI70：RSI≥阈值 + 三均线多头排列 + 间距扩张 ===
+        # === RSI60/RSI70：RSI≥阈值 + 三均线多头排列 + 间距扩张 + 量能确认 ===
         if rsi_curr < 60:
             continue
+
+        # 量能确认：最新已收盘日线成交额 > 近 20 根 SMA
+        volumes = [float(k[7]) for k in closed]
+        if len(volumes) < 20:
+            continue
+        volume_ma20 = sum(volumes[-20:]) / 20
+        if volume_usdt <= volume_ma20:
+            continue
+
         if len(closed) < 56:  # 需要算 EMA55 当前值与上一根
             continue
         ema55 = calc_ema(closes, 55)
