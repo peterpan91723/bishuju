@@ -262,10 +262,10 @@ def get_daily_indicators(symbols):
         if ema9_prev is None or ema21_prev is None or ema55_prev is None:
             continue
 
-        gap1_curr = ema9 - ema21
-        gap1_prev = ema9_prev - ema21_prev
-        gap2_curr = ema21 - ema55
-        gap2_prev = ema21_prev - ema55_prev
+        gap1_curr = (ema9 - ema21) / ema21 * 100
+        gap1_prev = (ema9_prev - ema21_prev) / ema21_prev * 100
+        gap2_curr = (ema21 - ema55) / ema55 * 100
+        gap2_prev = (ema21_prev - ema55_prev) / ema55_prev * 100
         if not (gap1_curr > gap1_prev and gap2_curr > gap2_prev):
             continue
 
