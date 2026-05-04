@@ -129,13 +129,35 @@ def calc_rsi(closes, period=14):
 
 
 def calc_rsi_last_two(closes, period=14):
-    """计算最后两个RSI值，用于判断动能递增"""
+    """单遍计算 RSI 序列的 (prev, curr)，与 calc_rsi 数学等价（性能 ~2x）。
+
+    避免分别对 closes[:-1] 和 closes 各跑一次 Wilder 递推。
+    """
     if len(closes) < period + 2:
         return None, None
-    # 倒数第二个RSI
-    rsi_prev = calc_rsi(closes[:-1], period)
-    # 最新RSI
-    rsi_curr = calc_rsi(closes, period)
+
+    deltas = [closes[i] - closes[i - 1] for i in range(1, len(closes))]
+    gains = [d if d > 0 else 0 for d in deltas]
+    losses = [-d if d < 0 else 0 for d in deltas]
+    n_deltas = len(deltas)
+
+    # Wilder 初始：前 period 根 deltas 的 SMA
+    avg_gain = sum(gains[:period]) / period
+    avg_loss = sum(losses[:period]) / period
+
+    # 递推到 closes[-2]（处理 deltas[period..n_deltas-2]）
+    for i in range(period, n_deltas - 1):
+        avg_gain = (avg_gain * (period - 1) + gains[i]) / period
+        avg_loss = (avg_loss * (period - 1) + losses[i]) / period
+
+    rsi_prev = 100.0 if avg_loss == 0 else 100 - 100 / (1 + avg_gain / avg_loss)
+
+    # 再走一步到 closes[-1]
+    avg_gain = (avg_gain * (period - 1) + gains[n_deltas - 1]) / period
+    avg_loss = (avg_loss * (period - 1) + losses[n_deltas - 1]) / period
+
+    rsi_curr = 100.0 if avg_loss == 0 else 100 - 100 / (1 + avg_gain / avg_loss)
+
     return rsi_prev, rsi_curr
 
 
@@ -383,8 +405,8 @@ def get_daily_indicators(symbols):
         if ema9 is None or ema21 is None:
             continue
 
-        rsi_prev, rsi_curr = calc_rsi_last_two(closes)
-        if rsi_prev is None or rsi_curr is None:
+        _, rsi_curr = calc_rsi_last_two(closes)
+        if rsi_curr is None:
             continue
 
         # === RSI59/RSI70：RSI≥阈值 + 三均线多头排列 + 间距扩张 + 量能确认 ===
@@ -454,14 +476,10 @@ def get_daily_indicators(symbols):
 def get_funding_rates():
     """获取当前资金费率"""
     data = _api_get(f"{BASE_URL}/fapi/v1/premiumIndex")
-    results = {}
-    for item in data:
-        symbol = item["symbol"]
-        results[symbol] = {
-            "fundingRate": float(item["lastFundingRate"]) * 100,
-            "nextFundingTime": item["nextFundingTime"],
-        }
-    return results
+    return {
+        item["symbol"]: {"fundingRate": float(item["lastFundingRate"]) * 100}
+        for item in data
+    }
 
 
 def format_volume(vol):
