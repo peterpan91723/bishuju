@@ -28,10 +28,10 @@ pip install requests pysocks
 python -c "
 from fetch_data import *
 symbols = get_usdt_perpetual_symbols()
-yesterday_data, funding_data, rsi70_data, rsi60_data = fetch_daily_data(symbols)
+yesterday_data, funding_data, rsi70_data, rsi59_data = fetch_daily_data(symbols)
 rsi_data = fetch_weekly_data(symbols)
 monthly_rsi_data = fetch_monthly_data(symbols)
-output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, rsi70_data, rsi60_data)
+output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, rsi70_data, rsi59_data)
 save_data(output)
 print(output['updateTime'])
 "
@@ -56,10 +56,10 @@ GitHub Actions (每小时) → fetch_data.py → data/rankings.json → GitHub P
 
 - `get_usdt_perpetual_symbols()` — 获取全部 USDT 永续合约列表
 - `batch_fetch_klines(symbols, params)` — 分批并发请求 K 线（50/批，10 并发，批间 0.5s 延迟，防限频）
-- `fetch_daily_data(symbols)` → `(yesterday_data, funding_data, rsi70_data, rsi60_data)` — 每次都抓
+- `fetch_daily_data(symbols)` → `(yesterday_data, funding_data, rsi70_data, rsi59_data)` — 每次都抓
 - `fetch_weekly_data(symbols, force=False)` → `rsi_data` — **带缓存**
 - `fetch_monthly_data(symbols, force=False)` → `monthly_rsi_data` — **带缓存**（仍用于 `monthlyClosedVolume`）
-- `get_daily_indicators(symbols)` — 一次抓 100 根日 K，同时算 RSI70 + RSI60 两组结果
+- `get_daily_indicators(symbols)` — 一次抓 499 根日 K，同时算 RSI70 + RSI59 两组结果
 - `build_rankings(...)` — 组装 7 个排行榜数据
 - `save_data(output)` — 写入 `data/rankings.json`
 
@@ -85,7 +85,7 @@ GitHub Actions (每小时) → fetch_data.py → data/rankings.json → GitHub P
 | `fundingRate` | 实时资金费率 | 默认升序 |
 | `weeklyRsi` | 周线RSI(14)，仅显示递增 | 按昨日USDT成交额 |
 | `dailyRsi70` | 日线 RSI≥70 + EMA9>21>55 + 百分比间距 (EMA9-21)/EMA21、(EMA21-55)/EMA55 同时较上一根扩大 + 当日**币本位**成交量 > SMA(20) + Parabolic SAR 多头 + CVD 当根 > 上一根 | 按当日USDT成交额 |
-| `dailyRsi60` | 同 `dailyRsi70`，阈值 RSI≥60 | 按当日USDT成交额 |
+| `dailyRsi59` | 同 `dailyRsi70`，阈值 RSI≥59 | 按当日USDT成交额 |
 
 > **量能确认细节**：过滤判断用币本位成交量 (`k[5]`，与 TradingView 默认 volume 指标一致)，列表排序用 USDT 成交额 (`k[7]`)。两者口径不同，前者用于"对齐 TV 信号"，后者用于"按金额排名"。
 >
@@ -93,7 +93,7 @@ GitHub Actions (每小时) → fetch_data.py → data/rankings.json → GitHub P
 >
 > **CVD 细节**：`calc_cvd_last_two(klines, 14)` 与 Pine "Cumulative Volume Delta" by Ankit_1618 对齐。每根 K 线按形状拆分 buying/selling volume：阳线 body 归买盘、影线一半各归买卖；阴线 body 归卖盘、影线一半各归买卖；平盘全归影线（买卖各半）。两条序列分别 EMA(14) 平滑（first-bar init），CVD = buying_ema − selling_ema。volume 用 k[5] 币本位。
 
-`dailyRsi70` 与 `dailyRsi60` 共用一次日 K 抓取（`get_daily_indicators`），RSI70 是 RSI60 的子集。
+`dailyRsi70` 与 `dailyRsi59` 共用一次日 K 抓取（`get_daily_indicators`），RSI70 是 RSI59 的子集。
 
 `weeklyClosedVolume` / `monthlyClosedVolume` 复用 `get_weekly_rsi` / `get_monthly_rsi` 已抓取的周/月 K 线，无额外 API 调用；`closedVolume` 字段取自 `klines[:-1][-1][7]`（最新已收盘 K 线的 quote_asset_volume）。
 
