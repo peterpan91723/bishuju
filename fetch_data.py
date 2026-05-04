@@ -211,14 +211,76 @@ def calc_ema(closes, period):
     return ema
 
 
+def calc_sar(highs, lows, closes, start=0.02, inc=0.02, max_af=0.2):
+    """Parabolic SAR — 严格对齐 TradingView Pine v5 `ta.sar(start, inc, max)`。
+
+    返回 (sar_value, uptrend) 即最新一根 K 的 SAR 数值以及是否处于多头趋势。
+    多头时 SAR 在价格下方（close > sar），空头时 SAR 在价格上方。
+
+    实现细节（与 Pine 一致）：
+      - bar 1 初始化：close[1] > close[0] 视为多头，SAR=low[0], EP=high[1]；否则反之。
+      - 每根递推 SAR := SAR_prev + AF*(EP - SAR_prev)。
+      - 多头时 SAR 不得高于 min(low[i-1], low[i-2])；空头镜像。
+      - 反转时 SAR 重置为前一段的 EP，再 max/min 到当根+前根的 high/low。
+      - 创新极值时更新 EP，AF 累加 inc 上限 max_af；反转时 AF 重置为 start。
+    足够长（≥几个反转周期）的窗口下，与 TV 长图 SAR bit 级对齐。
+    """
+    n = len(closes)
+    if n < 2:
+        return None, None
+
+    # bar 1 初始化
+    if closes[1] > closes[0]:
+        uptrend = True
+        sar = lows[0]
+        ep = highs[1]
+    else:
+        uptrend = False
+        sar = highs[0]
+        ep = lows[1]
+    af = start
+
+    for i in range(2, n):
+        sar = sar + af * (ep - sar)
+
+        if uptrend:
+            sar = min(sar, lows[i - 1], lows[i - 2])
+            if lows[i] <= sar:
+                # 反转为空头
+                uptrend = False
+                sar = ep
+                sar = max(sar, highs[i], highs[i - 1])
+                ep = lows[i]
+                af = start
+            else:
+                if highs[i] > ep:
+                    ep = highs[i]
+                    af = min(af + inc, max_af)
+        else:
+            sar = max(sar, highs[i - 1], highs[i - 2])
+            if highs[i] >= sar:
+                # 反转为多头
+                uptrend = True
+                sar = ep
+                sar = min(sar, lows[i], lows[i - 1])
+                ep = highs[i]
+                af = start
+            else:
+                if lows[i] < ep:
+                    ep = lows[i]
+                    af = min(af + inc, max_af)
+
+    return sar, uptrend
+
+
 def get_daily_indicators(symbols):
     """一次抓取日线 K 线，同时计算多个筛选结果（避免重复请求）。
 
     返回 (rsi70_data, rsi60_data):
-      rsi70_data: {symbol: {rsi, ema9, ema21, ema55, volume}}
-        筛选: RSI >= 70 + EMA9>21>55 + 百分比间距扩张 + 成交额>SMA20
-      rsi60_data: {symbol: {rsi, ema9, ema21, ema55, volume}}
-        筛选: RSI >= 60 + EMA9>21>55 + 百分比间距扩张 + 成交额>SMA20
+      rsi70_data: {symbol: {rsi, ema9, ema21, ema55, sar, volume}}
+        筛选: RSI >= 70 + EMA9>21>55 + 百分比间距扩张 + 量>SMA20 + SAR 多头
+      rsi60_data: {symbol: {rsi, ema9, ema21, ema55, sar, volume}}
+        筛选: RSI >= 60 + EMA9>21>55 + 百分比间距扩张 + 量>SMA20 + SAR 多头
     """
     # limit=499 用于 EMA55 充分暖机，让 EMA 数值与 TradingView 长图精度对齐。
     # Binance fapi /klines 权重按 limit 分桶: [100, 500) = weight 2, [500, 1000] = weight 5。
@@ -281,11 +343,19 @@ def get_daily_indicators(symbols):
         if not (gap1_curr > gap1_prev and gap2_curr > gap2_prev):
             continue
 
+        # SAR 多头确认（与 TradingView Pine `ta.sar(0.02, 0.02, 0.2)` 对齐）
+        highs = [float(k[2]) for k in closed]
+        lows = [float(k[3]) for k in closed]
+        sar_value, sar_uptrend = calc_sar(highs, lows, closes)
+        if not sar_uptrend:
+            continue
+
         entry = {
             "rsi": round(rsi_curr, 6),
             "ema9": round(ema9, 6),
             "ema21": round(ema21, 6),
             "ema55": round(ema55, 6),
+            "sar": round(sar_value, 6),
             "volume": round(volume_usdt, 2),
         }
         if rsi_curr >= 70:
@@ -393,6 +463,7 @@ def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_
             "ema9": d["ema9"],
             "ema21": d["ema21"],
             "ema55": d["ema55"],
+            "sar": d["sar"],
         }
         for s, d in rsi70_data.items()
         if s in valid_symbols
@@ -408,6 +479,7 @@ def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_
             "ema9": d["ema9"],
             "ema21": d["ema21"],
             "ema55": d["ema55"],
+            "sar": d["sar"],
         }
         for s, d in rsi60_data.items()
         if s in valid_symbols
