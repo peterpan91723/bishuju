@@ -1,12 +1,9 @@
 const TABS_CONFIG = {
     yesterdayChange: { header: "涨幅 (%)", format: v => formatPercent(v.value) },
-    yesterdayVolume: { header: "成交量 (USDT)", format: v => v.valueFormatted },
     weeklyClosedVolume: { header: "成交额 (USDT)", format: v => v.valueFormatted },
     monthlyClosedVolume: { header: "成交额 (USDT)", format: v => v.valueFormatted },
     fundingRate: { header: "费率 (%)", format: v => formatFunding(v.value) },
     weeklyRsi: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI: ${v.rsiPrev} → ${v.rsiCurr} ↑ 递增` },
-    monthlyRsi: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI: ${v.rsiPrev} → ${v.rsiCurr} ↑ 递增` },
-    rsiMomentum: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `EMA9>21 | RSI: ${v.rsiPrev} → ${v.rsiCurr}` },
     dailyRsi70: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI ${v.rsi} | EMA 9>21>55 间距扩张` },
     dailyRsi60: { header: "成交额 (USDT)", format: v => v.valueFormatted, subFormat: v => `RSI ${v.rsi} | EMA 9>21>55 间距扩张` },
 };
@@ -26,7 +23,7 @@ function formatFunding(val) {
 }
 
 function getColorClass(val, tab) {
-    if (tab === "yesterdayVolume" || tab === "weeklyClosedVolume" || tab === "monthlyClosedVolume" || tab === "rsiMomentum" || tab === "weeklyRsi" || tab === "monthlyRsi" || tab === "dailyRsi70" || tab === "dailyRsi60") return "neutral";
+    if (tab === "weeklyClosedVolume" || tab === "monthlyClosedVolume" || tab === "weeklyRsi" || tab === "dailyRsi70" || tab === "dailyRsi60") return "neutral";
     if (val > 0) return "positive";
     if (val < 0) return "negative";
     return "neutral";

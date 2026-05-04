@@ -28,10 +28,10 @@ pip install requests pysocks
 python -c "
 from fetch_data import *
 symbols = get_usdt_perpetual_symbols()
-yesterday_data, funding_data, momentum_data, rsi70_data = fetch_daily_data(symbols)
+yesterday_data, funding_data, rsi70_data, rsi60_data = fetch_daily_data(symbols)
 rsi_data = fetch_weekly_data(symbols)
 monthly_rsi_data = fetch_monthly_data(symbols)
-output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, momentum_data, rsi70_data)
+output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, rsi70_data, rsi60_data)
 save_data(output)
 print(output['updateTime'])
 "
@@ -56,11 +56,11 @@ GitHub Actions (每小时) → fetch_data.py → data/rankings.json → GitHub P
 
 - `get_usdt_perpetual_symbols()` — 获取全部 USDT 永续合约列表
 - `batch_fetch_klines(symbols, params)` — 分批并发请求 K 线（50/批，10 并发，批间 0.5s 延迟，防限频）
-- `fetch_daily_data(symbols)` → `(yesterday_data, funding_data, momentum_data, rsi70_data)` — 每次都抓
+- `fetch_daily_data(symbols)` → `(yesterday_data, funding_data, rsi70_data, rsi60_data)` — 每次都抓
 - `fetch_weekly_data(symbols, force=False)` → `rsi_data` — **带缓存**
-- `fetch_monthly_data(symbols, force=False)` → `monthly_rsi_data` — **带缓存**
-- `get_daily_indicators(symbols)` — 一次抓 100 根日 K，同时算 RSI 动能 + RSI70 两组结果
-- `build_rankings(...)` — 组装 9 个排行榜数据
+- `fetch_monthly_data(symbols, force=False)` → `monthly_rsi_data` — **带缓存**（仍用于 `monthlyClosedVolume`）
+- `get_daily_indicators(symbols)` — 一次抓 100 根日 K，同时算 RSI70 + RSI60 两组结果
+- `build_rankings(...)` — 组装 7 个排行榜数据
 - `save_data(output)` — 写入 `data/rankings.json`
 
 ### 周/月数据缓存
@@ -75,21 +75,19 @@ GitHub Actions (每小时) → fetch_data.py → data/rankings.json → GitHub P
 
 效果：周线 API 抓取从每小时 1 次 → 每周 1 次（减少 ~96%）；月线从每小时 1 次 → 每月 1 次（减少 ~99.9%）。
 
-### 9 个排行榜 Tab
+### 7 个排行榜 Tab
 
 | Tab key | 数据来源 | 排序 |
 |---|---|---|
 | `yesterdayChange` | 日K收盘涨跌幅 | 按涨幅 |
-| `yesterdayVolume` | 日K USDT成交额 | 按成交额，取 TOP 50 |
 | `weeklyClosedVolume` | 最新已收盘周K线 USDT 成交额 | 按成交额，取 TOP 50 |
 | `monthlyClosedVolume` | 最新已收盘月K线 USDT 成交额 | 按成交额，取 TOP 50 |
 | `fundingRate` | 实时资金费率 | 默认升序 |
 | `weeklyRsi` | 周线RSI(14)，仅显示递增 | 按昨日USDT成交额 |
-| `monthlyRsi` | 月线RSI(14)，仅显示递增 | 按昨日USDT成交额 |
-| `rsiMomentum` | 日线 EMA9>EMA21 且 RSI递增 | 按昨日USDT成交额 |
-| `dailyRsi70` | 日线 RSI≥70 + EMA9>21>55 + (EMA9-21)/(EMA21-55) 间距同时较上一根扩大 | 按昨日USDT成交额 |
+| `dailyRsi70` | 日线 RSI≥70 + EMA9>21>55 + 百分比间距 (EMA9-21)/EMA21、(EMA21-55)/EMA55 同时较上一根扩大 | 按当日USDT成交额 |
+| `dailyRsi60` | 同 `dailyRsi70`，阈值 RSI≥60 | 按当日USDT成交额 |
 
-`rsiMomentum` 与 `dailyRsi70` 共用一次日 K 抓取（`get_daily_indicators`），无重复请求。
+`dailyRsi70` 与 `dailyRsi60` 共用一次日 K 抓取（`get_daily_indicators`），RSI70 是 RSI60 的子集。
 
 `weeklyClosedVolume` / `monthlyClosedVolume` 复用 `get_weekly_rsi` / `get_monthly_rsi` 已抓取的周/月 K 线，无额外 API 调用；`closedVolume` 字段取自 `klines[:-1][-1][7]`（最新已收盘 K 线的 quote_asset_volume）。
 
