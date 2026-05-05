@@ -314,8 +314,12 @@ def calc_cvd_last_two(klines, period=14):
 def calc_sar(highs, lows, closes, start=0.02, inc=0.02, max_af=0.2):
     """Parabolic SAR — 严格对齐 TradingView Pine v5 `ta.sar(start, inc, max)`。
 
-    返回 (sar_value, uptrend) 即最新一根 K 的 SAR 数值以及是否处于多头趋势。
+    返回 (sar_value, uptrend_curr, uptrend_prev)：
+      - sar_value: 最新一根的 SAR 数值
+      - uptrend_curr: 最新一根（bar n-1）是否多头
+      - uptrend_prev: 上一根（bar n-2）是否多头
     多头时 SAR 在价格下方（close > sar），空头时 SAR 在价格上方。
+    `uptrend_curr=True 且 uptrend_prev=False` 表示这一根刚刚翻多。
 
     实现细节（与 Pine 一致）：
       - bar 1 初始化：close[1] > close[0] 视为多头，SAR=low[0], EP=high[1]；否则反之。
@@ -326,8 +330,8 @@ def calc_sar(highs, lows, closes, start=0.02, inc=0.02, max_af=0.2):
     足够长（≥几个反转周期）的窗口下，与 TV 长图 SAR bit 级对齐。
     """
     n = len(closes)
-    if n < 2:
-        return None, None
+    if n < 3:
+        return None, None, None
 
     # bar 1 初始化
     if closes[1] > closes[0]:
@@ -339,8 +343,12 @@ def calc_sar(highs, lows, closes, start=0.02, inc=0.02, max_af=0.2):
         sar = highs[0]
         ep = lows[1]
     af = start
+    uptrend_prev = uptrend  # 进入循环前的"上一根"状态 = bar 1 状态
 
     for i in range(2, n):
+        # 在本轮可能翻转之前，记录"上一根"（bar i-1）的状态
+        uptrend_prev = uptrend
+
         sar = sar + af * (ep - sar)
 
         if uptrend:
@@ -370,17 +378,19 @@ def calc_sar(highs, lows, closes, start=0.02, inc=0.02, max_af=0.2):
                     ep = lows[i]
                     af = min(af + inc, max_af)
 
-    return sar, uptrend
+    return sar, uptrend, uptrend_prev
 
 
 def get_daily_indicators(symbols):
     """一次抓取日线 K 线，同时计算多个筛选结果（避免重复请求）。
 
-    返回 (rsi70_data, rsi59_data):
+    返回 (rsi70_data, rsi59_data, sar_flip_data):
       rsi70_data: {symbol: {rsi, ema9, ema21, ema55, sar, cvdCurr, cvdPrev, volume}}
         筛选: RSI >= 70 + EMA9>21>55 + 百分比间距扩张 + 量>SMA20 + SAR 多头 + CVD 递增
       rsi59_data: {symbol: {rsi, ema9, ema21, ema55, sar, cvdCurr, cvdPrev, volume}}
         筛选: RSI >= 59 + EMA9>21>55 + 百分比间距扩张 + 量>SMA20 + SAR 多头 + CVD 递增
+      sar_flip_data: {symbol: {sar, volume}}
+        筛选: 最新已收盘 K 是 SAR 翻多首根（curr 多头 + prev 空头）+ 量>SMA20
     """
     # limit=499 用于 EMA55 充分暖机，让 EMA 数值与 TradingView 长图精度对齐。
     # Binance fapi /klines 权重按 limit 分桶: [100, 500) = weight 2, [500, 1000] = weight 5。
@@ -390,6 +400,7 @@ def get_daily_indicators(symbols):
     all_klines = batch_fetch_klines(symbols, params)
     rsi70_data = {}
     rsi59_data = {}
+    sar_flip_data = {}
 
     for symbol, klines in all_klines.items():
         if len(klines) < 23:
@@ -398,35 +409,47 @@ def get_daily_indicators(symbols):
         if len(closed) < 23:
             continue
         closes = [float(k[4]) for k in closed]
+        highs = [float(k[2]) for k in closed]
+        lows = [float(k[3]) for k in closed]
         volume_usdt = float(closed[-1][7])
 
-        ema9 = calc_ema(closes, 9)
-        ema21 = calc_ema(closes, 21)
-        if ema9 is None or ema21 is None:
-            continue
+        # === SAR：dailySar / dailyRsi 共用 ===
+        # 与 TradingView Pine `ta.sar(0.02, 0.02, 0.2)` 对齐
+        sar_value, sar_up_curr, sar_up_prev = calc_sar(highs, lows, closes)
 
-        _, rsi_curr = calc_rsi_last_two(closes)
-        if rsi_curr is None:
-            continue
-
-        # === RSI59/RSI70：RSI≥阈值 + 三均线多头排列 + 间距扩张 + 量能确认 ===
-        if rsi_curr < 59:
-            continue
-
-        # 量能确认：最新已收盘日线 **币本位** 成交量 > 近 20 根 SMA
+        # === 量能确认：最新已收盘日线 **币本位** 成交量 > 近 20 根 SMA ===
         # 用 k[5] 而非 k[7]，与 TradingView 默认 volume 指标 (币本位) 严格对齐。
-        # 注意：列表的 sort/display 仍用 USDT 成交额 (volume_usdt)，与其它 tab 体感一致。
+        # 注意：列表的 sort/display 仍用 USDT 成交额 (volume_usdt)。
         base_volumes = [float(k[5]) for k in closed]
         if len(base_volumes) < 20:
             continue
         base_vol_ma20 = sum(base_volumes[-20:]) / 20
-        if base_volumes[-1] <= base_vol_ma20:
+        vol_above_ma20 = base_volumes[-1] > base_vol_ma20
+
+        # === dailySar：SAR 翻多首根 + 量>MA20 ===
+        if sar_up_curr is True and sar_up_prev is False and vol_above_ma20:
+            sar_flip_data[symbol] = {
+                "sar": round(sar_value, 6),
+                "volume": round(volume_usdt, 2),
+            }
+
+        # === 以下为 RSI59/RSI70 完整过滤链 ===
+        _, rsi_curr = calc_rsi_last_two(closes)
+        if rsi_curr is None or rsi_curr < 59:
+            continue
+
+        if not vol_above_ma20:
+            continue
+
+        if not sar_up_curr:
             continue
 
         if len(closed) < 56:  # 需要算 EMA55 当前值与上一根
             continue
+        ema9 = calc_ema(closes, 9)
+        ema21 = calc_ema(closes, 21)
         ema55 = calc_ema(closes, 55)
-        if ema55 is None or not (ema9 > ema21 > ema55):
+        if ema9 is None or ema21 is None or ema55 is None or not (ema9 > ema21 > ema55):
             continue
 
         # 上一根 K 线收盘时的 EMA（用 closes[:-1]）
@@ -441,13 +464,6 @@ def get_daily_indicators(symbols):
         gap2_curr = (ema21 - ema55) / ema55 * 100
         gap2_prev = (ema21_prev - ema55_prev) / ema55_prev * 100
         if not (gap1_curr > gap1_prev and gap2_curr > gap2_prev):
-            continue
-
-        # SAR 多头确认（与 TradingView Pine `ta.sar(0.02, 0.02, 0.2)` 对齐）
-        highs = [float(k[2]) for k in closed]
-        lows = [float(k[3]) for k in closed]
-        sar_value, sar_uptrend = calc_sar(highs, lows, closes)
-        if not sar_uptrend:
             continue
 
         # CVD 递增：最新已收盘 K 线 CVD > 上一根 CVD
@@ -470,7 +486,7 @@ def get_daily_indicators(symbols):
             rsi70_data[symbol] = entry
         rsi59_data[symbol] = entry
 
-    return rsi70_data, rsi59_data
+    return rsi70_data, rsi59_data, sar_flip_data
 
 
 def get_funding_rates():
@@ -493,7 +509,7 @@ def format_volume(vol):
     return f"{vol:.2f}"
 
 
-def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, rsi70_data, rsi59_data):
+def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, rsi70_data, rsi59_data, sar_flip_data):
     """构建排行榜数据"""
     valid_symbols = set(symbols)
 
@@ -594,6 +610,19 @@ def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_
     ]
     daily_rsi59.sort(key=lambda x: x["value"], reverse=True)
 
+    # 日线 SAR 翻多首根 + 量>MA20，按 USDT 成交额排序
+    daily_sar = [
+        {
+            "symbol": rename_symbol(s),
+            "value": d["volume"],
+            "valueFormatted": format_volume(d["volume"]),
+            "sar": d["sar"],
+        }
+        for s, d in sar_flip_data.items()
+        if s in valid_symbols
+    ]
+    daily_sar.sort(key=lambda x: x["value"], reverse=True)
+
     return {
         "updateTime": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "yesterdayChange": yesterday_change,
@@ -603,6 +632,7 @@ def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_
         "weeklyRsi": weekly_rsi,
         "dailyRsi70": daily_rsi70,
         "dailyRsi59": daily_rsi59,
+        "dailySar": daily_sar,
     }
 
 
@@ -661,10 +691,10 @@ def fetch_daily_data(symbols):
     print("正在获取资金费率...")
     funding_data = get_funding_rates()
 
-    print("正在获取日线指标 (RSI70 + RSI59)...")
-    rsi70_data, rsi59_data = get_daily_indicators(symbols)
+    print("正在获取日线指标 (RSI70 + RSI59 + SAR 翻多)...")
+    rsi70_data, rsi59_data, sar_flip_data = get_daily_indicators(symbols)
 
-    return yesterday_data, funding_data, rsi70_data, rsi59_data
+    return yesterday_data, funding_data, rsi70_data, rsi59_data, sar_flip_data
 
 
 def fetch_weekly_data(symbols, force=False):
@@ -725,11 +755,11 @@ def main():
     symbols = get_usdt_perpetual_symbols()
     print(f"共 {len(symbols)} 个USDT永续合约")
 
-    yesterday_data, funding_data, rsi70_data, rsi59_data = fetch_daily_data(symbols)
+    yesterday_data, funding_data, rsi70_data, rsi59_data, sar_flip_data = fetch_daily_data(symbols)
     rsi_data = fetch_weekly_data(symbols)
     monthly_rsi_data = fetch_monthly_data(symbols)
 
-    output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, rsi70_data, rsi59_data)
+    output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, rsi70_data, rsi59_data, sar_flip_data)
     save_data(output)
     print(f"\n全量数据已保存 | 更新时间: {output['updateTime']}")
 
@@ -757,7 +787,7 @@ def main():
 
                     # 刷新合约列表
                     symbols = get_usdt_perpetual_symbols()
-                    yesterday_data, funding_data, rsi70_data, rsi59_data = fetch_daily_data(symbols)
+                    yesterday_data, funding_data, rsi70_data, rsi59_data, sar_flip_data = fetch_daily_data(symbols)
 
                     # 周一额外更新周线数据
                     current_week = now_utc8.isocalendar()[1]
@@ -781,7 +811,7 @@ def main():
                     # 更新资金费率
                     funding_data = get_funding_rates()
 
-                output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, rsi70_data, rsi59_data)
+                output = build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_data, rsi70_data, rsi59_data, sar_flip_data)
                 save_data(output)
                 print(f"[已更新] {output['updateTime']}")
             except Exception as e:
