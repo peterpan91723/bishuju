@@ -84,8 +84,8 @@ GitHub Actions (每小时) → fetch_data.py → data/rankings.json → GitHub P
 | `monthlyClosedVolume` | 最新已收盘月K线 USDT 成交额 | 按成交额，取 TOP 50 |
 | `fundingRate` | 实时资金费率 | 默认升序 |
 | `weeklyRsi` | 周线RSI(14)，仅显示递增 | 按昨日USDT成交额 |
-| `dailyRsi70` | 日线 RSI≥70 + EMA9>21>55 + 百分比间距 (EMA9-21)/EMA21、(EMA21-55)/EMA55 同时较上一根扩大 + 当日**币本位**成交量 > SMA(20) + Parabolic SAR 多头 + CVD 当根 > 上一根 | 按当日USDT成交额 |
-| `dailyRsi59` | 同 `dailyRsi70`，阈值 RSI≥59 | 按当日USDT成交额 |
+| `dailyRsi70` | 日线 RSI≥70 + EMA9>21>55 + 百分比间距 (EMA9-21)/EMA21、(EMA21-55)/EMA55 同时较上一根扩大 + 当日**币本位**成交量 > SMA(20) + Parabolic SAR 多头 + CVD 当根 > 上一根 | 按 RSI 值 |
+| `dailyRsi59` | 同 `dailyRsi70`，阈值 RSI≥59 | 按 RSI 值 |
 | `dailySar` | 日线 Parabolic SAR 翻多**首根**（当根多头 + 上一根空头）+ 当日**币本位**成交量 > SMA(20) | 按当日USDT成交额 |
 
 > **量能确认细节**：过滤判断用币本位成交量 (`k[5]`，与 TradingView 默认 volume 指标一致)，列表排序用 USDT 成交额 (`k[7]`)。两者口径不同，前者用于"对齐 TV 信号"，后者用于"按金额排名"。

@@ -574,12 +574,13 @@ def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_
     ]
     monthly_closed_volume.sort(key=lambda x: x["value"], reverse=True)
 
+    # daily_rsi70 / daily_rsi59 排序键改为 RSI 值（支持升/降序），成交额作为副信息
     daily_rsi70 = [
         {
             "symbol": rename_symbol(s),
-            "value": d["volume"],
-            "valueFormatted": format_volume(d["volume"]),
-            "rsi": d["rsi"],
+            "value": d["rsi"],
+            "volume": d["volume"],
+            "volumeFormatted": format_volume(d["volume"]),
             "ema9": d["ema9"],
             "ema21": d["ema21"],
             "ema55": d["ema55"],
@@ -595,9 +596,9 @@ def build_rankings(symbols, yesterday_data, funding_data, rsi_data, monthly_rsi_
     daily_rsi59 = [
         {
             "symbol": rename_symbol(s),
-            "value": d["volume"],
-            "valueFormatted": format_volume(d["volume"]),
-            "rsi": d["rsi"],
+            "value": d["rsi"],
+            "volume": d["volume"],
+            "volumeFormatted": format_volume(d["volume"]),
             "ema9": d["ema9"],
             "ema21": d["ema21"],
             "ema55": d["ema55"],
