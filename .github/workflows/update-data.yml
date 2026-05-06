@@ -2,8 +2,11 @@ name: Update Rankings Data
 
 on:
   schedule:
-    # 每小时更新全部数据
-    - cron: '7 * * * *'
+    # 每小时第 23 分钟更新全部数据
+    # 选 23（质数、远离整点）是为了错峰避开 GitHub Actions hosted runner 的高峰拥塞，
+    # 减少 scheduled run 因抢不到 runner 而被 silent skip / 超时失败的概率。
+    # 之前用 7 时遇到过整天 schedule 都不触发的情况（GitHub 平台已知问题）。
+    - cron: '23 * * * *'
   workflow_dispatch: # 手动触发
 
 permissions:
